@@ -1,4 +1,210 @@
-#+title: Introduction to data science with R
-#+subtitle: DSC 105 Lyon College Fall 2023
-#+startup: overview hideblocks indent inlineimages
-#+options: toc:1 num:1
+:REVEAL_PROPERTIES:
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_REVEAL_JS_VERSION: 4
+#+REVEAL_INIT_OPTIONS: transition: 'cube'
+#+REVEAL_THEME: black
+:END:
+#+TITLE: Course overview
+#+AUTHOR: Marcus Birkenkrahe
+#+SUBTITLE: Introduction to data science (DSC 105) Fall 2023
+#+STARTUP:overview hideblocks indent inlineimages
+#+options: toc:1 num:nil
+#+attr_html: :width 600px
+* About me
+#+attr_html: :width 500px
+[[../img/1_pferd.jpeg]]
+
+- PhD: theoretical particle physics
+- Industry: Knowledge management
+- [[https://www.researchgate.net/publication/372691072_Teaching_Data_Science_with_Literate_Programming_Tools][Teaching data science]] / [[https://github.com/birkenkrahe/org/blob/master/research/SSCET_2023.org][Coding w/AI]]
+
+* About you
+#+attr_html: :width 500px
+[[../img/1_universal_converter_box.png]]
+
+1. Why are you here?
+2. What would delight you?
+3. What would disappoint you?
+4. Where are you headed?
+
+* Course syllabus
+#+attr_html: :width 400px
+[[../img/1_syllabus.png]]
+
+- [[https://lyon.instructure.com/courses/1427/assignments/syllabus][Syllabus on Canvas]]
+- General information & standard policies
+- Course information (grading, schedule)
+
+** Canvas LMS
+#+attr_html: :width 500px
+[[../img/1_canvas.png]]
+
+- All [[https://lyon.instructure.com/courses/568/grades][grades]] should be visible at all times
+- Control your own [[https://lyon.instructure.com/courses/568?view=notifications][notifications]] (email)
+- Important course [[https://lyon.instructure.com/courses/568/pages/course-links][links]] on a page
+- Add all your Canvas calendars to Google
+
+** Course topics
+#+attr_html: :width 450px
+[[../img/1_topics.jpg]]
+
+1) The R statistical programming language
+2) Basics of data visualization with R
+3) Software development methods
+4) From R to Python ... and back again
+
+** Video lectures
+#+attr_html: :width 400px
+[[../img/1_lecture.jpg]]
+#+begin_notes
+- [[https://www.youtube.com/playlist?list=PLwgb17bzeNygo8GU6SivwwjsQj9QabqAJ][Emacs + Org-mode + R]] (Tutorial videos Spring '22)
+- [[https://www.youtube.com/playlist?list=PL6SfZh1-kWXkLa45V6JeEhNZEXvsmUR1f][Introduction to R: installation and shell]]
+- Vectors in R ([[https://www.youtube.com/playlist?list=PL6SfZh1-kWXl3_YDc-8SS5EuG4h1aILHz][part 1]], [[https://www.youtube.com/playlist?list=PL6SfZh1-kWXlA2axuHdNMzhwhuEhtGtlK][part 2]], [[https://www.youtube.com/playlist?list=PL6SfZh1-kWXn0PLpr1dB8NQwkDuThwkf5][part 3]])
+- [[https://www.youtube.com/playlist?list=PL6SfZh1-kWXmMY6rKe2dkUUdn41m50-n6][Data frames, matrices, lists, factors in R]]
+- [[https://www.youtube.com/playlist?list=PL6SfZh1-kWXlKpHIv66nOhGAFxztXaCEd][Data frames in R]]
+- [[https://www.youtube.com/playlist?list=PL6SfZh1-kWXkDVwgn2kXG13Y4SnoWDj9q][Base R plotting]]
+- [[https://www.youtube.com/playlist?list=PL6SfZh1-kWXnLB9cVQQKRxtAFFDfyGw0h][Plotting with ggplot2]]
+- [[https://www.youtube.com/playlist?list=PLwgb17bzeNyi9RjO0pL48am-Bk6XWol44][Data import]] with R
+- [[https://www.youtube.com/playlist?list=PL6SfZh1-kWXl3RimChL59F7lKSDGA97AZ][RStudio R Notebooks and literate programming]]
+#+end_notes
+
+** Agile project (with "Scrum")
+#+attr_html: :width 700px
+[[../img/1_scrum.png]]
+
+#+begin_notes
+- The project makes up 25% of your final grade for this course.
+- What is a Scrum project? ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org][GitHub FAQ]])
+- Do you have examples for data science projects? (FAQ)
+- Can you do a project as an absolute beginner? (FAQ)
+
+*Note:* the first /[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-is-a-sprint-review][sprint review]]/ is in the week of Sep-11. Use it to
+present your initial results (see FAQ on [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-do-i-need-to-deliver-at-a-sprint-review][what to deliver]], and [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-should-we-do-in-the-first-sprint][1st
+sprint review]]).
+#+end_notes
+
+** IMRaD and Scrum
+#+attr_html: :width 700px
+[[../img/1_imrad.png]]
+#+begin_notes
+- Introduction (research question - what you want to find out)
+- Method (how you want to do it)
+- Results (what you found out)
+- Discussion (what it means)
+
+([[https://youtu.be/dip7UwZ3wUM][Video: Research Writing with IMRaD]])
+#+end_notes
+
+** Many project opportunities
+#+attr_html: :width 400px
+[[../img/1_competition.png]]
+
+#+begin_notes
+- Explore and document an R package
+- Document an [[https://www.r-bloggers.com/][extended analysis example]]
+- Explore a data set of your choice
+- Complete a DataCamp competition
+- See [[https://app.datacamp.com/learn/projects][DataCamp projects]] for examples
+- You can branch out: SQL, Python, Java etc.
+- See GitHub issues for examples (e.g. [[https://github.com/birkenkrahe/ds1/issues/4][whale song]])
+- Double/triple up if you're in > 1 of my courses
+- Use problems from other courses for your project, e.g. data
+  collected by yourself, or data in economics, business, art etc.
+#+end_notes
+
+** Introduction to DataCamp
+#+attr_html: :width 500px
+[[../img/1_datacamp.png]]
+#+begin_notes
+- [[https://datacamp.com][DataCamp]] is a data science learning platform
+- Access for you is free (academic alliance)
+- All assignments are DataCamp assignments
+- Assignments are drawn from 4 courses
+  1. Data science for everyone
+  2. Introduction to R
+  3. Data manipulation with data.table
+  4. Python for R users
+- Complete them on time to get full points
+- Completed DataCamp courses can [[https://www.linkedin.com/in/birkenkrahe/][support your resume]]
+#+end_notes
+** Introduction to the textbook
+#+attr_html: :width 400px
+[[../img/1_bookofR.png]]
+#+begin_notes
+- R is /FOSS/ with focus on stats and graphics
+- Davies' "[[https://nostarch.com/bookofr][Book of R]]" is extensive (832p.)
+- You don't have to read along but it might help
+- Many other tutorials and textbooks available
+- The best short online tutorial: [[https://github.com/matloff/fasteR][Matloff's "fasteR"]]
+- Beware of ideologies (cp. Matloff's "[[http://github.com/matloff/TidyverseSkeptic][TidyverseSceptic]]")
+#+end_notes
+** Good-bye Emacs
+#+attr_html: :width 500px
+[[../img/1_emacs.png]]
+#+begin_notes
+- Emacs: self-documenting, extensible /FOSS/ text editor
+- Process, file and package management (like an OS)
+- /Literate programming/ environment for 43 languages
+- /IDE/ for R programming and /REPL/ for interactive coding
+#+end_notes
+** Literate programming
+#+attr_html: :width 700px
+[[../img/1_litprog.png]]
+
+#+begin_notes
+Source: "[[https://docs.google.com/presentation/d/1wA7sb41EjV6GP3oBEFsOiYnoe29WILtLJR2sHSfr6Fs/edit?usp=sharing][Teaching data science with hacker tools]]" (2022)
+
+- Common practice among data scientists
+- /Paradigm/ behind interactive computing notebooks
+- Useful when learning any programming language
+#+end_notes
+** Tests (multiple-choice)
+#+attr_html: :width 600px
+[[../img/1_entry_quiz.png]]
+
+#+begin_notes
+- Tests have to be completed online, are timed, and have a deadline;
+  after the deadline, you can play them an unlimited number of times
+- There will be a revision quiz on Canvas every week, consisting of
+  5-10 multiple choice, matching and true/false questions.
+- A subset of the test questions will form the final exam (25% of your
+  final grade) - we will practice in the last week before the exam.
+#+end_notes
+
+* Home assignments
+#+attr_html: :width 500px
+[[../img/home.jpg]]
+
+- Register with DataCamp now
+- Read "[[https://github.com/birkenkrahe/ds105/blob/main/pub/Adventures_with_R.pdf][Adventures with R]]" by Friday
+- Complete 1st chapter by Sunday
+
+#+begin_notes
+[[https://lyon.instructure.com/courses/568/assignments/1420][Introduction to data science​]]
+
++ Data science definition
++ Data science workflow
++ Application to real-world problems
++ Different professional data science roles
+#+end_notes
+
+* Practice - first R program
+#+attr_html: :width 700px
+[[../img/replit.png]]
+
+- In your browser, go to ~replit.com~
+- Register using your Lyon email
+- Create a REPL using an R template
+
+#+begin_notes
+print("hello, world")
+data(mtcars)
+head(mtcars)
+plot(mtcars$mpg ~ mtcars$wt,
+    main="Miles per gallon vs. weight in mtcars",
+    xlab="Weight [tons]", ylab="Miles per gallon")
+abline(lm(mtcars$mpg ~ mtcars$wt),col="red")
+#+end_notes
+* Next: DataCamp Workspace
+#+attr_html: :width 600px
+[[../img/0_workspace.png]]

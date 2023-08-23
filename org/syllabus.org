@@ -83,8 +83,8 @@ i.e. every discipline, from accounting to zoology).
 
 Notes:
 - To pass: 60% of all available points.
-- DataCamp assignments: there are 1 assignments spread out over 3
-  courses. Each assignment contributes 1.5625% (25/16) to your final
+- DataCamp assignments: there are 16 assignments spread out over 4
+  courses. Each assignment contributes 1.5625% (25/15) to your final
   grade. Late assignments are counted as 50% complete only.
 - Sprint review presentations: a customer-focused team effort
   resulting in a project presentation, with 4 Scrum sprint reviews.
@@ -96,20 +96,20 @@ Notes:
 
 | Week | Date          | Datacamp assignments               | Project           |
 |------+---------------+------------------------------------+-------------------|
-|    1 | Aug 21-Aug 25 | Intro to basics                    |                   |
-|    2 | Aug 28-Sep 01 | Vectors                            |                   |
-|    3 | Sep 04-Sep 08 | Matrices                           |                   |
-|    4 | Sep 11-Sep 15 | Factors                            | 1st sprint review |
-|    5 | Sep 18-Sep 22 | Data frames                        |                   |
-|    6 | Sep 25-Sep 29 | Lists                              |                   |
-|    7 | Oct 02-Oct 06 | Introduction to data.table         |                   |
-|    8 | Oct 09-Oct 13 | Selecting and computing on columns | 2nd sprint review |
-|    9 | Oct 16-Oct 20 | Groupwise operations               |                   |
-|   10 | Oct 23-Oct 27 | Reference semantics                |                   |
-|   11 | Oct 30-Nov 03 | Importing and exporting data       |                   |
+|    1 | Aug 21-Aug 25 | Introduction to data science       |                   |
+|    2 | Aug 28-Sep 01 | Data collection and storage        |                   |
+|    3 | Sep 04-Sep 08 | Preparation and visualization      |                   |
+|    4 | Sep 11-Sep 15 | Experimentation and prediction     | 1st sprint review |
+|    5 | Sep 18-Sep 22 | Introduction to basics of R        |                   |
+|    6 | Sep 25-Sep 29 | Vectors in R                       |                   |
+|    7 | Oct 02-Oct 06 | Matrices in R                      |                   |
+|    8 | Oct 09-Oct 13 | Factors in R                       | 2nd sprint review |
+|    9 | Oct 16-Oct 20 | Data frames in R                   |                   |
+|   10 | Oct 23-Oct 27 | Lists in R                         |                   |
+|   11 | Oct 30-Nov 03 | Introduction to data.table         |                   |
 |   12 | Nov 06-Nov 10 | Python for R users: basics         | 3rd sprint review |
 |   13 | Nov 13-Nov 17 | Control flow, loops, and functions |                   |
-|   14 | Nov 20-Nov 24 | Pandas                             |                   |
+|   14 | Nov 20-Nov 24 | Pandas (Python data frames)        |                   |
 |   15 | Nov 27-Dec 01 | Plotting                           |                   |
 |   16 | Dec 04-Dec 08 | Capstone: Python project           | 4th sprint review |
 
@@ -130,6 +130,7 @@ Notes:
 The course includes a free subscription to the DataCamp classroom at
 [[https://datacamp.com/][datacamp.com]] for further study, and the opportunity to earn
 certificates. DataCamp is a popular data science online learning
+platform. We'll also be using DataCamp workspace as our coding
 platform.
 
 * GitHub
