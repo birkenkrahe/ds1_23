@@ -7,7 +7,7 @@
 #+TITLE: Course overview
 #+AUTHOR: Marcus Birkenkrahe
 #+SUBTITLE: Introduction to data science (DSC 105) Fall 2023
-#+STARTUP:overview hideblocks indent inlineimages
+#+STARTUP: overview hideblocks indent inlineimages
 #+options: toc:1 num:nil
 #+attr_html: :width 600px
 * About me
@@ -127,7 +127,7 @@ sprint review]]).
 - Complete them on time to get full points
 - Completed DataCamp courses can [[https://www.linkedin.com/in/birkenkrahe/][support your resume]]
 #+end_notes
-** Introduction to the textbook
+** NEXT Introduction to the textbook
 #+attr_html: :width 400px
 [[../img/1_bookofR.png]]
 #+begin_notes
@@ -177,7 +177,7 @@ Source: "[[https://docs.google.com/presentation/d/1wA7sb41EjV6GP3oBEFsOiYnoe29WI
 
 - Register with DataCamp now
 - Read "[[https://github.com/birkenkrahe/ds105/blob/main/pub/Adventures_with_R.pdf][Adventures with R]]" by Friday
-- Complete 1st chapter by Sunday
+- Complete 1st DataCamp assignment by Sunday
 
 #+begin_notes
 [[https://lyon.instructure.com/courses/568/assignments/1420][Introduction to data science​]]
@@ -208,3 +208,6 @@ abline(lm(mtcars$mpg ~ mtcars$wt),col="red")
 * Next: DataCamp Workspace
 #+attr_html: :width 600px
 [[../img/0_workspace.png]]
+
+- Simple example: https://tinyurl.com/SimpleRexample
+- More next time!
