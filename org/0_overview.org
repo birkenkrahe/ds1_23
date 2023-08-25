@@ -176,8 +176,17 @@ Source: "[[https://docs.google.com/presentation/d/1wA7sb41EjV6GP3oBEFsOiYnoe29WI
 [[../img/home.jpg]]
 
 - Register with DataCamp now
-- Read "[[https://github.com/birkenkrahe/ds105/blob/main/pub/Adventures_with_R.pdf][Adventures with R]]" by Friday
-- Complete 1st DataCamp assignment by Sunday
+- Read "[[https://github.com/birkenkrahe/ds105/blob/main/pub/Adventures_with_R.pdf][Adventures with R]]" by Monday 28 August 1 PM ([[https://lyon.instructure.com/courses/1427/assignments/17918][Canvas]])
+- From the Google Chat:
+  #+begin_quote
+  We're going to look at DataCamp workspace tomorrow - here is a good
+  short summary video of the AI coding capabilities:
+  https://youtu.be/9XHop0xTTCM?si=bY4UsJmSrzxCYMUI - for this
+  particular tool: what're your thoughts on this? How is it going to
+  change coding and data science? For the better or for the worse?
+  #+end_quote
+  
+- Complete 1st DataCamp assignment by Sunday 11.59 PM
 
 #+begin_notes
 [[https://lyon.instructure.com/courses/568/assignments/1420][Introduction to data science​]]
