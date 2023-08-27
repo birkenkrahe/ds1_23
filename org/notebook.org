@@ -1,0 +1,15 @@
+#+startup: overview inlineimages indent hideblocks
+#+property: header-args:python :results output
+* README
+
+- Notes usually based on whiteboard screenshots ([[https://drive.google.com/drive/folders/16Z3Lt_RBMnRMwORqZDfGMUezy-_B9huB?usp=sharing][GDrive]]).
+- Includes further reading, watching and comments
+
+* Wednesday, 08/23/2023
+
+- 
+
+* Friday, 08/25/2023
+
+- 
+  
