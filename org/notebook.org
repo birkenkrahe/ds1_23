@@ -1,15 +1,104 @@
 #+startup: overview inlineimages indent hideblocks
-#+property: header-args:python :results output
+#+property: header-args:R :results output :session *R* :noweb yes
 * README
 
-- Notes usually based on whiteboard screenshots ([[https://drive.google.com/drive/folders/16Z3Lt_RBMnRMwORqZDfGMUezy-_B9huB?usp=sharing][GDrive]]).
+- See also whiteboard screenshots ([[https://drive.google.com/drive/folders/16Z3Lt_RBMnRMwORqZDfGMUezy-_B9huB?usp=sharing][GDrive]]).
 - Includes further reading, watching and comments
 
 * Wednesday, 08/23/2023
 
-- 
+Summary:
+- introductory stuff on data science
+- project management methodology
+- information on the data science major and minor
+
+Review questions:
+1. What is the purpose of Scrum?
+2. What is an example for a potential term project?
+3. What are the dominant languages in data science?
 
 * Friday, 08/25/2023
 
-- 
-  
+- Literate programming: tangle and weave and markup commands
+- Textbook selection to learn beginning and advanced R
+- Ways to develop and run R programs locally and online
+- What's special about R ("Adventures in R" article)
+- Loading, viewing and plotting a data frame in R
+
+* TODO Week 1 review
+
+1. What is data science?
+   #+begin_quote
+   - Use data to better describe the present, predict or prescribe the
+     future.
+   - Interdisciplinary field that uses algorithms, data and math to
+     extract insights from structured and unstructured data.
+   - The "sexiest job of the 21st century"
+   #+end_quote
+2. Is the [[https://www.tesmanian.com/blogs/tesmanian-blog/elon-musk-shows-fsd-beta-v12-live-test-drive-on-x][Tesla test drive with Elon Musk]] (Aug 26, 2023) an example
+   for a "data science application"? 
+3. Describe the data science workflow.
+   #+begin_quote
+   1) Data collection and storage  [data import]
+   2) Data preparation [data wrangling]
+   3) Data exploration and visualization [data modeling]
+   4) Experimentation and prediction [+ data storytelling]
+
+   [[https://www.datacamp.com/blog/what-is-data-science-the-definitive-guide?irclickid=0a2UQaStbxyNWhXRYE2FCwsmUkFyUrU-NVpDxo0&irgwc=1&utm_medium=affiliate&utm_source=impact&utm_campaign=000000_1-1310690_2-mix_3-all_4-na_5-na_6-na_7-mp_8-affl-ip_9-na_10-bau_11-Admitad%20-%201310690&utm_content=TEXT_LINK&utm_term=442763][From the DataCamp blog:]]
+   #+attr_latex: :width 400px
+   [[../img/datascience.png]] 
+   #+end_quote
+4. What does 'deep learning' refer to?
+   #+begin_quote
+   A subfield of machine learning, which relies on large
+   (i.e. multi-layered) neural networks.
+   #+attr_latex: :width 400px
+   [[../img/gpt.png]]
+   #+end_quote
+5. Which job roles exist in data science and what do they mean?
+   #+begin_quote
+   1. Data wrangling: data engineer (SQL, cloud, Linux)
+   2. Data analytics: data analyst (SQL, R, dashboards)
+   3. Data modeling: data scientist (R, SQL, stats, machine learning)
+   4. Deep learning: ML scientist (NLP, LLMs, Python)
+   #+end_quote
+6. Which ways do you know to program and run R?
+   #+begin_quote
+   - As a shell from the command line with ~R~ (or ~Rterm~)
+   - As a REPL in replit.com (editor, console, terminal, PDF)
+   - As an IDE with the command ~Rgui~ on your PC
+   - As an IDE with RStudio on your PC or in the cloud
+   - As an IDE in Emacs + ESS + Org-mode (advanced only)
+   #+end_quote
+7. What's special about R?
+   #+begin_quote
+   - Statistical programming language with great graphics
+   - Open source and easy to expand
+   - Easy to learn especially for non-technical people
+   - Large community
+   #+end_quote
+8. Which R functions do you remember? (6)
+   #+begin_example R
+   data
+   ls()
+   help
+   head
+   plot
+   q[uit]()
+   #+end_example
+9. What is the "formula" notation?
+   #+begin_quote
+   Refers to the use of ~~~ for x and y arguments in certain R functions
+   like ~plot~ where you can call ~plot(x,y)~ or ~plot(y~x)~.
+   #+end_quote
+10. When can you connect the points in a scatterplot?
+    #+begin_quote
+    When the points are ordered in some way - for example when the
+    data represent a time series (see ~Nile~).
+    #+end_quote
+
+* TODO Week 2 preview
+
+ - Datacamp Workspace: simple and extended example.
+ - Exercise: import, view and plot the ~Nile~ data.
+ - Lecture: What is data science?
