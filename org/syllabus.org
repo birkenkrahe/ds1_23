@@ -113,7 +113,7 @@ Notes:
 |   15 | Nov 27-Dec 01 | Plotting                           |                   |
 |   16 | Dec 04-Dec 08 | Capstone: Python project           | 4th sprint review |
 
-- NO CLASSES: Aug 21, Oct 9 (Fall break), Nov 22 + 24
+- NO CLASSES: Aug 21, Sept 4 (Labor day), Oct 9 (Fall break), Nov 22 + 24
   (Thanksgiving). See [[https://catalog.lyon.edu/202324-academic-calendar][2023-2024 academic calendar]].
 - ONLINE CLASSES: Sept 15 + 22.
 

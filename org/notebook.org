@@ -35,8 +35,10 @@ Review questions:
      extract insights from structured and unstructured data.
    - The "sexiest job of the 21st century"
    #+end_quote
+
 2. Is the [[https://www.tesmanian.com/blogs/tesmanian-blog/elon-musk-shows-fsd-beta-v12-live-test-drive-on-x][Tesla test drive with Elon Musk]] (Aug 26, 2023) an example
    for a "data science application"? 
+
 3. Describe the data science workflow.
    #+begin_quote
    1) Data collection and storage  [data import]
@@ -48,6 +50,7 @@ Review questions:
    #+attr_latex: :width 400px
    [[../img/datascience.png]] 
    #+end_quote
+
 4. What does 'deep learning' refer to?
    #+begin_quote
    A subfield of machine learning, which relies on large
@@ -55,13 +58,15 @@ Review questions:
    #+attr_latex: :width 400px
    [[../img/gpt.png]]
    #+end_quote
+
 5. Which job roles exist in data science and what do they mean?
    #+begin_quote
    1. Data wrangling: data engineer (SQL, cloud, Linux)
    2. Data analytics: data analyst (SQL, R, dashboards)
    3. Data modeling: data scientist (R, SQL, stats, machine learning)
-   4. Deep learning: ML scientist (NLP, LLMs, Python)
+   4. Deep learning: ML scientist (NLP, LLMs, Python > R)
    #+end_quote
+
 6. Which ways do you know to program and run R?
    #+begin_quote
    - As a shell from the command line with ~R~ (or ~Rterm~)
@@ -70,6 +75,7 @@ Review questions:
    - As an IDE with RStudio on your PC or in the cloud
    - As an IDE in Emacs + ESS + Org-mode (advanced only)
    #+end_quote
+
 7. What's special about R?
    #+begin_quote
    - Statistical programming language with great graphics
