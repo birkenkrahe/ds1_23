@@ -109,6 +109,25 @@ Review questions:
 - It's an open book test: use any help you can get
 - Gradebook in Canvas is updated automatically
 
-* Monday, 27-Aug
+* Monday, 28-Aug
 
-- 
+- DataCamp review: data pipeline; job roles in data science
+- Simple ~mtcars~ example in DataCamp workspace.
+- Parameters in R functions, e.g. ~n~ in ~head(data, n=3)~.
+- Plotting ~Nile~ data with ~plot(Nile)~ produces a line plot, choosing
+  the parameter ~type="p"~ changes it to a scatterplot.
+- Computing a trendline through points using ~lm~ (linear regression
+  model), and drawing a colored line with ~abline~.
+
+* Wednesday, 30-Aug
+
+- For the first sprint review, try to identify a topic and/or a
+  dataset, and work through the criteria of the Canvas assignment.
+- ~plot()~ is an example of a 'generic function' - no matter what data
+  structures or types you throw at it, it'll produce a plot.
+- In DataCamp workspace, you can edit your notebook using Jupyter Lab:
+  this gives you access to a launcher with file editor and a terminal;
+  you can now create a .R file in the editor, and run it with ~Rterm~ in
+  the terminal.
+- The notebook has text cells, which allow insertion of links and
+  images using markup notation.
