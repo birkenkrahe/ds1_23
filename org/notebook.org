@@ -103,11 +103,12 @@ Review questions:
  - Exercise: import, view and plot the ~Nile~ data.
  - Lecture: What is data science?
 
-** NEXT Test 1 is live (complete by Sept 3, 11:59 pm)
+** Test 1 is live (complete by Sept 3, 11:59 pm)
 
 - The test is available online, you've got 30 minutes
 - It's an open book test: use any help you can get
 - Gradebook in Canvas is updated automatically
 
+* Monday, 27-Aug
 
-
+- 
