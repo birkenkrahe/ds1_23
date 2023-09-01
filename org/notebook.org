@@ -1,3 +1,6 @@
+#+title: Introduction to data science - notebook
+#+author: Marcus Birkenkrahe
+#+subtitle: Lyon College - DSC 105 - fall 2023
 #+startup: overview inlineimages indent hideblocks
 #+property: header-args:R :results output :session *R* :noweb yes
 * README
@@ -5,7 +8,7 @@
 - See also whiteboard screenshots ([[https://drive.google.com/drive/folders/16Z3Lt_RBMnRMwORqZDfGMUezy-_B9huB?usp=sharing][GDrive]]).
 - Includes further reading, watching and comments
 
-* Wednesday, 08/23/2023
+* Wednesday, 23-Aug
 
 Summary:
 - introductory stuff on data science
@@ -17,7 +20,7 @@ Review questions:
 2. What is an example for a potential term project?
 3. What are the dominant languages in data science?
 
-* Friday, 08/25/2023
+* Friday, 25-Aug
 
 - Literate programming: tangle and weave and markup commands
 - Textbook selection to learn beginning and advanced R
@@ -131,3 +134,5 @@ Review questions:
   the terminal.
 - The notebook has text cells, which allow insertion of links and
   images using markup notation.
+
+* NEXT Friday, 1-Sep
