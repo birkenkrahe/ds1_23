@@ -1,7 +1,7 @@
 #+title: ds105-agenda-fall23
 #+startup: overview hideblocks indent inlineimages
 #+property: header-args:R :results output :noweb yes :session *R*
-* Code along in Python: unicorn companies
+* Code along in R: unicorn companies
 
 This is a demo notebook using R and the R shell (R Core Team, 2022) as
 part of an DataCamp workspace demo originally developed by DataCamp
