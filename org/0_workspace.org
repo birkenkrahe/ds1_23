@@ -164,6 +164,8 @@ Now that the categories are cleaned up, we group by ~Category~. In R, we
 can do this with the ~dplyr~ package, or with ~data.table~, or with base
 R.
 
+*** Grouping data by column with base R
+
 With base R, we can use the ~stats::aggregate~ function, which splits
 the data into subsets.
 #+begin_src R
@@ -202,6 +204,10 @@ its first argument into ascending (default) or descending order:
   grouped_df <- grouped_df[order(grouped_df$Count),]
   grouped_df
 #+end_src
+
+*** Grouping data by column with ~dplyr~
+
+With 
 
 ** Creating a barplot of category counts
 

@@ -8,7 +8,7 @@
 - See also whiteboard screenshots ([[https://drive.google.com/drive/folders/16Z3Lt_RBMnRMwORqZDfGMUezy-_B9huB?usp=sharing][GDrive]]).
 - Includes further reading, watching and comments
 
-* Wednesday, 23-Aug
+* Wed-23-Aug
 
 Summary:
 - introductory stuff on data science
@@ -20,7 +20,7 @@ Review questions:
 2. What is an example for a potential term project?
 3. What are the dominant languages in data science?
 
-* Friday, 25-Aug
+* Fri-25-Aug
 
 - Literate programming: tangle and weave and markup commands
 - Textbook selection to learn beginning and advanced R
@@ -112,7 +112,7 @@ Review questions:
 - It's an open book test: use any help you can get
 - Gradebook in Canvas is updated automatically
 
-* Monday, 28-Aug
+* Mon-28-Aug
 
 - DataCamp review: data pipeline; job roles in data science
 - Simple ~mtcars~ example in DataCamp workspace.
@@ -122,7 +122,7 @@ Review questions:
 - Computing a trendline through points using ~lm~ (linear regression
   model), and drawing a colored line with ~abline~.
 
-* Wednesday, 30-Aug
+* Wed-30-Aug
 
 - For the first sprint review, try to identify a topic and/or a
   dataset, and work through the criteria of the Canvas assignment.
@@ -135,6 +135,24 @@ Review questions:
 - The notebook has text cells, which allow insertion of links and
   images using markup notation.
 
-* Friday, 1-Sep
+* Fri-1-Sep
 
-- 
+We worked with the Workspace Demo file [[https://tinyurl.com/WorkspaceDemoR][tinyurl.com/WorkspaceDemoR]].
+
+- How to download a CSV file to the PC
+- How to establish an absolute or relative path to the file (on PC)
+- How to read the CSV file into a data frame
+- How to store the data frame in a variable
+- How to check the structure of the data frame
+- How to extract values from the data frame
+- How to extract unique values from a column vector
+- How to use the AI notebook interface 
+
+* Wed-6-Sep
+
+- How to share notebook editing rights
+- How to change values based on a pattern search with ~gsub~
+- Function parameters in ~unique~ and ~read.csv~
+- Adding your project idea to Canvas (pages)
+
+
