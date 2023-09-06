@@ -135,4 +135,6 @@ Review questions:
 - The notebook has text cells, which allow insertion of links and
   images using markup notation.
 
-* NEXT Friday, 1-Sep
+* Friday, 1-Sep
+
+- 
