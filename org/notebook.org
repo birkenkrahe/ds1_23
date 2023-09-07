@@ -155,4 +155,13 @@ We worked with the Workspace Demo file [[https://tinyurl.com/WorkspaceDemoR][tin
 - Function parameters in ~unique~ and ~read.csv~
 - Adding your project idea to Canvas (pages)
 
+* Fri-8-Sep
+
+** Review test 1
+
+- You have loaded mtcars, saved ~mtcars~ in the variable data and loaded
+  the ~Nile~ time series. What will ~ls()~ show in R?
+- Data science work flow
+- Print first few lines of ~mtcars~
+
 
