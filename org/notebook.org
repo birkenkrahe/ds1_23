@@ -39,7 +39,7 @@ Review questions:
    - The "sexiest job of the 21st century"
    #+end_quote
 2. Is the [[https://www.tesmanian.com/blogs/tesmanian-blog/elon-musk-shows-fsd-beta-v12-live-test-drive-on-x][Tesla test drive with Elon Musk]] (Aug 26, 2023) an example
-   for a "data science application"? 
+   for a "data science application"?
 3. Describe the data science workflow.
    #+begin_quote
    1) Data collection and storage  [data import]
@@ -49,7 +49,7 @@ Review questions:
 
    [[https://www.datacamp.com/blog/what-is-data-science-the-definitive-guide?irclickid=0a2UQaStbxyNWhXRYE2FCwsmUkFyUrU-NVpDxo0&irgwc=1&utm_medium=affiliate&utm_source=impact&utm_campaign=000000_1-1310690_2-mix_3-all_4-na_5-na_6-na_7-mp_8-affl-ip_9-na_10-bau_11-Admitad%20-%201310690&utm_content=TEXT_LINK&utm_term=442763][From the DataCamp blog:]]
    #+attr_latex: :width 400px
-   [[../img/datascience.png]] 
+   [[../img/datascience.png]]
    #+end_quote
 4. What does 'deep learning' refer to?
    #+begin_quote
@@ -102,9 +102,9 @@ Review questions:
 
 ** Week 2 preview
 
- - Datacamp Workspace: simple and extended example.
- - Exercise: import, view and plot the ~Nile~ data.
- - Lecture: What is data science?
+- Datacamp Workspace: simple and extended example.
+- Exercise: import, view and plot the ~Nile~ data.
+- Lecture: What is data science?
 
 ** Test 1 is live (complete by Sept 3, 11:59 pm)
 
@@ -146,7 +146,7 @@ We worked with the Workspace Demo file [[https://tinyurl.com/WorkspaceDemoR][tin
 - How to check the structure of the data frame
 - How to extract values from the data frame
 - How to extract unique values from a column vector
-- How to use the AI notebook interface 
+- How to use the AI notebook interface
 
 * Wed-6-Sep
 
@@ -157,11 +157,79 @@ We worked with the Workspace Demo file [[https://tinyurl.com/WorkspaceDemoR][tin
 
 * Fri-8-Sep
 
+** Review DataCamp session
+
+1) What's an event log, for example for web data? How many features
+   does it have?
+   #+begin_quote
+   An identifier, a description of the event, and a timestamp
+   #+end_quote
+2) Open your R scratchbook, load these data into a dataframe and tell
+   me how many columns and rows the data have - use only ONE line:
+   [[https://tinyurl.com/flightEventLogCsv][tinyurl.com/flightEventLogCsv]]
+   #+begin_src R
+     str(read.csv("../data/flight_event_log.csv",header=TRUE))
+   #+end_src
+3) What can you do with the Twitter API?
+   #+begin_quote
+   Extract tweets from Twitter for further analysis or to build an
+   application - here are [[https://techcrunch.com/2009/02/19/the-top-20-twitter-applications/][examples]] from the early days of X (2009).
+   #+end_quote
+4) Does OpenAI have an API? What could you do with it?
+   #+begin_quote
+   Yes, and you could use it to get access to ChatGPT and build an AI
+   application ([[https://platform.openai.com/overview][overview]]).
+   #+end_quote
+5) Are social network data quantitative or qualitative data?
+   #+begin_quote
+   Can be both: number of people logging in (quantitative), or
+   sentiments expressed in a social media post (qualitative). For
+   computational (=numerical) analysis, you need to convert
+   qualitative into quantitative data.
+   #+end_quote
+6) Is a social network graph like shown below an example of
+   quantitative or qualitative data?
+   #+attr_latex: :width 400px
+   #+caption: https://www-cdn.nebula-graph.io/nebula-website-5.0/images/blogs/nebulagraph-sns/graph-database-on-social-network-03.jpeg
+   [[../img/social_network_graph.jpeg]]
+   #+begin_quote
+   Both! the node image represents a quality (type of account), while
+   the graph itself represents a collection of nodes or vertices and
+   edges or links, which can be represented as an edge list:
+   [(1,2),(2,3)] means that node 1 is connected with node 2 and node 2
+   is connected with node 3.
+   #+end_quote
+7) What languages do you use to query databases?
+   #+begin_quote
+   NoSQL for document (graph) databases (Not-only-SQL), and SQL for
+   relational (tabular) databases.
+   #+end_quote
+8) What's the top problem for data storage?
+   #+begin_quote
+   "Scaling": 3V (Volume, Velocity, Variety) definition of Big Data.
+   #+end_quote
+9) Could you tell the "smart home" case study after watching it?
+   #+begin_quote
+   1) Gather data using APIs for weather information (public), for
+      tweets (commercial) and for sensor data (private).
+   2) Transform data to fit a database format using e.g. [[https://airflow.apache.org/][Apache
+      Airflow]]. 
+   3) 
+   #+end_quote
+10) What does this case study illustrate?
+    #+begin_quote
+    The data pipeline: gather, transform, store data.
+    #+end_quote
+   
 ** Review test 1
 
-- You have loaded mtcars, saved ~mtcars~ in the variable data and loaded
-  the ~Nile~ time series. What will ~ls()~ show in R?
-- Data science work flow
-- Print first few lines of ~mtcars~
+1) You have loaded mtcars, saved ~mtcars~ in the variable data and loaded
+   the ~Nile~ time series. What will ~ls()~ show in R?
+2) What is the data science work flow?
+3) Print the first 5 records of ~mtcars~
 
+** (Systematic) introduction to R
+
+- This and the lecture on data science in general are available via
+  GitHub as PDF files.
 

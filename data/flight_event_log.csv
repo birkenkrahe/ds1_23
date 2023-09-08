@@ -1,0 +1,93 @@
+Flight,Activity,Timestamp,City
+TR320,Check-in,1/12/2019 12:01:00,Munich
+TR320,Boarding,1/12/2019 12:45:00,Munich
+TR320,Take off,1/12/2019 13:03:00,Munich
+TR320,Landing,1/12/2019 22:05:00,New York
+TR320,Baggage claim,1/12/2019 23:00:00,New York
+TR520,Check-in,1/22/2019 8:15:00,New York
+TR520,Delay announcement,1/22/2019 9:01:00,New York
+TR520,Boarding,1/22/2019 14:00:00,New York
+TR520,Mechanical problem,1/22/2019 14:30:00,New York
+TR520,Take off,1/22/2019 16:30:00,New York
+TR520,Landing,1/23/2019 1:00:00,Munich
+TR520,Baggage claim,1/23/2019 1:45:00,Munich
+PR120,Check-in,2/12/2019 10:00:00,Munich
+PR120,Missed my flight,2/12/2019 11:32:00,Munich
+PR121,Check-in,2/13/2019 12:43:00,Munich
+PR121,Boarding,2/13/2019 13:30:00,Munich
+PR121,Take off,2/13/2019 14:20:00,Munich
+PR121,Landing,2/13/2019 15:40:00,Pristina
+PR121,Baggage claim,2/13/2019 16:15:00,Pristina
+MU220,Check-in,2/17/2019 16:00:00,Pristina
+MU220,Delay announcement,2/17/2019 16:35:00,Pristina
+MU220,Boarding,2/17/2019 17:20:00,Pristina
+MU220,Take off,2/17/2019 18:00:00,Pristina
+MU220,Landing,2/17/2019 20:00:00,Munich
+MU220,Mechanical problem,2/17/2019 20:30:00,Munich
+MU220,Baggage claim,2/17/2019 21:30:00,Munich
+LN200,Check-in,4/15/2019 9:00:00,Munich
+LN200,Boarding,4/15/2019 10:10:00,Munich
+LN200,Take off,4/15/2019 10:30:00,Munich
+LN200,Landing,4/15/2019 12:20:00,London
+LN200,Baggage claim,4/15/2019 13:00:00,London
+MU330,Check-in,4/17/2019 16:00:00,London
+MU330,Delay announcement,4/17/2019 16:35:00,London
+MU330,Boarding,4/17/2019 17:20:00,London
+MU330,Take off,4/17/2019 18:00:00,London
+MU330,Landing,4/17/2019 20:00:00,Munich
+MU330,Mechanical problem,4/17/2019 20:30:00,Munich
+MU330,Baggage claim,4/17/2019 21:30:00,Munich
+LH458,Check-in,4/18/2019 9:00:00,Munich
+LH458,Boarding,4/18/2019 10:35:00,Munich
+LH458,Mechanical problem,4/18/2019 10:55:00,Munich
+LH458,Off boarding,4/18/2019 11:07:00,Munich
+LH458,Boarding,4/18/2019 12:13:00,Munich
+LH458,Take off,4/18/2019 12:51:00,Munich
+LH458,Landing,4/18/2019 21:00:00,San Francisco
+LH458,Baggage claim,4/18/2019 21:34:00,San Francisco
+LH459,Check-in,4/21/2019 17:00:00,San Francisco
+LH459,Boarding,4/21/2019 19:25:00,San Francisco
+LH459,Take off,4/21/2019 20:15:00,San Francisco
+LH459,Landing,4/22/2019 6:55:00,Munich
+LH459,Baggage claim,4/22/2019 7:35:00,Munich
+LH655,Check-in,4/26/2019 17:00:00,Munich
+LH655,Flight canceled,4/26/2019 19:25:00,Munich
+GH2230,Check-in,4/27/2019 11:00:00,Paris
+GH2230,Boarding,4/27/2019 11:25:00,Paris
+GH2230,Mechanical problem,4/27/2019 12:15:00,Paris
+GH2230,Off boarding,4/27/2019 12:43:00,Paris
+GH2230,Boarding,4/27/2019 13:30:00,Paris
+GH2230,Mechanical problem,4/27/2019 13:50:00,Paris
+GH2230,Off boarding,4/27/2019 14:30:00,Paris
+GH2230,Flight canceled,4/27/2019 14:35:00,Paris
+LN205,Check-in,5/15/2019 9:00:00,Munich
+LN205,Boarding,5/15/2019 10:10:00,Munich
+LN205,Take off,5/15/2019 10:30:00,Munich
+LN205,Landing,5/15/2019 12:20:00,London
+LN205,Baggage claim,5/15/2019 13:00:00,London
+FN338,Check-in,5/21/2019 17:00:00,San Francisco
+FN338,Boarding,5/21/2019 17:35:00,San Francisco
+FN338,Take off,5/21/2019 17:55:00,San Francisco
+FN338,Landing,5/22/2019 5:55:00,Munich
+FN338,Baggage claim,5/22/2019 7:35:00,Munich
+LH2286,Check-in,6/11/2019 9:37:00,Munich
+LH2286,Boarding,6/11/2019 10:05:00,Munich
+LH2286,Take off,6/11/2019 10:25:00,Munich
+LH2286,Landing,6/11/2019 11:57:00,Brussels
+LH2286,Baggage claim,6/11/2019 12:33:00,Brussels
+TR321,Check-in,7/1/2019 11:43:00,Munich
+TR321,Boarding,7/1/2019 12:51:00,Munich
+TR321,Take off,7/1/2019 13:15:00,Munich
+TR321,Landing,7/1/2019 21:54:00,New York
+TR321,Baggage claim,7/1/2019 22:38:00,New York
+TR521,Check-in,7/16/2019 8:15:00,New York
+TR521,Delay announcement,7/16/2019 9:01:00,New York
+TR521,Boarding,7/16/2019 14:00:00,New York
+TR521,Take off,7/16/2019 16:30:00,New York
+TR521,Landing,7/16/2019 1:00:00,Munich
+TR521,Baggage claim,7/16/2019 1:23:00,Munich
+LH2306,Check-in,7/20/2019 13:58:00,Munich
+LH2306,Delay announcement,7/20/2019 14:20:00,Munich
+LH2306,Boarding,7/20/2019 14:23:00,Munich
+LH2306,Take off,7/20/2019 15:03:00,Munich
+LH2306,Landing,7/20/2019 16:20:00,Amsterdam
