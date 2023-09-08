@@ -157,7 +157,13 @@ We worked with the Workspace Demo file [[https://tinyurl.com/WorkspaceDemoR][tin
 
 * Fri-8-Sep
 
-** Review DataCamp session
+* Project sprint review coming up
+
+- [[https://lyon.instructure.com/courses/1427/pages/sign-up-for-term-project][Sign up here!]]
+- Another idea: DataCamp weekly datasets! ([[https://app.datacamp.com/workspace/overview][Example]])
+  [[../img/weekly.png]]
+  
+* Review DataCamp session
 
 1) What's an event log, for example for web data? How many features
    does it have?
@@ -165,8 +171,8 @@ We worked with the Workspace Demo file [[https://tinyurl.com/WorkspaceDemoR][tin
    An identifier, a description of the event, and a timestamp
    #+end_quote
 2) Open your R scratchbook, load these data into a dataframe and tell
-   me how many columns and rows the data have - use only ONE line:
-   [[https://tinyurl.com/flightEventLogCsv][tinyurl.com/flightEventLogCsv]]
+   me how many columns and rows the data have - use only ONE line
+   after downloading the file: [[https://tinyurl.com/flightEventLogCsv][tinyurl.com/flightEventLogCsv]]
    #+begin_src R
      str(read.csv("../data/flight_event_log.csv",header=TRUE))
    #+end_src
@@ -210,25 +216,29 @@ We worked with the Workspace Demo file [[https://tinyurl.com/WorkspaceDemoR][tin
    #+end_quote
 9) Could you tell the "smart home" case study after watching it?
    #+begin_quote
+   What's the goal? To collect data from various sources to analyze
+   usage patterns, detect anomalies, make maintenance predictions.
+   
    1) Gather data using APIs for weather information (public), for
       tweets (commercial) and for sensor data (private).
    2) Transform data to fit a database format using e.g. [[https://airflow.apache.org/][Apache
-      Airflow]]. 
-   3) 
+      Airflow]]: pulls data from all sources at regular intervals,
+      cleans the data and loads it into a database.
    #+end_quote
 10) What does this case study illustrate?
     #+begin_quote
-    The data pipeline: gather, transform, store data.
+    The data pipeline: gather, transform, store data, and the
+    availability of infrastructure to help with these.
     #+end_quote
    
-** Review test 1
+* Review test 1
 
 1) You have loaded mtcars, saved ~mtcars~ in the variable data and loaded
    the ~Nile~ time series. What will ~ls()~ show in R?
 2) What is the data science work flow?
 3) Print the first 5 records of ~mtcars~
 
-** (Systematic) introduction to R
+* (Systematic) introduction to R
 
 - This and the lecture on data science in general are available via
   GitHub as PDF files.
