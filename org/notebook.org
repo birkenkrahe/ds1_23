@@ -8,7 +8,7 @@
 - See also whiteboard screenshots ([[https://drive.google.com/drive/folders/16Z3Lt_RBMnRMwORqZDfGMUezy-_B9huB?usp=sharing][GDrive]]).
 - Includes further reading, watching and comments
 
-* Wed-23-Aug
+* 1.1 Wed-23-Aug
 
 Summary:
 - introductory stuff on data science
@@ -20,7 +20,7 @@ Review questions:
 2. What is an example for a potential term project?
 3. What are the dominant languages in data science?
 
-* Fri-25-Aug
+* 1.2 Fri-25-Aug
 
 - Literate programming: tangle and weave and markup commands
 - Textbook selection to learn beginning and advanced R
@@ -112,7 +112,7 @@ Review questions:
 - It's an open book test: use any help you can get
 - Gradebook in Canvas is updated automatically
 
-* Mon-28-Aug
+* 2.1 Mon-28-Aug
 
 - DataCamp review: data pipeline; job roles in data science
 - Simple ~mtcars~ example in DataCamp workspace.
@@ -122,7 +122,7 @@ Review questions:
 - Computing a trendline through points using ~lm~ (linear regression
   model), and drawing a colored line with ~abline~.
 
-* Wed-30-Aug
+* 2.2 Wed-30-Aug
 
 - For the first sprint review, try to identify a topic and/or a
   dataset, and work through the criteria of the Canvas assignment.
@@ -135,7 +135,7 @@ Review questions:
 - The notebook has text cells, which allow insertion of links and
   images using markup notation.
 
-* Fri-1-Sep
+* 2.3 Fri-1-Sep
 
 We worked with the Workspace Demo file [[https://tinyurl.com/WorkspaceDemoR][tinyurl.com/WorkspaceDemoR]].
 
@@ -148,22 +148,22 @@ We worked with the Workspace Demo file [[https://tinyurl.com/WorkspaceDemoR][tin
 - How to extract unique values from a column vector
 - How to use the AI notebook interface
 
-* Wed-6-Sep
+* 3.1 Wed-6-Sep
 
 - How to share notebook editing rights
 - How to change values based on a pattern search with ~gsub~
 - Function parameters in ~unique~ and ~read.csv~
 - Adding your project idea to Canvas (pages)
 
-* Fri-8-Sep
+* 3.2 Fri-8-Sep
 
-* Project sprint review coming up
+** Project sprint review coming up
 
 - [[https://lyon.instructure.com/courses/1427/pages/sign-up-for-term-project][Sign up here!]]
 - Another idea: DataCamp weekly datasets! ([[https://app.datacamp.com/workspace/overview][Example]])
   [[../img/weekly.png]]
-  
-* Review DataCamp session
+
+** Review DataCamp session
 
 1) What's an event log, for example for web data? How many features
    does it have?
@@ -218,7 +218,7 @@ We worked with the Workspace Demo file [[https://tinyurl.com/WorkspaceDemoR][tin
    #+begin_quote
    What's the goal? To collect data from various sources to analyze
    usage patterns, detect anomalies, make maintenance predictions.
-   
+
    1) Gather data using APIs for weather information (public), for
       tweets (commercial) and for sensor data (private).
    2) Transform data to fit a database format using e.g. [[https://airflow.apache.org/][Apache
@@ -230,16 +230,46 @@ We worked with the Workspace Demo file [[https://tinyurl.com/WorkspaceDemoR][tin
     The data pipeline: gather, transform, store data, and the
     availability of infrastructure to help with these.
     #+end_quote
-   
-* Review test 1
 
-1) You have loaded mtcars, saved ~mtcars~ in the variable data and loaded
-   the ~Nile~ time series. What will ~ls()~ show in R?
+** Review test 1
+
+1) You have loaded mtcars, saved ~mtcars~ in the variable ~data~ and
+   loaded the ~Nile~ time series. What will ~ls()~ show in R?
+   #+begin_src R :results output
+     data(mtcars)
+     data <- mtcars
+     data(Nile)
+     ls()
+   #+end_src
+
+   #+RESULTS:
+   : [1] "data"   "mtcars" "Nile"
+
 2) What is the data science work flow?
-3) Print the first 5 records of ~mtcars~
+   1) collect data
+   2) prepare data (clean, storing)
+   3) analyze (transform, visualize)
+   4) share insights (present, notebooks)
 
-* (Systematic) introduction to R
+3) Print the first 5 records of ~mtcars~
+   #+begin_src R
+     head(mtcars,n=5)
+   #+end_src
+
+   #+RESULTS:
+   :                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+   : Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+   : Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+   : Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+   : Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+   : Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+
+* NEXT 4.1 Mon-11-Sep
+** Introduction to R
 
 - This and the lecture on data science in general are available via
-  GitHub as PDF files.
+  GitHub as PDF files ([[https://github.com/birkenkrahe/ds105/tree/main/pdf][link]]) - you have to download the ~raw~ file.
 
+* 4.2 Wed-13-Sep
+* 5.1 Mon-18-Sep
+** Monthly summary
