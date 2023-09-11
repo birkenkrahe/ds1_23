@@ -264,8 +264,7 @@ We worked with the Workspace Demo file [[https://tinyurl.com/WorkspaceDemoR][tin
    : Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
    : Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
 
-
-* NEXT 4.1 Mon-11-Sep
+* 4.1 Mon-11-Sep
 
 ** Vote for Lyon College this week!
 
@@ -285,7 +284,26 @@ https://arkansasmoneypolitics.secondstreetapp.com/og/e404fba6-f03f-4d70-939a-b72
 - This and the lecture on data science in general are available via
   GitHub as PDF files ([[https://github.com/birkenkrahe/ds105/tree/main/pdf][link]]) - you have to download the ~raw~ file.
 
+- Summary:
+  1) Different ways of opening and running R: notebooks (Google Colab,
+     Kaggle, DataCamp workspace, notable.io), Rterm/Rgui, and
+     different IDEs (RStudio, replit.com, vscode.dev).
+  2) Installing R locally and setting the ~$PATH~ variable (with admin
+     rights).
+  3) Keeping different versions of R on your computer because of the
+     dominance of libraries (which are tied to specific versions).
+  4) R demo with ~demo()~, e.g. ~demo(graphics)~ and ~help.start()~
+     documentation with tutorial and package list (local).
+  
+- Becker, History of S, 2004,
+  https://doi.org/10.1007/978-3-642-57991-2_6
 
 * 4.2 Wed-13-Sep
+
+** Projects
+
+
+** Introduction to R
+
 * 5.1 Mon-18-Sep
 ** Monthly summary

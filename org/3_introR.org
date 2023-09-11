@@ -422,8 +422,8 @@ Summary:
 Summary:
 - Function without arguments: ~getwd()~
 - Function with arguments: ~setwd('...')~
-- Absolute pathname like ~'c:/Users/birkenkrahe/'~
-- Relative pathnames like ~'../../'~ ("go up by 2 levels")
+- Absolute pathname like ~c:/Users/birkenkrahe/~
+- Relative pathnames like ~../../~ ("go up by 2 levels")
 
 * The R shell prompt
 
