@@ -264,11 +264,14 @@ We worked with the Workspace Demo file [[https://tinyurl.com/WorkspaceDemoR][tin
    : Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
    : Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
 
+
 * NEXT 4.1 Mon-11-Sep
+
 ** Introduction to R
 
 - This and the lecture on data science in general are available via
   GitHub as PDF files ([[https://github.com/birkenkrahe/ds105/tree/main/pdf][link]]) - you have to download the ~raw~ file.
+
 
 * 4.2 Wed-13-Sep
 * 5.1 Mon-18-Sep
