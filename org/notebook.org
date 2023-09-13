@@ -294,12 +294,11 @@ https://arkansasmoneypolitics.secondstreetapp.com/og/e404fba6-f03f-4d70-939a-b72
      dominance of libraries (which are tied to specific versions).
   4) R demo with ~demo()~, e.g. ~demo(graphics)~ and ~help.start()~
      documentation with tutorial and package list (local).
-  
+
 - Becker, History of S, 2004,
   https://doi.org/10.1007/978-3-642-57991-2_6
 
 * 4.2 Wed-13-Sep
-
 ** Vote for Lyon College this week!
 
 Put this in your daily calendar for daily vote through September 15!
@@ -313,8 +312,31 @@ You can vote once per day through Sept. 15! Go Scots!
 https://arkansasmoneypolitics.secondstreetapp.com/og/e404fba6-f03f-4d70-939a-b72afd1dcb42/gallery/396819790
 #+end_quote
 
-** Projects
-** Introduction to R part II
+** Projects!
+** DataCamp review
+
+- What's EDA?
+- What's Anscombe's quartet?
+  #+begin_src R
+    data(anscombe)
+    str(anscombe)
+  #+end_src
+  #+begin_src R :results graphics output file :file ../img/anscombe.png
+    plot(anscombe$x4,anscombe$y4,pch=16,col="red")
+  #+end_src
+  #+begin_src R
+    summary(anscombe)
+  #+end_src
+- Visualization and color.
+  #+begin_src R 
+    plot(mtcars$mpg ~ mtcars$wt, col=factor(mtcars$cyl), pch=16)
+  #+end_src
+
+  #+RESULTS:
+  
+** Introduction to R part
+
+
 
 * 5.1 Mon-18-Sep
 ** Monthly summary
