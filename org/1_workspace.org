@@ -1,4 +1,4 @@
-#+title: ds105-agenda-fall23
+#+title: Introducing DataCamp Workspace with R
 #+startup: overview hideblocks indent inlineimages
 #+property: header-args:R :results output :noweb yes :session *R*
 * Code along in R: unicorn companies
