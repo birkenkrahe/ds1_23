@@ -368,7 +368,6 @@ See R scratchbook in DataCamp workspace.
 - Special values
 - Special functions
 
-
 * No meeting on Sep-22 go to [[https://www.lyon.edu/acteb-conference][ACTEB]] instead!
 
 Extra credit: get a [[https://docs.google.com/document/d/1nya8YnjmXJRtSAi3VLCj-llfHgOie9RGd87rJ5H-YAI/edit?usp=sharing][signature]] from me for attending either the plenary
