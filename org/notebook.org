@@ -361,15 +361,27 @@ See R scratchbook in DataCamp workspace.
 #+attr_latex: :width 400px
 [[../img/bitcoin.png]]
 
-
-** Arithmetic with R
-- Special values
-- Special functions
-
 ** Assignments
 - Test 3 due Monday: includes DataCamp Intro to R chapter 
 - DataCamp assignment "Intro to basics in R" due Sunday
   
+** Arithmetic with R
+
+Summary:
+1) R environment settings - e.g. how many decimal digits are printed,
+   or how many columns are printed, and many more, are stored in
+   ~options()~, an R ~list~ type.
+2) To access an options parameter, use ~$~, for example ~options$digits~
+   for the number of decimal places displayed.
+3) To change an options parameter, set the new value as an argument,
+   for example ~options(digits=12)~ to increase the default accuracy
+   from 6 to 12.
+4) Special values ~Inf~ (Infinite) and ~NaN~ (Not a Number) are ~numeric~
+   data. ~NA~ is a "missing value". You can remove NAs from many
+   functions like ~mean~ using the ~na.rm=TRUE~ setting.
+5) The ~summary~ function returns the number of ~NA~ values in your data.
+   
+
 * No meeting on Sep-22 go to [[https://www.lyon.edu/acteb-conference][ACTEB]] instead!
 
 Extra credit: get a [[https://docs.google.com/document/d/1nya8YnjmXJRtSAi3VLCj-llfHgOie9RGd87rJ5H-YAI/edit?usp=sharing][signature]] from me for attending either the plenary
