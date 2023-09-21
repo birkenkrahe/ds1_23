@@ -362,6 +362,7 @@ See R scratchbook in DataCamp workspace.
 [[../img/bitcoin.png]]
 
 ** Assignments
+
 - Test 3 due Monday: includes DataCamp Intro to R chapter 
 - DataCamp assignment "Intro to basics in R" due Sunday
   
@@ -381,7 +382,6 @@ Summary:
    functions like ~mean~ using the ~na.rm=TRUE~ setting.
 5) The ~summary~ function returns the number of ~NA~ values in your data.
    
-
 * No meeting on Sep-22 go to [[https://www.lyon.edu/acteb-conference][ACTEB]] instead!
 
 Extra credit: get a [[https://docs.google.com/document/d/1nya8YnjmXJRtSAi3VLCj-llfHgOie9RGd87rJ5H-YAI/edit?usp=sharing][signature]] from me for attending either the plenary
