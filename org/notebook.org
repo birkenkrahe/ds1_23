@@ -404,3 +404,9 @@ A selection of interesting talks (judging from the title):
 4) Entrepreneurship: "The Importance of Entrepreneurs is Growing",
    Terrance Farrier (UA Pine Bluff)
 
+* 6.1 Mon-25-Sep
+
+** Review test 3 ([[https://lyon.instructure.com/courses/1427/assignments/18890?display=full_width][Canvas]])
+** Vectors in R (notebook)
+
+
