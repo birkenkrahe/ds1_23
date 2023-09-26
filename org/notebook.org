@@ -406,8 +406,12 @@ A selection of interesting talks (judging from the title):
 
 * 6.1 Mon-25-Sep
 
-** TODO How are you getting prepared for Thursday?
+** IN PROGRESS How are you getting prepared for Oct 5 Thursday?
+
+- MB: research attending companies and let students know
+
 ** Review test 3 ([[https://lyon.instructure.com/courses/1427/assignments/18890?display=full_width][Canvas]])
+
 ** Vectors in R (notebook)
 
 
