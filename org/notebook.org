@@ -406,12 +406,26 @@ A selection of interesting talks (judging from the title):
 
 * 6.1 Mon-25-Sep
 
-** IN PROGRESS How are you getting prepared for Oct 5 Thursday?
+** How are you getting prepared for Oct 5 Thursday?
 
 - MB: research attending companies and let students know
 
 ** Review test 3 ([[https://lyon.instructure.com/courses/1427/assignments/18890?display=full_width][Canvas]])
 
-** Vectors in R (notebook)
+** Vectors in R (notebook) - Part I
+
+- Assigning objects with ~<-~ | assigning parameter values with ~=~
+- ~class~ to check R object class (aka data type)
+- Data types: ~numeric~, ~character~, ~logical~
+- Emptying user-defined functions and variables with ~remove~
+
+* 6.2. Wed-27-Sep
+
+** Oct 5 Career fair update
+
+Interesting new companies attending: [[https://fbijobs.gov/special-agents?msclkid=c1b3852ed152177c47d6e03abd619b10][FBI]], [[https://www.acxiom.com/careers/][Acxiom]].
+
+** Vectors in R (notebook) - Part I
+
 
 
