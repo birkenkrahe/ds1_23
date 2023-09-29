@@ -330,10 +330,10 @@ See R scratchbook in DataCamp workspace.
     summary(anscombe)
   #+end_src
 - Visualization and color.
-  #+begin_src R 
+  #+begin_src R
     plot(mtcars$mpg ~ mtcars$wt, col=factor(mtcars$cyl), pch=16)
   #+end_src
-  
+
 ** Introduction to R part
 
 * 5.1 Mon-18-Sep
@@ -351,7 +351,7 @@ See R scratchbook in DataCamp workspace.
 6. RStudio or Rterm?
 7. ~help~ or ~?~
 
-** Arithmetic with R 
+** Arithmetic with R
 
 - Formula translator
 - Logarithms, exponential function
@@ -363,9 +363,9 @@ See R scratchbook in DataCamp workspace.
 
 ** Assignments
 
-- Test 3 due Monday: includes DataCamp Intro to R chapter 
+- Test 3 due Monday: includes DataCamp Intro to R chapter
 - DataCamp assignment "Intro to basics in R" due Sunday
-  
+
 ** Arithmetic with R
 
 Summary:
@@ -381,7 +381,7 @@ Summary:
    data. ~NA~ is a "missing value". You can remove NAs from many
    functions like ~mean~ using the ~na.rm=TRUE~ setting.
 5) The ~summary~ function returns the number of ~NA~ values in your data.
-   
+
 * No meeting on Sep-22 go to [[https://www.lyon.edu/acteb-conference][ACTEB]] instead!
 
 Extra credit: get a [[https://docs.google.com/document/d/1nya8YnjmXJRtSAi3VLCj-llfHgOie9RGd87rJ5H-YAI/edit?usp=sharing][signature]] from me for attending either the plenary
@@ -405,7 +405,6 @@ A selection of interesting talks (judging from the title):
    Terrance Farrier (UA Pine Bluff)
 
 * 6.1 Mon-25-Sep
-
 ** How are you getting prepared for Oct 5 Thursday?
 
 - MB: research attending companies and let students know
@@ -420,12 +419,34 @@ A selection of interesting talks (judging from the title):
 - Emptying user-defined functions and variables with ~remove~
 
 * 6.2. Wed-27-Sep
-
 ** Oct 5 Career fair update
 
 Interesting new companies attending: [[https://fbijobs.gov/special-agents?msclkid=c1b3852ed152177c47d6e03abd619b10][FBI]], [[https://www.acxiom.com/careers/][Acxiom]].
 
-** Vectors in R (notebook) - Part I
+** Vectors in R ([[https://app.datacamp.com/workspace/w/dd82b27c-14f4-4964-8d04-8750599d4274/edit][notebook]])
 
+- Everything is an object
+- Assigning objects
+- Creating vectors with =c=
+- Base R basics
+- Example: Down the ~Nile~
+- Histograms and line plots
 
+* 6.4 Fri-29-Sep
 
+** Vectors in R ([[https://app.datacamp.com/workspace/w/dd82b27c-14f4-4964-8d04-8750599d4274/edit][notebook]])
+
+- More on the histogram (with =factor= arguments)
+- Coercing strings to numbers, vectorization
+- Creating vectors with the colon operator =:=
+- Creating vectors with =seq= using stepwidth =by= or length of
+  vector =length.out=.
+
+* 7.1 Mon-2-Oct
+
+** Vectors in R ([[https://app.datacamp.com/workspace/w/dd82b27c-14f4-4964-8d04-8750599d4274/edit][notebook]])
+
+- Test practice: review R vectors
+- Repetitions with =rep=
+- Sorting and measuring vectors with =sort= and =length=
+- Naming with =names=

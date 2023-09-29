@@ -1,7 +1,7 @@
 #+TITLE: VECTORS in R
 #+AUTHOR: Introduction to data science (DSC 105) Fall 2022
 #+startup: hideblocks indent overview inlineimages entitiespretty
-#+PROPERTY: header-args:R :results output :session *R*
+#+PROPERTY: header-args:R :results output :session *R* :exports both :noweb yes
 #+attr_html: :width 400px
 [[../img/5_workhorse.png]]
 * What will you learn?
@@ -198,7 +198,7 @@ Let's call ~class~ for our three sample vectors:
     is.finite(specvec1)  # testing for finiteness
     is.infinite(specvec1)  # testing for infiniteness
     class(specvec1)
-    #+end_src
+  #+end_src
 
 * Base R - what's that again?
 
@@ -241,14 +241,14 @@ Let's call ~class~ for our three sample vectors:
   #+end_src
   #+begin_notes
 
-  Because we don't know yet how to look at sub-vectors or individual
-  vector elements, we cannot directly check what type the elements of
-  ~Nile~ have, but the output seems to suggest that the Nile flow is
-  measured in integer numbers.
+Because we don't know yet how to look at sub-vectors or individual
+vector elements, we cannot directly check what type the elements of
+~Nile~ have, but the output seems to suggest that the Nile flow is
+measured in integer numbers.
 
-  You can also see from the print output of ~Nile~ how row labels
-  work: there are 15 numbers per row, and the second row starts with
-  the 16th number, indicated by ~[16]~.
+You can also see from the print output of ~Nile~ how row labels
+work: there are 15 numbers per row, and the second row starts with
+the 16th number, indicated by ~[16]~.
   #+end_notes
 
 * Plotting the nile [[https://youtu.be/c_BvsnKU7T4][(video)]]
@@ -307,18 +307,73 @@ next four sections, we're going to look at useful functions.
 
 * Plotting the line plot
 
-- Since ~Nile~ is a time series, every data point has a time label
+Since ~Nile~ is a time series, every data point has a time label
 
-- You can easily plot the evolution of the date over time with ~plot~
+You can easily plot the evolution of the date over time with ~plot~
 
-- A line plot is useful to visualize two continuous numeric variables
+A line plot is useful to visualize two continuous numeric variables
 
-- This leads to a so-called /line plot/
-  #+begin_src R :exports both :session :results output graphics file :file ../img/lineNile.png
-    plot(Nile)
-  #+end_src
+This leads to a so-called /line plot/
+#+begin_src R :exports both :session :results output graphics file :file ../img/lineNile.png
+  plot(Nile)
+#+end_src
 
 - [ ] *Can you interpret the plot given what you know about the data?*
+
+Is =hist= a generic function?
+- Try to make a histogram of ~mtcars~.
+- Check out the structure of ~mtcars~ to see the column vector data types.
+- Make a histogram of ~mtcars$mpg~:
+  #+begin_src R :results graphics output file :file ../img/histmtcars.png
+    hist(mtcars$mpg)
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/histmtcars.png]]
+
+Will =hist= work with =factor= vectors? Check out ~ToothGrowth~, another
+built-in dataset:
+#+begin_src R
+  str(ToothGrowth)
+#+end_src
+
+#+RESULTS:
+: 'data.frame': 60 obs. of  3 variables:
+:  $ len : num  4.2 11.5 7.3 5.8 6.4 10 11.2 11.2 5.2 7 ...
+:  $ supp: Factor w/ 2 levels "OJ","VC": 2 2 2 2 2 2 2 2 2 2 ...
+:  $ dose: num  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 ...
+
+Try to create a histogram of the ~supp~ =factor= vector:
+#+begin_src R
+  tgs <- ToothGrowth$supp
+                                          # hist(tgs) #  Error in hist.default(tgs) : 'x' must be numeric
+#+end_src
+
+Can we turn the =factor= values into numbers?
+#+begin_src R :graphics
+  tgs <- as.numeric(tgs)
+  tgs
+#+end_src
+
+#+RESULTS:
+:  [1] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1
+: [41] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+Now we can plot the values as a histogram:
+#+begin_src R :results graphics output file :file ../img/tghist.png
+  hist(tgs,
+       breaks = 2,
+       col = "purple",
+       border = "white",
+       xlab = "Supply type (orange juice/vitamin C)")
+#+end_src
+
+#+RESULTS:
+[[file:../img/tghist.png]]
+
+For these and other settings, check out =help(hist)=, and =example(hist)=
+for the examples listed at the end of the documentation (see next
+section).
 
 * Asking for help
 #+attr_latex: :width 400px
@@ -343,40 +398,40 @@ system of learning - looking up the help content - and the more you
 look at help pages, the more you recognize known concepts.
 #+end_notes
 
-* NEXT Creating sequences and repetitions [[https://youtu.be/G2P_MVq3eyM][(video)]]
+* Creating sequences and repetitions [[https://youtu.be/G2P_MVq3eyM][(video)]]
 #+attr_html: :width 600px
 [[../img/5_sequence.jpg]]
 * The colon ~:~ operator
 
-- ~1:n~ creates a sequence of numbers separated by intervals of 1
-  #+begin_src R
-    3:21
-  #+end_src
+~1:n~ creates a sequence of numbers separated by intervals of 1
+#+begin_src R
+  3:21
+#+end_src
 
-- Check what type of R object ~3:21~ is by applying the functions:
+Check what type of R object ~3:21~ is by applying the functions:
   - ~class~ (R object class),
   - ~mode~ (R object storage mode)
   - ~is.vector~ (R vector check)
-  #+begin_src R
-    class(3:27)
-    mode(3:27)
-    is.vector(3:27)
-  #+end_src
+    #+begin_src R
+      class(3:27)
+      mode(3:27)
+      is.vector(3:27)
+    #+end_src
 
-- Sequences created this way can also be stored.
+  Sequences created this way can also be stored.
   #+begin_src R
     foo <- 5.3
     bar <- foo:10
     bar
   #+end_src
 
-- What happens if the first argument of ~:~ is smaller than the second?
+  What happens if the first argument of ~:~ is smaller than the second?
   #+begin_src R
     x <- 10:foo
     x
   #+end_src
 
-- You can perform computations to specify the range.
+  You can perform computations to specify the range.
   #+begin_src R
     baz <- foo:(-47+1.5)
     baz
@@ -390,6 +445,19 @@ look at help pages, the more you recognize known concepts.
   value. It stops at ~-44.7~, because the next value, ~-45.7~ would be
   outside of the interval $[5.3,-45.5])$.
   #+end_notes
+
+** Challenge: weird histogram
+
+The following code creates a weird histogram:
+#+begin_src R :results output graphics file :file ../colonhist.png
+  hist(1:10, breaks=10)
+#+end_src
+
+#+RESULTS:
+[[file:../colonhist.png]]
+
+What can you do to see the proper distribution with breaks at every
+number (all bars should have height 1)?
 
 * Sequences
 
@@ -415,20 +483,22 @@ look at help pages, the more you recognize known concepts.
     s[2]-s[1] # step-width
     seq(from = 3, to = 27, by = s[2]-s[1])
   #+end_src
-  #+end_notes
-- ~length.out~ can only be positive (there is no 'negative length').
 
-- [ ] Create a decreasing sequence of length 5 from 5 to -5. Use
-  ~length.out~ first, then use ~by~ to achieve the same result.
-  #+begin_notes solution
-  #+begin_src R
-    myseq <- seq(from=5, to=-5, length.out=5)
-    myseq
-    myseq1 <- seq(from=5, to=-5, by = -2.5)
-    myseq1
-  #+end_src
   #+end_notes
-* Repetition
+  - ~length.out~ can only be positive (there is no 'negative length').
+
+  - [ ] Create a decreasing sequence of length 5 from 5 to -5. Use
+    ~length.out~ first, then use ~by~ to achieve the same result.
+    #+begin_notes solution
+    #+begin_src R
+      myseq <- seq(from=5, to=-5, length.out=5)
+      myseq
+      myseq1 <- seq(from=5, to=-5, by = -2.5)
+      myseq1
+    #+end_src
+    #+end_notes
+
+* NEXT Repetition
 - Use ~rep~ to repeat a value, e.g. the number 1, four times:
   #+begin_src R
     rep( x = 1, times = 4)
@@ -592,12 +662,12 @@ look at help pages, the more you recognize known concepts.
   #+end_src
 
   #+RESULTS:
-  : Mon Tue Wed Thu Fri Sat Sun 
+  : Mon Tue Wed Thu Fri Sat Sun
   :   1   2   3   4   5   6   7
 
 - Copy ~week~ to ~workweek~, and remove ~"Saturday"~ and ~"Sunday"~ from the
   ~workweek~.
- #+begin_src R
+  #+begin_src R
     workweek <- week[1:5] # or week[-(6:7)]
     workweek
   #+end_src
@@ -651,7 +721,7 @@ look at help pages, the more you recognize known concepts.
     foo
     class(foo)  # foo becomes a character vector
   #+end_src
-  
+
 - Missing values ~NA~ are not coerced to ~character~ (e.g. ~"NA"~) because
   this would mean altering their main property, to be missing.
 
@@ -660,7 +730,7 @@ look at help pages, the more you recognize known concepts.
     mode(foo)  # R storage mode
     class(foo) # R object class
   #+end_src
-    
+
 - You can also explicitly convert elements using the functions
   ~as.character~, ~as.logical~ or ~as.numeric~.
   #+begin_src R
@@ -677,7 +747,7 @@ look at help pages, the more you recognize known concepts.
   : [1]   NA   NA TRUE
 
 - Conversion with ~as.logical~ has a surprise: any non-zero number is
-  turned into ~TRUE~ if the vector is ~numeric~. 
+  turned into ~TRUE~ if the vector is ~numeric~.
   #+begin_src R
     as.logical(c(1,0,-1, 0.333, -Inf, NaN ))
   #+end_src
