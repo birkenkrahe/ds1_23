@@ -210,6 +210,9 @@ Let's call ~class~ for our three sample vectors:
 - Do you remember how to find these pre-loaded datasets? One of these
   is ~Nile~. Do you remember how to get information on such a dataset
   (or on any R object)?
+  #+begin_example R
+    data()
+  #+end_example
 
 * Example: down the Nile [[https://youtu.be/wwsD2KuoKt8][(video)]]
 #+attr_html: :width 600px
@@ -512,26 +515,16 @@ resulting graph looks wrong:
 #+RESULTS:
 [[file:../colonhist.png]]
 
-The code below fixes all problems:
-1) =freq = FALSE= normalizes the diagram so that it shows the density
-   (so that the histogram has a total area of one).
-2) =breaks = seq(0.5,10.5,by=1)= puts each integer in its own bin.
-3) =axes = FALSE= removes the axes so that we can redraw them.
-4) =ylim = c(0,0.12)= resets the y-axis values (for the density \in [0,0.1]).
-5) The =axis= commands redraw the axis, for the y-axis including labels.
-#+begin_src R :results output graphics file :file ../colonhist1.png
-    hist(1:10,
-         freq = FALSE,
-         breaks = seq(0.5, 10.5, by=1),
-         axes = FALSE,
-         ylim = c(0, 0.12),
-         ylab = "Value")
-    axis(1, at = 1:10)
-    axis(2, at = c(0,0.1), labels = c('0','1'))
+The fix:
+#+begin_src R :results output graphics file :file ../img/colonhist2.png
+  hist(x = 1:10,
+       breaks = seq(from=1,
+                    to=10,
+                    length.out=11))
 #+end_src
 
 #+RESULTS:
-[[file:../colonhist1.png]]
+[[file:../img/colonhist2.png]]
 
 * Repetition
 - Use ~rep~ to repeat a value, e.g. the number 1, four times:

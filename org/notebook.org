@@ -445,7 +445,34 @@ Interesting new companies attending: [[https://fbijobs.gov/special-agents?msclki
 
 ** Solution to the histogram challenge?
 
-[[https://github.com/birkenkrahe/ds105/blob/main/org/5_vectors.org#odd-histogram-with-][Solution]]: uses 
+[[https://github.com/birkenkrahe/ds105/blob/main/org/5_vectors.org#odd-histogram-with-][Solution]]: uses the [[https://stat.ethz.ch/R-manual/R-devel/library/graphics/html/hist.html][documentation]] for =hist= and graphical output
+manipulation for redrawing the axes (shown at the end of the doc).
+
+
+** Class review = test preview
+
+1. Does =c= accept vectors as arguments?
+2. How does =mean= work and what does it do?
+3. Which assignment operators does R have?
+4. Which data types do you already know?
+   #+begin_src R
+     is.numeric(3.14)
+     is.integer(100)
+     is.logical(TRUE)
+     is.character("Liberty")
+   #+end_src
+5. What do you get from a histogram?
+   #+begin_src R :results output graphics file :file ../histogram.png
+     ## frequency of continues numeric values in a bin (interval)
+     ## number of years in which these values were observed
+     hist(Nile) 
+   #+end_src
+6. How can you load a dataset?
+   #+begin_src R
+     data()
+     # MASS must be installed with install.packages("MASS")
+     library(MASS)
+   #+end_src
 
 ** Vectors in R ([[https://app.datacamp.com/workspace/w/dd82b27c-14f4-4964-8d04-8750599d4274/edit][notebook]])
 
