@@ -433,7 +433,6 @@ Interesting new companies attending: [[https://fbijobs.gov/special-agents?msclki
 - Histograms and line plots
 
 * 6.4 Fri-29-Sep
-
 ** Vectors in R ([[https://app.datacamp.com/workspace/w/dd82b27c-14f4-4964-8d04-8750599d4274/edit][notebook]])
 
 - More on the histogram (with =factor= arguments)
@@ -443,6 +442,10 @@ Interesting new companies attending: [[https://fbijobs.gov/special-agents?msclki
   vector =length.out=.
 
 * 7.1 Mon-2-Oct
+
+** Solution to the histogram challenge?
+
+
 
 ** Vectors in R ([[https://app.datacamp.com/workspace/w/dd82b27c-14f4-4964-8d04-8750599d4274/edit][notebook]])
 
