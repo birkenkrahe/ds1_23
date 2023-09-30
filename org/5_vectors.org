@@ -2,8 +2,7 @@
 #+AUTHOR: Introduction to data science (DSC 105) Fall 2022
 #+startup: hideblocks indent overview inlineimages entitiespretty
 #+PROPERTY: header-args:R :results output :session *R* :exports both :noweb yes
-#+attr_html: :width 400px
-[[../img/5_workhorse.png]]
+#+options: toc:1
 * What will you learn?
 #+attr_html: :width 500px
 [[../img/5_workhorse.jpg]]
@@ -457,7 +456,7 @@ The following code creates a weird histogram:
 [[file:../colonhist.png]]
 
 What can you do to see the proper distribution with breaks at every
-number (all bars should have height 1)?
+number (all bars should have height 1)? See below for the solution.
 
 * Sequences
 
