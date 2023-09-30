@@ -445,7 +445,7 @@ Interesting new companies attending: [[https://fbijobs.gov/special-agents?msclki
 
 ** Solution to the histogram challenge?
 
-
+[[https://github.com/birkenkrahe/ds105/blob/main/org/5_vectors.org#odd-histogram-with-][Solution]]: uses 
 
 ** Vectors in R ([[https://app.datacamp.com/workspace/w/dd82b27c-14f4-4964-8d04-8750599d4274/edit][notebook]])
 

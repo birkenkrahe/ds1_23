@@ -501,7 +501,7 @@ Create a decreasing sequence of length 5 from 5 to -5. Use
 #+end_src
 #+end_notes
 
-* Odd histogram with =:=
+* Solution: odd histogram with colon op =:=
 
 When creating a histogram of the vector ~1:10~ with binwidth 10, the
 resulting graph looks wrong:
@@ -514,7 +514,7 @@ resulting graph looks wrong:
 
 The code below fixes all problems:
 1) =freq = FALSE= normalizes the diagram so that it shows the density
-   (number of elements over total number of elements) instead of count.
+   (so that the histogram has a total area of one).
 2) =breaks = seq(0.5,10.5,by=1)= puts each integer in its own bin.
 3) =axes = FALSE= removes the axes so that we can redraw them.
 4) =ylim = c(0,0.12)= resets the y-axis values (for the density \in [0,0.1]).
@@ -532,7 +532,7 @@ The code below fixes all problems:
 #+RESULTS:
 [[file:../colonhist1.png]]
 
-* NEXT Repetition
+* Repetition
 - Use ~rep~ to repeat a value, e.g. the number 1, four times:
   #+begin_src R
     rep( x = 1, times = 4)
