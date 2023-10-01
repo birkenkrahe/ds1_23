@@ -480,3 +480,8 @@ manipulation for redrawing the axes (shown at the end of the doc).
 - Repetitions with =rep=
 - Sorting and measuring vectors with =sort= and =length=
 - Naming with =names=
+
+* Mon, 16-Oct
+
+Monthly summary
+
