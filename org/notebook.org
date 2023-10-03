@@ -442,34 +442,77 @@ Interesting new companies attending: [[https://fbijobs.gov/special-agents?msclki
   vector =length.out=.
 
 * 7.1 Mon-2-Oct
-
 ** Solution to the histogram challenge?
 
 [[https://github.com/birkenkrahe/ds105/blob/main/org/5_vectors.org#odd-histogram-with-][Solution]]: uses the [[https://stat.ethz.ch/R-manual/R-devel/library/graphics/html/hist.html][documentation]] for =hist= and graphical output
 manipulation for redrawing the axes (shown at the end of the doc).
 
-
 ** Class review = test preview
 
 1. Does =c= accept vectors as arguments?
+   #+begin_src R
+     v <- c(1,2)
+     w <- c(v,3,4)
+     w
+   #+end_src
+
+   #+RESULTS:
+   : [1] 1 2 3 4
+
 2. How does =mean= work and what does it do?
+   #+begin_src R
+     mean(1,2,3)
+     mean(c(1,2,3))
+     mean(c(1,NA,2,NA,3))
+     mean(c(1,NA,2,NA,3), na.rm=TRUE)
+   #+end_src
+
+   #+RESULTS:
+   : [1] 1
+   : [1] 2
+   : [1] NA
+   : [1] 2
+
 3. Which assignment operators does R have?
+   #+begin_src R
+     x <- 1
+     x
+     y = 1  # you should reserver = for parameters
+     y
+   #+end_src
+
+   #+RESULTS:
+   : [1] 1
+   : [1] 1
+
 4. Which data types do you already know?
    #+begin_src R
      is.numeric(3.14)
-     is.integer(100)
+     is.integer(100) # is FALSE! Does not test for integer numbers
      is.logical(TRUE)
      is.character("Liberty")
    #+end_src
-5. What do you get from a histogram?
+
+   #+RESULTS:
+   : [1] TRUE
+   : [1] FALSE
+   : [1] "numeric"
+   : [1] TRUE
+   : [1] TRUE
+
+5. What do you get from a histogram (e.g. Nile)?
    #+begin_src R :results output graphics file :file ../histogram.png
      ## frequency of continues numeric values in a bin (interval)
      ## number of years in which these values were observed
      hist(Nile) 
    #+end_src
+
+   #+RESULTS:
+   [[file:../histogram.png]]
+
 6. How can you load a dataset?
    #+begin_src R
-     data()
+     data()  # shows the list of ALL built-in datasets
      # MASS must be installed with install.packages("MASS")
      library(MASS)
    #+end_src
@@ -478,8 +521,14 @@ manipulation for redrawing the axes (shown at the end of the doc).
 
 - Test practice: review R vectors
 - Repetitions with =rep=
+
+* Wed, 4-Oct
+
+** Vectors in R ([[https://app.datacamp.com/workspace/w/dd82b27c-14f4-4964-8d04-8750599d4274/edit][notebook]])
+
 - Sorting and measuring vectors with =sort= and =length=
 - Naming with =names=
+- Practice (lab) with practice file
 
 * Mon, 16-Oct
 
