@@ -604,6 +604,10 @@ The fix:
   #+begin_src R
     class(NA)
   #+end_src
+
+  #+RESULTS:
+  : [1] "logical"
+
 * Length of vectors
 
 - The ~length~ function gets or sets the length of vectors[fn:3]:
@@ -614,6 +618,14 @@ The fix:
     length(1000)               # scalar/vector of 1 element
   #+end_src
 
+  #+begin_src R
+    methods(length)
+  #+end_src
+
+  #+RESULTS:
+  : [1] length.hashtab* length.POSIXlt 
+  : see '?methods' for accessing help and source code
+  
 - If you have functions inside the object definition, ~length~ gives you
   the number of entries /after/ the inner functions have been executed:
   #+begin_src R
