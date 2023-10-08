@@ -12,29 +12,6 @@ Subsetting and extracting relates to vectorization:
 - How to create matrices and arrays
 - How to mix different data types
 
-* Preparations to code along
-  #+attr_html: :width 400px
-  [[../img/emacsprep.png]]
-
-  - Open a new Org-mode file ~subsetting.org~ in Emacs
-
-  - Put this line at the top of the file ~subsetting.org~
-
-    ~#+PROPERTY: header-args:R :results output :session *R*~
-
-  - Activate the code by putting your cursor on the line and entering
-    ~C-c C-c~. You should see the message ~Local setup has been refreshed~
-    in the minibuffer at the bottom of the editor.
-
-  - When you execute your first R code block, you'll be asked where you
-    want the session named ~*R*~ to run: enter the path to ~subsetting.org~
-
-  - For plots, use the header ~:results graphics file :file subsetting.png~
-    (this will overwrite the PNG file every time you create a new plot)
-
-  - When you leave Emacs, you'll be warned that the session ~*R*~ is
-    active: you can ignore this warning
-
 * Vectorization 1-2-3
 
   - In R, you don't need loops to perform operations on all elements of
@@ -158,6 +135,7 @@ Subsetting and extracting relates to vectorization:
       summary(foo[2:5])
       summary(foo)
     #+end_src
+
 * Logical functions in vectors: ~<~, ~>~, ~!=~, ~==~
 
   - You can directly use logical operators to subset vectors
@@ -236,7 +214,7 @@ Subsetting and extracting relates to vectorization:
       sum(Nile[ t >= 1960 & t <= 1966])
     #+end_src
 
-* TODO Negative indices
+* Negative indices
 
   - The minus operator ~-~ removes values with respective indices
 
@@ -279,7 +257,7 @@ Subsetting and extracting relates to vectorization:
       vec
     #+end_src
 
-* TODO Putting dissected vectors back together
+* Putting dissected vectors back together
 
   We're going to remove the next-to-last element of a vector and store
   the result. Then we re-insert the removed value again
@@ -307,7 +285,7 @@ Subsetting and extracting relates to vectorization:
      2. add ~bar~ at the end
      3. put last element of ~qux~ back
      #+end_notes
-* TODO Practice with ~Nile~
+* Practice with ~Nile~
 #+attr_html: :width 500px
 [[../img/nile.png]]
 

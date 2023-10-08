@@ -724,6 +724,7 @@ The fix:
     names(bar) <- NULL # remove names altogether
     bar
   #+end_src
+  
 * Indexing vectors
 
 - Passing a vector of positive numbers returns the slice of the

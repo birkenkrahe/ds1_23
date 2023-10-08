@@ -117,7 +117,7 @@ Notes:
   (Thanksgiving). See [[https://catalog.lyon.edu/202324-academic-calendar][2023-2024 academic calendar]].
 - ONLINE CLASSES: Sept 15 + 22.
 
-* Learning management system
+ Learning management system
 
 - We use Lyon's Canvas installation for this course.
 - The home page contains: assignments, grades, pages, people,
