@@ -418,7 +418,7 @@ A selection of interesting talks (judging from the title):
 - Data types: ~numeric~, ~character~, ~logical~
 - Emptying user-defined functions and variables with ~remove~
 
-* 6.2. Wed-27-Sep
+* 6.2. Wed-27-Sep: objects and assignments
 ** Oct 5 Career fair update
 
 Interesting new companies attending: [[https://fbijobs.gov/special-agents?msclkid=c1b3852ed152177c47d6e03abd619b10][FBI]], [[https://www.acxiom.com/careers/][Acxiom]].
@@ -432,7 +432,7 @@ Interesting new companies attending: [[https://fbijobs.gov/special-agents?msclki
 - Example: Down the ~Nile~
 - Histograms and line plots
 
-* 6.4 Fri-29-Sep
+* 6.4 Fri-29-Sep: hist, seq
 ** Vectors in R ([[https://app.datacamp.com/workspace/w/dd82b27c-14f4-4964-8d04-8750599d4274/edit][notebook]])
 
 - More on the histogram (with =factor= arguments)
@@ -441,8 +441,7 @@ Interesting new companies attending: [[https://fbijobs.gov/special-agents?msclki
 - Creating vectors with =seq= using stepwidth =by= or length of
   vector =length.out=.
 
-* 7.1 Mon-2-Oct
-
+* 7.1 Mon-2-Oct: vectors I
 ** Solution to the histogram challenge?
 
 [[https://github.com/birkenkrahe/ds105/blob/main/org/5_vectors.org#odd-histogram-with-][Solution]]: uses the [[https://stat.ethz.ch/R-manual/R-devel/library/graphics/html/hist.html][documentation]] for =hist= and graphical output
@@ -523,15 +522,13 @@ manipulation for redrawing the axes (shown at the end of the doc).
 - Test practice: review R vectors
 - Repetitions with =rep=
 
-* 7.2 Wed, 4-Oct
-
+* 7.2 Wed, 4-Oct: vectors II
 ** Vectors in R ([[https://app.datacamp.com/workspace/w/dd82b27c-14f4-4964-8d04-8750599d4274/edit][notebook]])
 
 - Sorting and measuring vectors with =sort= and =length=
 - Practice (lab) with practice file
 
-* 7.3 Fri, 6-Oct
-
+* 7.3 Fri, 6-Oct: vectors III
 ** Vectors in R ([[https://app.datacamp.com/workspace/w/dd82b27c-14f4-4964-8d04-8750599d4274/edit][notebook]])
 
 - Naming vectors with =names=
@@ -539,7 +536,7 @@ manipulation for redrawing the axes (shown at the end of the doc).
 - Indexing vectors
 - Coercion of data types
 
-* 8.1 Wed, 11-Oct
+* 8.1 Wed, 11-Oct: indexing
 ** Preview and review
 
 1. What's =NULL=? How do you get it or use it?
@@ -655,14 +652,15 @@ manipulation for redrawing the axes (shown at the end of the doc).
     : [1] 1
 
 ** Indexing practice
+* 8.2 Fri, 13-Oct: subsetting
 ** Subsetting examples
 ** Subsetting practice
 
-* 8.2 Fri, 13-Oct
-
 * 9.1 Mon, 16-Oct
 
-Monthly summary
+- Monthly summary
+
+- 2nd sprint review
 
 * 9.2 Wed, 18-Oct
 * 9.3 Fri, 20-Oct
