@@ -658,6 +658,30 @@ manipulation for redrawing the axes (shown at the end of the doc).
 ** Subsetting examples
 ** Subsetting practice
 
-* Mon, 16-Oct
+* 8.2 Fri, 13-Oct
+
+* 9.1 Mon, 16-Oct
 
 Monthly summary
+
+* 9.2 Wed, 18-Oct
+* 9.3 Fri, 20-Oct
+* 10.1 Mon, 23-Oct
+
+Wed, 25-Oct meeting in Derby 209 (via Zoom)
+#+attr_latex: :width 400px
+[[../img/uams.jpg]]
+
+As a follow-up from the Career fair, Dr. Clare Brown (BA psych Lyon
+'07) and Dr. Mandana Rezaeiahari will present a research showcase and
+give an introduction to the [[https://publichealth.uams.edu/academics/masters/academics-masters-mshcda/][UAMS healthcare analytics programs]]
+(Master and Graduate certificate).
+
+The meeting will take place on October 25, 9-9.50 AM via Zoom:
+https://lyon-edu.zoom.us/j/83316335723 (no passcode) - or you can join
+us in room 209 in the Derby building.
+
+* 10.2 Wed, 25-Oct
+* 10.3 Fri, 27-Oct SCOTSFEST VISIT
+#+attr_html: :width 400px
+[[../img/scotsfest.jpg]]
