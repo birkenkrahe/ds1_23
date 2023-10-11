@@ -539,7 +539,6 @@ manipulation for redrawing the axes (shown at the end of the doc).
 * 8.1 Wed, 11-Oct: indexing
 
 REMEMBER THE 2ND SPRINT REVIEW ON FRIDAY!
-
 ** Vectors - preview and review
 
 [[https://app.datacamp.com/workspace/w/7fc0edc8-6606-4a22-abf9-4bc628d90edc/edit][DataCamp workspace - vector_review.ipynb]]
@@ -732,6 +731,7 @@ REMEMBER THE 2ND SPRINT REVIEW ON FRIDAY!
    #+end_src
 
    #+RESULTS:
+        
    : [1] 1 2 3 6 7 9
    : [1] 1 2 3 6 7 9
    :  [1]  7  5  6  1  2 10  8  3  8  2
@@ -758,7 +758,7 @@ REMEMBER THE 2ND SPRINT REVIEW ON FRIDAY!
 ** Subsetting examples
 ** Subsetting practice
 
-* 9.1 Mon, 16-Oct
+* 9.1 Mon, 16-Oct: second sprint review
 
 - Monthly summary
 
