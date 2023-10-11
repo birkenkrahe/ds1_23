@@ -537,7 +537,12 @@ manipulation for redrawing the axes (shown at the end of the doc).
 - Coercion of data types
 
 * 8.1 Wed, 11-Oct: indexing
-** Preview and review
+
+REMEMBER THE 2ND SPRINT REVIEW ON FRIDAY!
+
+** Vectors - preview and review
+
+[[https://app.datacamp.com/workspace/w/7fc0edc8-6606-4a22-abf9-4bc628d90edc/edit][DataCamp workspace - vector_review.ipynb]]
 
 1. What's =NULL=? How do you get it or use it?
    #+begin_src R
@@ -621,7 +626,7 @@ manipulation for redrawing the axes (shown at the end of the doc).
    :   longer object length is not a multiple of shorter object length
 8. How can you retrieve the first row of the =mpg= column of =mtcars=?
    #+begin_src R
-                                             # What are we retrieving?
+     ## What are we retrieving?
      print(mtcars$mpg[1])
      print(mtcars[1,1])
    #+end_src
@@ -629,6 +634,7 @@ manipulation for redrawing the axes (shown at the end of the doc).
    #+RESULTS:
    : [1] 21
    : [1] 21
+
 9. If ~foo <- c(100,200,300)~, what are ~foo < 200~ and ~foo[foo<200]~?
    #+begin_src R
      foo <- c(100,200,300)
@@ -652,6 +658,102 @@ manipulation for redrawing the axes (shown at the end of the doc).
     : [1] 1
 
 ** Indexing practice
+
+[[https://app.datacamp.com/workspace/w/7fc0edc8-6606-4a22-abf9-4bc628d90edc/edit][DataCamp workspace - 5_indexing_practice.ipynb]]
+
+1) Store a vector of these 10 values in ~foo~: ~7 5 6 1 2 10 8 3 8 2~
+
+   #+begin_src R
+     (foo <- c(7, 5, 6, 1, 2, 10, 8, 3, 8, 2))
+     foo
+   #+end_src
+
+   #+RESULTS:
+   :  [1]  7  5  6  1  2 10  8  3  8  2
+   :  [1]  7  5  6  1  2 10  8  3  8  2
+
+2) Show that the vector has 10 values using a function.
+
+   #+begin_src R
+     length(foo)
+   #+end_src
+
+   #+RESULTS:
+   : [1] 10
+
+3) Extract the fifth through seventh elements of ~foo~ and add ~5~ to
+   these elements (the answer should be: ~7 15 13~).
+
+   #+begin_src R
+     foo[5:7]
+     foo[5:7] + 5
+   #+end_src
+
+   #+RESULTS:
+   : [1]  2 10  8
+   : [1]  7 15 13
+
+4) Create a logical flag vector with the command ~foo >= 5~
+
+   #+begin_src R
+     foo >= 5 # because of vectorisation, R tests every element of foo:
+     foo[1] >= 5
+     foo[4] >= 5
+   #+end_src
+
+   #+RESULTS:
+   :  [1]  TRUE  TRUE  TRUE FALSE FALSE  TRUE  TRUE FALSE  TRUE FALSE
+   : [1] TRUE
+   : [1] FALSE
+
+5) Extract the elements of ~foo~ that are greater than or equal to 5 and
+   store them in ~bar~
+
+   #+begin_src R
+     foo[c(TRUE, TRUE, TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE)]
+     bar <- foo[foo >= 5]
+     foo; bar
+   #+end_src
+
+   #+RESULTS:
+   : [1]  7  5  6 10  8  8
+   :  [1]  7  5  6  1  2 10  8  3  8  2
+   : [1]  7  5  6 10  8  8
+
+6) Create a logical index vector named ~index~ that contains the indices
+   of the elements of ~foo~ that are greater than or equal to 5 using
+   the function ~which~
+
+   #+begin_src R
+     which(c(TRUE, TRUE, TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE))
+     index <- which(foo >= 5)
+     index
+     foo
+   #+end_src
+
+   #+RESULTS:
+   : [1] 1 2 3 6 7 9
+   : [1] 1 2 3 6 7 9
+   :  [1]  7  5  6  1  2 10  8  3  8  2
+
+7) Print those elements of ~foo~ that are smaller than ~5~ using ~index~
+
+   #+begin_src R
+     foo[-index]
+   #+end_src
+
+   #+RESULTS:
+   : [1] 1 2 3 2
+
+8) Print elements greater than or equal to 5
+
+   #+begin_src R
+     foo[index]
+   #+end_src
+
+   #+RESULTS:
+   : [1]  7  5  6 10  8  8
+
 * 8.2 Fri, 13-Oct: subsetting
 ** Subsetting examples
 ** Subsetting practice
