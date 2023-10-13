@@ -94,6 +94,10 @@ Subsetting and extracting relates to vectorization:
     #+begin_src R
       time(Nile)[length(Nile)]
     #+end_src
+
+    #+RESULTS:
+    : [1] 1970
+
 * Using the colon operator in index
 
   - Create a sample vector ~foo~
@@ -162,6 +166,12 @@ Subsetting and extracting relates to vectorization:
     
   - /Tip: reset your variables with ~rm(list=ls())~ at any time/
 
+  - A logical sub-vector, flag or index vector is a Boolean or =logical=
+    vector whose elements are the result of a logical check, for
+    example ~v > 0~. This will return a vector of length ~length(v)~ whose
+    elements are =TRUE= or =FALSE= if they meet or don't meet the
+    logical check.
+  
   - Create logical sub-vectors of positive and negative elements
     #+begin_src R
       foo_pos <- c(foo > 0)
@@ -176,12 +186,17 @@ Subsetting and extracting relates to vectorization:
       c(foo=0)
     #+end_src
 
+    #+RESULTS:
+    : foo 
+    :   0
+
   - What happens if you ~sum~ the logical index vectors?
     #+begin_src R
       sum(foo_pos)
       sum(foo_neg)
       sum(foo_nul)
     #+end_src
+
 * Selecting with logical index vectors
 
   - You can now use these subvectors as logical flag or index vectors
