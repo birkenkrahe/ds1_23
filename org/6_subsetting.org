@@ -140,7 +140,7 @@ Subsetting and extracting relates to vectorization:
       summary(foo)
     #+end_src
 
-* Logical functions in vectors: ~<~, ~>~, ~!=~, ~==~
+* IN PROGRESS Logical functions in vectors: ~<~, ~>~, ~!=~, ~==~
 
   - You can directly use logical operators to subset vectors
 
@@ -181,6 +181,7 @@ Subsetting and extracting relates to vectorization:
       foo_nul <- c(foo == 0)  # what is c(foo=0) ?
       foo_nul
     #+end_src
+
   - What is ~c(foo = 0)~?
     #+begin_src R
       c(foo=0)
