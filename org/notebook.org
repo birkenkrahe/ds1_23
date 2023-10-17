@@ -757,9 +757,6 @@ REMEMBER THE 2ND SPRINT REVIEW ON FRIDAY!
 
 ** 8.2 Fri, 13-Oct: subsetting
 *** Subsetting lecture / code along
-* NEXT 9.1 Mon, 16-Oct: second sprint review
-#+caption: Illustration of the 'R Superhero' action figure encased in transparent plastic. He's depicted with a cape that has patterns resembling data distributions and histograms. His armor is inscribed with Base R commands, and he wears a helmet shaped like an 'R' letter. Accessories include a miniature laptop running Base R scripts and a magnifying glass for inspecting data points. The package highlights 'Analytics Ace!', 'Functionality Fanatic!', 'Data Detective!', and 'Graph Guru!' showcasing his prowess in data analytics and statistical programming.
-#+attr_latex: :width 400px
 [[../img/Rsuperhero.png]]
 
 ** Monthly summary
@@ -819,8 +816,10 @@ REMEMBER THE 2ND SPRINT REVIEW ON FRIDAY!
 |  39 | sum          | Return sum of all values                  |
 |  40 | summary      | Return statistical summary (generic)      |
 |  41 | mean         | Return arithmetic average                 |
+|  42 | matrix       | Create a matrix                           |
 
-*** Extras
+*** Extras (Google Space)
+
 - [[https://www.datacamp.com/blog/how-to-use-workspace-ai-powered-notebooks-for-every-data-skill-level][Workspace AI-Powered Notebooks for Every Data Skill Level]].
 - =is.integer= does not actually check if its argument is an integer.
 - What are good questions for product owner/project teams?
