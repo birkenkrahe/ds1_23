@@ -182,6 +182,11 @@ Subsetting and extracting relates to vectorization:
       foo_nul
     #+end_src
 
+    #+RESULTS:
+    :  [1] FALSE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE  TRUE
+    :  [1]  TRUE FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE FALSE FALSE FALSE
+    :  [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE FALSE
+
   - What is ~c(foo = 0)~?
     #+begin_src R
       c(foo=0)
@@ -229,6 +234,10 @@ Subsetting and extracting relates to vectorization:
       Nile[ t >= 1960 & t <= 1966]
       sum(Nile[ t >= 1960 & t <= 1966])
     #+end_src
+
+    #+RESULTS:
+    : [1]  815 1020  906  901 1170  912  746
+    : [1] 6470
 
 * Negative indices
 
