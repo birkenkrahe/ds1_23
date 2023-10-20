@@ -232,11 +232,16 @@ Subsetting and extracting relates to vectorization:
     #+begin_src R
       t <- time(Nile)
       Nile[ t >= 1960 & t <= 1966]
+      Nile[ t >= 1960 | t <= 1966]      
       sum(Nile[ t >= 1960 & t <= 1966])
     #+end_src
 
     #+RESULTS:
     : [1]  815 1020  906  901 1170  912  746
+    : numeric(0)
+    : Warning message:
+    : In t >= 1960 && t <= 1966 :
+    :   'length(x) = 100 > 1' in coercion to 'logical(1)'
     : [1] 6470
 
 * Negative indices
