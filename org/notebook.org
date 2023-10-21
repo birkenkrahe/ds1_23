@@ -732,7 +732,7 @@ REMEMBER THE 2ND SPRINT REVIEW ON FRIDAY!
    #+end_src
 
    #+RESULTS:
-        
+
    : [1] 1 2 3 6 7 9
    : [1] 1 2 3 6 7 9
    :  [1]  7  5  6  1  2 10  8  3  8  2
@@ -824,7 +824,7 @@ REMEMBER THE 2ND SPRINT REVIEW ON FRIDAY!
 - =is.integer= does not actually check if its argument is an integer.
 - What are good questions for product owner/project teams?
 - [[https://app.datacamp.com/learn/competitions/board-games][DataCamp competition]] in Python or R "which game to play?"
-  
+
 ** 2nd sprint review
 #+caption: Medieval colored woodcut of a grand hall with large wooden tables. Project teams from various regions, wearing medieval attire, stand around the tables presenting scrolls and parchments. One team highlights their methods using intricate diagrams and charts carved onto wooden boards. In the background, scholars and lords attentively listen, some taking notes on small scrolls. A large banner overhead reads 'Sprint Review'.
 #+attr_latex: :width 400px
@@ -835,17 +835,15 @@ REMEMBER THE 2ND SPRINT REVIEW ON FRIDAY!
 - Comment on you general *progress*, pride, change issues.
 - Ask *questions* of the product owner and of other projects.
 - *Upload* any material to your project folder in GDrive.
-  
+
 ** Subsetting code along / practice ([[https://app.datacamp.com/workspace/w/ef97b586-175f-4314-9f94-a4034e1f1be2/edit][workspace]])
 
-* 9.2 Wed, 18-Oct
-
-** Subsetting code along continued
-** Subsetting practice
-
-* 9.3 Fri, 20-Oct
+* 9.2 Wed, 18-Oct - subsetting =Nile=
+- Subsetting code along continued
+- Subsetting practice
+* 9.3 Fri, 20-Oct - subsetting =islands= & test 6
 * 10.1 Mon, 23-Oct
-
+** UAMS presentation Wednesday 25-Oct
 Wed, 25-Oct meeting in Derby 209 (via Zoom)
 #+attr_latex: :width 400px
 [[../img/uams.jpg]]
@@ -859,7 +857,342 @@ The meeting will take place on October 25, 9-9.50 AM via Zoom:
 https://lyon-edu.zoom.us/j/83316335723 (no passcode) - or you can join
 us in room 209 in the Derby building.
 
-* 10.2 Wed, 25-Oct
+** Assignment review and test preview
+
+*** Review subsetting exercises for =Nile= and =islands=:
+  [[https://app.datacamp.com/workspace/w/ef97b586-175f-4314-9f94-a4034e1f1be2/edit][notebook for Nile]] / [[https://app.datacamp.com/workspace/w/84f18411-f8a5-4b1d-82fd-41d9f7b08312/edit][notebook for islands]]
+
+*** Review DataCamp lesson on =matrix= data structures:
+  1) How can you find out if an R object is a =matrix=?
+     #+begin_src R
+       M <- cbind(c(1,2), c(3,4))
+       M
+       is.matrix(M)
+     #+end_src
+
+     #+RESULTS:
+     :      [,1] [,2]
+     : [1,]    1    3
+     : [2,]    2    4
+     : [1] TRUE
+  2) How many data types can a =matrix= hold?
+  3) Can you create this matrix?
+     #+begin_example org
+     :      [,1] [,2]
+     : [1,]    1    2
+     : [2,]    3    4
+     #+end_example
+     #+begin_src R
+       M1 <- rbind(c(1,2),c(3,4)); M1
+       M2 <- cbind(c(1,3),c(2,4)); M2
+       matrix(1:4,nrow=2,byrow=TRUE)
+     #+end_src
+
+     #+RESULTS:
+     :      [,1] [,2]
+     : [1,]    1    2
+     : [2,]    3    4
+     :      [,1] [,2]
+     : [1,]    1    2
+     : [2,]    3    4
+     :      [,1] [,2]
+     : [1,]    1    2
+     : [2,]    3    4
+  4) How can you check if two matrices are =identical=?
+     #+begin_src R
+       identical(M1,M2)  # exact equality
+       all.equal(M1,M2)  # approximate equality
+     #+end_src
+
+     #+RESULTS:
+     : [1] TRUE
+     : [1] TRUE
+  5) Can you create this matrix?
+     #+begin_example org
+     :     name  age
+     : 001 "Joe" "22"
+     : 002 "Jim" "25"
+     #+end_example
+     Solution:
+     #+begin_src R
+       names <- c("Joe","Jim")
+       age <- c(22,25)
+       names_age <- matrix(c(names,age),nrow=2)
+       names_age
+       colnames(names_age) <- c("name","age")
+       names_age
+       rownames(names_age) <- c("001","002")
+       names_age
+     #+end_src
+
+     #+RESULTS:
+     :      [,1]  [,2]
+     : [1,] "Joe" "22"
+     : [2,] "Jim" "25"
+     :      name  age
+     : [1,] "Joe" "22"
+     : [2,] "Jim" "25"
+     :     name  age
+     : 001 "Joe" "22"
+     : 002 "Jim" "25"
+  6) When you put named vectors in a =matrix=, what happens to them?
+     #+begin_src R
+       names2 <- c(name1="Joe",name2="Jim")
+       names2
+       age2 <- c(age1=22,age2=25)
+       age2
+       names_age2 <- matrix(c(names,age),nrow=2)
+       names_age2
+       colnames(names_age2)
+       rownames(names_age2)
+       str(names_age2)
+       names_age2[1,1]
+     #+end_src
+
+     #+RESULTS:
+     : name1 name2 
+     : "Joe" "Jim"
+     : age1 age2 
+     :   22   25
+     :      [,1]  [,2]
+     : [1,] "Joe" "22"
+     : [2,] "Jim" "25"
+     : NULL
+     : NULL
+  7) What does ~rowSums~ give you on the following matrix?
+     #+begin_example org
+     :     name  age
+     : 001 "Joe" "22"
+     : 002 "Jim" "25"
+     #+end_example
+     Solution:
+     #+begin_src R
+       rowSums(names_age2)
+     #+end_src
+
+     #+RESULTS:
+     : Error in rowSums(names_age2) : 'x' must be numeric
+  8) How can you compute column sums on this matrix?
+     #+begin_example org
+     :      [,1] [,2] 
+     : [1,] "10" "101"
+     : [2,] "20" "201"
+     #+end_example
+
+     Solution:
+     #+begin_src R
+       M3 <- matrix(as.character(c(10,20,101,201)),
+                    nrow=2)
+       M3
+       M4 <- matrix(as.numeric(M3),
+                    nrow=2)
+       M4
+     #+end_src
+
+     #+RESULTS:
+     :      [,1] [,2] 
+     : [1,] "10" "101"
+     : [2,] "20" "201"
+     :      [,1] [,2]
+     : [1,]   10  101
+     : [2,]   20  201
+  9) How can you extract the first row and add it at the end?
+     #+begin_example org
+     :      [,1] [,2]
+     : [1,]   10  101
+     : [2,]   20  201
+     #+end_example
+
+     Solution:
+     #+begin_src R
+       M4
+       M4[1,]
+       rbind(M4,M4[1,])
+     #+end_src
+
+     #+RESULTS:
+     :      [,1] [,2]
+     : [1,]   10  101
+     : [2,]   20  201
+     : [1]  10 101
+     :      [,1] [,2]
+     : [1,]   10  101
+     : [2,]   20  201
+     : [3,]   10  101
+  10) How can you extract the diagonal from the following matrix as a
+      vector ~1 1 1~? Tip: to generate this matrix, use =diag=.
+      #+begin_example
+      :      [,1] [,2] [,3]
+      : [1,]    1    0    0
+      : [2,]    0    1    0
+      : [3,]    0    0    1
+      #+end_example
+
+      Solution:
+      #+begin_src R
+        M5 <- diag(3)
+        M5
+        M5[c(M5[1,1],M5[2,2],M5[3,3])]
+      #+end_src
+
+      #+RESULTS:
+      :      [,1] [,2] [,3]
+      : [1,]    1    0    0
+      : [2,]    0    1    0
+      : [3,]    0    0    1
+      : [1] 1 1 1
+      
+*** Review DataCamp lesson on =factor= data structures:
+1) What's a =factor=?
+   #+begin_quote
+   A =factor= is a statistical data type used to store ordinal or
+   nominal categorical variables as a =vector= with =levels=.
+   #+end_quote
+2) How can you find out if an R object is a factor?
+   #+begin_src R
+     foo <- c("Joe", "Jim", "Job")
+     foof <- factor(foo)
+     foof
+     is.factor(foof)
+   #+end_src
+
+   #+RESULTS:
+   : [1] Joe Jim Job
+   : Levels: Jim Job Joe
+   : [1] TRUE
+3) How many data types can a =factor= hold?
+   #+begin_quote
+   A =factor= is a vector data structure and can hold only one type of
+   element, namely =character= type =levels=. Other types are coerced.
+   #+end_quote
+   #+begin_src R
+     levels(foof)
+     class(levels(foof))
+   #+end_src
+
+   #+RESULTS:
+   : [1] "Jim" "Job" "Joe"
+   : [1] "character"
+4) What type of categorical variables are these vector elements?
+   #+begin_src R :results silent
+     foo <- c("green", "red", "blue")
+     bar <- c("small", "medium", "tall")
+   #+end_src
+
+   Solution:
+   #+begin_src R
+                                             # foo is a nominal categorical variable and a character vector
+     factor(foo)
+                                             # bar is an ordinal categorical variable and a character vector
+     factor(bar)
+   #+end_src
+
+   #+RESULTS:
+   : [1] green red   blue
+   : Levels: blue green red
+   : [1] small  medium tall
+   : Levels: medium small tall
+5) How can you turn ~bar~ into a =factor= named ~barf~ that is =ordered=?
+   #+begin_src R
+     barf <- factor(bar,levels=c("small","medium","tall"),
+                    ordered=TRUE)
+     barf
+   #+end_src
+
+   #+RESULTS:
+   : [1] small  medium tall
+   : Levels: small < medium < tall
+6) What happens to ~c(1,2,3)~ when I convert it to a =factor=?
+   #+begin_src R
+     baz <- factor(c(1,2,3))
+     baz
+     class(levels(baz)) # factor levels are stored as character
+   #+end_src
+
+   #+RESULTS:
+   : [1] 1 2 3
+   : Levels: 1 2 3
+   : [1] "character"
+7) How can I sum up elements of ~factor(c(1,2,3))~?
+   #+begin_src R
+     ## the elements of a factor are (character) levels
+     ## sum(factor) is not meaningful
+     baz
+     sum(as.numeric(baz))
+   #+end_src
+
+   #+RESULTS:
+   : [1] 1 2 3
+   : Levels: 1 2 3
+   : [1] 6
+8) How do =levels= of a =factor= and =names= of a =vector= differ?
+   #+begin_src R
+     vec <- c(one=1,two=2,three=3)
+     factor(vec)
+   #+end_src
+
+   #+RESULTS:
+   :   one   two three
+   :     1     2     3
+   : Levels: 1 2 3
+9) What is the (statistical) =summary= of a =factor= vector?
+   #+begin_src R
+     barf  # ordered factor
+     summary(barf)
+     barf2 <- c(barf,barf,barf)  # ordered factor
+     barf2
+     summary(barf2)
+   #+end_src
+
+   #+RESULTS:
+   #+begin_example
+   [1] small  medium tall
+   Levels: small < medium < tall
+    small medium   tall
+        1      1      1
+   [1] small  medium tall   small  medium tall   small  medium tall
+   Levels: small < medium < tall
+    small medium   tall
+        3      3      3
+   Error in Summary.ordered(c(1L, 2L, 3L, 1L, 2L, 3L, 1L, 2L, 3L), na.rm = FALSE) :
+     'sum' not defined for ordered factors
+   #+end_example
+10) Can you compare two factors levels?
+    #+begin_src R
+      ## you can compare factors if they are ordered
+      barf  # ordered 3-level factor
+      joe <- barf[2]
+      jim <- barf[3]
+      if (joe > jim) {
+        cat("Joe's taller than Jim\n")
+      }  else {
+        cat("Jim's taller than Joe\n")
+      }
+      
+      qux <- factor(c("small","big")) # not ordered 2-level factor
+      qux
+      qux[1] > qux[2]  # output is NA
+    #+end_src
+
+    #+RESULTS:
+    : [1] small  medium tall  
+    : Levels: small < medium < tall
+    : Jim's taller than Joe
+    : [1] small big  
+    : Levels: big small
+    : [1] NA
+    : Warning message:
+    : In Ops.factor(qux[1], qux[2]) : '>' not meaningful for factors
+
+** DataCamp assignments published
+
+- Oct 30: R data frames
+- Nov 6: R lists
+- Nov 13: Introduction to importing data in R
+- Nov 20: Introduction to data visualization using ggplot2
+- Nov 27: Python for R users - Basics
+
+* 10.2 Wed, 25-Oct -
 * 10.3 Fri, 27-Oct SCOTSFEST VISIT
 #+attr_html: :width 400px
 [[../img/scotsfest.jpg]]

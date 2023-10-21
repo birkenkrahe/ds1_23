@@ -1,0 +1,63 @@
+#+TITLE: Practice: Creating and subsetting data frames
+#+AUTHOR: [YourName]
+#+SUBTITLE: Introduction to data science (DSC 105) Fall 2023
+#+STARTUP: overview hideblocks indent
+#+PROPERTY: header-args:R :session *R* :results output
+* README
+
+  - Practice file for the lecture on "Subsetting and extracting data
+    frames in R" ([[https://github.com/birkenkrahe/ds1/tree/piHome/org][lecture and review file in GitHub]])
+  - Create, execute and debug R code blocks as needed
+  - You can find the solutions in the PDF repository for the course
+
+* Create data frame
+
+  1) Create the data frame shown in the image (link below)
+  2) Name the dataframe ~df~
+  3) Print the dataframe
+  4) Print the dataframe's structure information
+
+  [[https://tinyurl.com/2hs7dpp4][tinyurl.com/2hs7dpp4]]
+
+  #+begin_src R
+    ## create dataframe df
+  #+end_src
+
+* Select subsets using index operators
+
+  Select subsets using the index operators ~$~ and ~[]~:
+  1) Select rows 1 to 2 using ~[]~
+  2) Select column 2 using ~[]~ and ~$~
+  3) Select row 3 of column 2  using ~[]~ and ~$~
+  4) Select rows 1 to 3 in columns 3 and 4 using ~[]~ and ~$~
+  5) Select rows 2 to 3, and columns 1 and 4 using ~[]~ and ~$~
+
+  #+begin_src R
+    ## select subsets using index operators
+  #+end_src
+
+* Select indices and values using ~which~, ~names~, ~%in%~
+
+Select data frame indices using functions ~which~, ~colnames~ and ~%in%~:
+1) Print the column index for the column ~price~ using ~colnames~
+2) Store the row index for ~textbook~ in ~idx~
+3) Print the entry ~textbook~ using ~idx~
+4) Check if ~pencil_case~ is a store item using ~%in%~ 
+
+For the last question, the format of the ~%in%~ matching function to
+find a string is: ~string %in% vector~
+   
+#+begin_src R
+  ...
+#+end_src
+
+* Select subsets using the ~subset~ function
+
+  Using ~subset~,
+  1) Select product IDs above 20
+  2) Select all books listed
+  3) Select all items cheaper than $11 and in stock
+
+  #+begin_src R
+    ## select subsets using the subset function
+  #+end_src
