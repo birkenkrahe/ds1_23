@@ -858,190 +858,189 @@ https://lyon-edu.zoom.us/j/83316335723 (no passcode) - or you can join
 us in room 209 in the Derby building.
 
 ** Assignment review and test preview
-
 *** Review subsetting exercises for =Nile= and =islands=:
-  [[https://app.datacamp.com/workspace/w/ef97b586-175f-4314-9f94-a4034e1f1be2/edit][notebook for Nile]] / [[https://app.datacamp.com/workspace/w/84f18411-f8a5-4b1d-82fd-41d9f7b08312/edit][notebook for islands]]
+[[https://app.datacamp.com/workspace/w/ef97b586-175f-4314-9f94-a4034e1f1be2/edit][notebook for Nile]] / [[https://app.datacamp.com/workspace/w/84f18411-f8a5-4b1d-82fd-41d9f7b08312/edit][notebook for islands]] (will post solutions)
 
 *** Review DataCamp lesson on =matrix= data structures:
-  1) How can you find out if an R object is a =matrix=?
-     #+begin_src R
-       M <- cbind(c(1,2), c(3,4))
-       M
-       is.matrix(M)
-     #+end_src
+1) How can you find out if an R object is a =matrix=?
+   #+begin_src R
+     M <- cbind(c(1,2), c(3,4))
+     M
+     is.matrix(M)
+   #+end_src
 
-     #+RESULTS:
-     :      [,1] [,2]
-     : [1,]    1    3
-     : [2,]    2    4
-     : [1] TRUE
-  2) How many data types can a =matrix= hold?
-  3) Can you create this matrix?
-     #+begin_example org
-     :      [,1] [,2]
-     : [1,]    1    2
-     : [2,]    3    4
-     #+end_example
-     #+begin_src R
-       M1 <- rbind(c(1,2),c(3,4)); M1
-       M2 <- cbind(c(1,3),c(2,4)); M2
-       matrix(1:4,nrow=2,byrow=TRUE)
-     #+end_src
+   #+RESULTS:
+   :      [,1] [,2]
+   : [1,]    1    3
+   : [2,]    2    4
+   : [1] TRUE
+2) How many data types can a =matrix= hold?
+3) Can you create this matrix?
+   #+begin_example org
+   :      [,1] [,2]
+   : [1,]    1    2
+   : [2,]    3    4
+   #+end_example
+   #+begin_src R
+     M1 <- rbind(c(1,2),c(3,4)); M1
+     M2 <- cbind(c(1,3),c(2,4)); M2
+     matrix(1:4,nrow=2,byrow=TRUE)
+   #+end_src
 
-     #+RESULTS:
-     :      [,1] [,2]
-     : [1,]    1    2
-     : [2,]    3    4
-     :      [,1] [,2]
-     : [1,]    1    2
-     : [2,]    3    4
-     :      [,1] [,2]
-     : [1,]    1    2
-     : [2,]    3    4
-  4) How can you check if two matrices are =identical=?
-     #+begin_src R
-       identical(M1,M2)  # exact equality
-       all.equal(M1,M2)  # approximate equality
-     #+end_src
+   #+RESULTS:
+   :      [,1] [,2]
+   : [1,]    1    2
+   : [2,]    3    4
+   :      [,1] [,2]
+   : [1,]    1    2
+   : [2,]    3    4
+   :      [,1] [,2]
+   : [1,]    1    2
+   : [2,]    3    4
+4) How can you check if two matrices are =identical=?
+   #+begin_src R
+     identical(M1,M2)  # exact equality
+     all.equal(M1,M2)  # approximate equality
+   #+end_src
 
-     #+RESULTS:
-     : [1] TRUE
-     : [1] TRUE
-  5) Can you create this matrix?
-     #+begin_example org
-     :     name  age
-     : 001 "Joe" "22"
-     : 002 "Jim" "25"
-     #+end_example
-     Solution:
-     #+begin_src R
-       names <- c("Joe","Jim")
-       age <- c(22,25)
-       names_age <- matrix(c(names,age),nrow=2)
-       names_age
-       colnames(names_age) <- c("name","age")
-       names_age
-       rownames(names_age) <- c("001","002")
-       names_age
-     #+end_src
+   #+RESULTS:
+   : [1] TRUE
+   : [1] TRUE
+5) Can you create this matrix?
+   #+begin_example org
+   :     name  age
+   : 001 "Joe" "22"
+   : 002 "Jim" "25"
+   #+end_example
+   Solution:
+   #+begin_src R
+     names <- c("Joe","Jim")
+     age <- c(22,25)
+     names_age <- matrix(c(names,age),nrow=2)
+     names_age
+     colnames(names_age) <- c("name","age")
+     names_age
+     rownames(names_age) <- c("001","002")
+     names_age
+   #+end_src
 
-     #+RESULTS:
-     :      [,1]  [,2]
-     : [1,] "Joe" "22"
-     : [2,] "Jim" "25"
-     :      name  age
-     : [1,] "Joe" "22"
-     : [2,] "Jim" "25"
-     :     name  age
-     : 001 "Joe" "22"
-     : 002 "Jim" "25"
-  6) When you put named vectors in a =matrix=, what happens to them?
-     #+begin_src R
-       names2 <- c(name1="Joe",name2="Jim")
-       names2
-       age2 <- c(age1=22,age2=25)
-       age2
-       names_age2 <- matrix(c(names,age),nrow=2)
-       names_age2
-       colnames(names_age2)
-       rownames(names_age2)
-       str(names_age2)
-       names_age2[1,1]
-     #+end_src
+   #+RESULTS:
+   :      [,1]  [,2]
+   : [1,] "Joe" "22"
+   : [2,] "Jim" "25"
+   :      name  age
+   : [1,] "Joe" "22"
+   : [2,] "Jim" "25"
+   :     name  age
+   : 001 "Joe" "22"
+   : 002 "Jim" "25"
+6) When you put named vectors in a =matrix=, what happens to them?
+   #+begin_src R
+     names2 <- c(name1="Joe",name2="Jim")
+     names2
+     age2 <- c(age1=22,age2=25)
+     age2
+     names_age2 <- matrix(c(names,age),nrow=2)
+     names_age2
+     colnames(names_age2)
+     rownames(names_age2)
+     str(names_age2)
+     names_age2[1,1]
+   #+end_src
 
-     #+RESULTS:
-     : name1 name2 
-     : "Joe" "Jim"
-     : age1 age2 
-     :   22   25
-     :      [,1]  [,2]
-     : [1,] "Joe" "22"
-     : [2,] "Jim" "25"
-     : NULL
-     : NULL
-  7) What does ~rowSums~ give you on the following matrix?
-     #+begin_example org
-     :     name  age
-     : 001 "Joe" "22"
-     : 002 "Jim" "25"
-     #+end_example
-     Solution:
-     #+begin_src R
-       rowSums(names_age2)
-     #+end_src
+   #+RESULTS:
+   : name1 name2
+   : "Joe" "Jim"
+   : age1 age2
+   :   22   25
+   :      [,1]  [,2]
+   : [1,] "Joe" "22"
+   : [2,] "Jim" "25"
+   : NULL
+   : NULL
+7) What does ~rowSums~ give you on the following matrix?
+   #+begin_example org
+   :     name  age
+   : 001 "Joe" "22"
+   : 002 "Jim" "25"
+   #+end_example
+   Solution:
+   #+begin_src R
+     rowSums(names_age2)
+   #+end_src
 
-     #+RESULTS:
-     : Error in rowSums(names_age2) : 'x' must be numeric
-  8) How can you compute column sums on this matrix?
-     #+begin_example org
-     :      [,1] [,2] 
-     : [1,] "10" "101"
-     : [2,] "20" "201"
-     #+end_example
+   #+RESULTS:
+   : Error in rowSums(names_age2) : 'x' must be numeric
+8) How can you compute column sums on this matrix?
+   #+begin_example org
+   :      [,1] [,2]
+   : [1,] "10" "101"
+   : [2,] "20" "201"
+   #+end_example
 
-     Solution:
-     #+begin_src R
-       M3 <- matrix(as.character(c(10,20,101,201)),
-                    nrow=2)
-       M3
-       M4 <- matrix(as.numeric(M3),
-                    nrow=2)
-       M4
-     #+end_src
+   Solution:
+   #+begin_src R
+     M3 <- matrix(as.character(c(10,20,101,201)),
+                  nrow=2)
+     M3
+     M4 <- matrix(as.numeric(M3),
+                  nrow=2)
+     M4
+   #+end_src
 
-     #+RESULTS:
-     :      [,1] [,2] 
-     : [1,] "10" "101"
-     : [2,] "20" "201"
-     :      [,1] [,2]
-     : [1,]   10  101
-     : [2,]   20  201
-  9) How can you extract the first row and add it at the end?
-     #+begin_example org
-     :      [,1] [,2]
-     : [1,]   10  101
-     : [2,]   20  201
-     #+end_example
+   #+RESULTS:
+   :      [,1] [,2]
+   : [1,] "10" "101"
+   : [2,] "20" "201"
+   :      [,1] [,2]
+   : [1,]   10  101
+   : [2,]   20  201
+9) How can you extract the first row and add it at the end?
+   #+begin_example org
+   :      [,1] [,2]
+   : [1,]   10  101
+   : [2,]   20  201
+   #+end_example
 
-     Solution:
-     #+begin_src R
-       M4
-       M4[1,]
-       rbind(M4,M4[1,])
-     #+end_src
+   Solution:
+   #+begin_src R
+     M4
+     M4[1,]
+     rbind(M4,M4[1,])
+   #+end_src
 
-     #+RESULTS:
-     :      [,1] [,2]
-     : [1,]   10  101
-     : [2,]   20  201
-     : [1]  10 101
-     :      [,1] [,2]
-     : [1,]   10  101
-     : [2,]   20  201
-     : [3,]   10  101
-  10) How can you extract the diagonal from the following matrix as a
-      vector ~1 1 1~? Tip: to generate this matrix, use =diag=.
-      #+begin_example
-      :      [,1] [,2] [,3]
-      : [1,]    1    0    0
-      : [2,]    0    1    0
-      : [3,]    0    0    1
-      #+end_example
+   #+RESULTS:
+   :      [,1] [,2]
+   : [1,]   10  101
+   : [2,]   20  201
+   : [1]  10 101
+   :      [,1] [,2]
+   : [1,]   10  101
+   : [2,]   20  201
+   : [3,]   10  101
+10) How can you extract the diagonal from the following matrix as a
+    vector ~1 1 1~? Tip: to generate this matrix, use =diag=.
+    #+begin_example
+    :      [,1] [,2] [,3]
+    : [1,]    1    0    0
+    : [2,]    0    1    0
+    : [3,]    0    0    1
+    #+end_example
 
-      Solution:
-      #+begin_src R
-        M5 <- diag(3)
-        M5
-        M5[c(M5[1,1],M5[2,2],M5[3,3])]
-      #+end_src
+    Solution:
+    #+begin_src R
+      M5 <- diag(3)
+      M5
+      M5[c(M5[1,1],M5[2,2],M5[3,3])]
+    #+end_src
 
-      #+RESULTS:
-      :      [,1] [,2] [,3]
-      : [1,]    1    0    0
-      : [2,]    0    1    0
-      : [3,]    0    0    1
-      : [1] 1 1 1
-      
+    #+RESULTS:
+    :      [,1] [,2] [,3]
+    : [1,]    1    0    0
+    : [2,]    0    1    0
+    : [3,]    0    0    1
+    : [1] 1 1 1
+
 *** Review DataCamp lesson on =factor= data structures:
 1) What's a =factor=?
    #+begin_quote
@@ -1168,17 +1167,17 @@ us in room 209 in the Derby building.
       }  else {
         cat("Jim's taller than Joe\n")
       }
-      
+
       qux <- factor(c("small","big")) # not ordered 2-level factor
       qux
       qux[1] > qux[2]  # output is NA
     #+end_src
 
     #+RESULTS:
-    : [1] small  medium tall  
+    : [1] small  medium tall
     : Levels: small < medium < tall
     : Jim's taller than Joe
-    : [1] small big  
+    : [1] small big
     : Levels: big small
     : [1] NA
     : Warning message:
