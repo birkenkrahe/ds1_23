@@ -860,7 +860,6 @@ us in room 209 in the Derby building.
 ** Assignment review and test preview
 *** Review subsetting exercises for =Nile= and =islands=:
 [[https://app.datacamp.com/workspace/w/ef97b586-175f-4314-9f94-a4034e1f1be2/edit][notebook for Nile]] / [[https://app.datacamp.com/workspace/w/84f18411-f8a5-4b1d-82fd-41d9f7b08312/edit][notebook for islands]] (will post solutions)
-
 *** Review DataCamp lesson on =matrix= data structures:
 1) How can you find out if an R object is a =matrix=?
    #+begin_src R
@@ -875,6 +874,9 @@ us in room 209 in the Derby building.
    : [2,]    2    4
    : [1] TRUE
 2) How many data types can a =matrix= hold?
+   #+begin_quote
+   ONLY ONE because a matrix consists of vectors of the same length
+   #+end_quote
 3) Can you create this matrix?
    #+begin_example org
    :      [,1] [,2]
@@ -901,12 +903,28 @@ us in room 209 in the Derby building.
    #+begin_src R
      identical(M1,M2)  # exact equality
      all.equal(M1,M2)  # approximate equality
+     M1 == M2  # through vectorization, this checks by element
    #+end_src
 
    #+RESULTS:
    : [1] TRUE
    : [1] TRUE
-5) Can you create this matrix?
+   :      [,1] [,2]
+   : [1,] TRUE TRUE
+   : [2,] TRUE TRUE
+
+   What's the difference between =identical= and =all.equal=?
+   #+begin_src R
+     pi
+     identical(pi,3.14)
+     all.equal(pi,3.141593)
+   #+end_src
+
+   #+RESULTS:
+: [1] 3.141593
+: [1] FALSE
+: [1] "Mean relative difference: 1.102658e-07"
+5) Can you create this matrix (with named rows and columns)?
    #+begin_example org
    :     name  age
    : 001 "Joe" "22"
@@ -928,10 +946,10 @@ us in room 209 in the Derby building.
    :      [,1]  [,2]
    : [1,] "Joe" "22"
    : [2,] "Jim" "25"
-   :      name  age
+   :      name  age 
    : [1,] "Joe" "22"
    : [2,] "Jim" "25"
-   :     name  age
+   :     name  age 
    : 001 "Joe" "22"
    : 002 "Jim" "25"
 6) When you put named vectors in a =matrix=, what happens to them?
@@ -946,18 +964,24 @@ us in room 209 in the Derby building.
      rownames(names_age2)
      str(names_age2)
      names_age2[1,1]
+     names_age2[name1,age1]
    #+end_src
 
    #+RESULTS:
-   : name1 name2
-   : "Joe" "Jim"
-   : age1 age2
-   :   22   25
-   :      [,1]  [,2]
-   : [1,] "Joe" "22"
-   : [2,] "Jim" "25"
-   : NULL
-   : NULL
+   #+begin_example
+   name1 name2 
+   "Joe" "Jim"
+   age1 age2 
+     22   25
+        [,1]  [,2]
+   [1,] "Joe" "22"
+   [2,] "Jim" "25"
+   NULL
+   NULL
+    chr [1:2, 1:2] "Joe" "Jim" "22" "25"
+   [1] "Joe"
+   Error: object 'name1' not found
+   #+end_example
 7) What does ~rowSums~ give you on the following matrix?
    #+begin_example org
    :     name  age
@@ -971,6 +995,10 @@ us in room 209 in the Derby building.
 
    #+RESULTS:
    : Error in rowSums(names_age2) : 'x' must be numeric
+
+   #+begin_src R
+     
+   #+end_src
 8) How can you compute column sums on this matrix?
    #+begin_example org
    :      [,1] [,2]
@@ -986,15 +1014,20 @@ us in room 209 in the Derby building.
      M4 <- matrix(as.numeric(M3),
                   nrow=2)
      M4
+     colSums(M4)  # this works
+     colSums(M3)  # this does not
    #+end_src
 
    #+RESULTS:
-   :      [,1] [,2]
+   :      [,1] [,2] 
    : [1,] "10" "101"
    : [2,] "20" "201"
    :      [,1] [,2]
    : [1,]   10  101
    : [2,]   20  201
+   : [1]  30 302
+   : Error in colSums(as.numeric(M3)) : 
+   :   'x' must be an array of at least two dimensions
 9) How can you extract the first row and add it at the end?
    #+begin_example org
    :      [,1] [,2]
