@@ -858,8 +858,6 @@ https://lyon-edu.zoom.us/j/83316335723 (no passcode) - or you can join
 us in room 209 in the Derby building.
 
 ** Assignment review and test preview
-*** Review subsetting exercises for =Nile= and =islands=:
-[[https://app.datacamp.com/workspace/w/ef97b586-175f-4314-9f94-a4034e1f1be2/edit][notebook for Nile]] / [[https://app.datacamp.com/workspace/w/84f18411-f8a5-4b1d-82fd-41d9f7b08312/edit][notebook for islands]] (will post solutions)
 *** Review DataCamp lesson on =matrix= data structures:
 1) How can you find out if an R object is a =matrix=?
    #+begin_src R
@@ -1074,6 +1072,19 @@ us in room 209 in the Derby building.
     : [3,]    0    0    1
     : [1] 1 1 1
 
+** DataCamp assignments published
+
+- Oct 30: R data frames
+- Nov 6: R lists
+- Nov 13: Introduction to importing data in R
+- Nov 20: Introduction to data visualization using ggplot2
+- Nov 27: Python for R users - Basics
+
+* 10.2 Wed, 25-Oct -
+
+*** Review subsetting exercises for =Nile= and =islands=:
+[[https://app.datacamp.com/workspace/w/ef97b586-175f-4314-9f94-a4034e1f1be2/edit][notebook for Nile]] / [[https://app.datacamp.com/workspace/w/84f18411-f8a5-4b1d-82fd-41d9f7b08312/edit][notebook for islands]] (will post solutions)
+
 *** Review DataCamp lesson on =factor= data structures:
 1) What's a =factor=?
    #+begin_quote
@@ -1216,15 +1227,6 @@ us in room 209 in the Derby building.
     : Warning message:
     : In Ops.factor(qux[1], qux[2]) : '>' not meaningful for factors
 
-** DataCamp assignments published
-
-- Oct 30: R data frames
-- Nov 6: R lists
-- Nov 13: Introduction to importing data in R
-- Nov 20: Introduction to data visualization using ggplot2
-- Nov 27: Python for R users - Basics
-
-* 10.2 Wed, 25-Oct -
 * 10.3 Fri, 27-Oct SCOTSFEST VISIT
 #+attr_html: :width 400px
 [[../img/scotsfest.jpg]]
