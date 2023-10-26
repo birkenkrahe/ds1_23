@@ -21,6 +21,7 @@
 
   #+begin_src R
     ## create dataframe df
+    
   #+end_src
 
 * Select subsets using index operators
@@ -34,6 +35,7 @@
 
   #+begin_src R
     ## select subsets using index operators
+    
   #+end_src
 
 * Select indices and values using ~which~, ~names~, ~%in%~
@@ -48,7 +50,8 @@ For the last question, the format of the ~%in%~ matching function to
 find a string is: ~string %in% vector~
    
 #+begin_src R
-  ...
+  
+
 #+end_src
 
 * Select subsets using the ~subset~ function

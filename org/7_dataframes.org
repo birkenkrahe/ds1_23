@@ -109,10 +109,9 @@
 #+attr_html: :width 600px
 [[../img/penguins.jpg]]
 
-1) Get the raw file from GitHub: [[https://tinyurl.com/2hhwwtfh][tinyurl.com/2hhwwtfh]]
-2) Save it as a practice Org-mode file to your PC
-3) Complete the file on your own (or with thy neighbour)
-4) Submit it in Canvas: [[https://lyon.instructure.com/courses/568/assignments/3541][Practice 8: Creating/subsetting data frames]]
+1) Go go the DataCamp workspace practice template file.
+2) Save it to your own workspace and complete the exercises.
+3) Finish it at home and submit it as a bonus assignment in Canvas.
 
 * Home assignment: properties of real data frames
 #+attr_html: :width 600px
@@ -150,7 +149,7 @@
 
 - Try to create a not rectangular data frame
 - Define vectors of different length
-- Combine them using  ~data.frame~
+- Combine them using ~data.frame~
 - Explain the result!
 
 *** Solution
@@ -164,8 +163,9 @@
 #+end_src
 
 #+name: 3
+#+attr_latex: :width 400px
 #+caption: element-wise vector operation
-[[./img/challenge.png]]
+[[../img/7_challenge.png]]
 
 ** Challenge 2
 
