@@ -8,7 +8,7 @@
 - See also whiteboard screenshots ([[https://drive.google.com/drive/folders/16Z3Lt_RBMnRMwORqZDfGMUezy-_B9huB?usp=sharing][GDrive]]).
 - Includes further reading, watching and comments
 
-* First part of term
+* DONE First part of term
 ** 1.1 Wed-23-Aug
 
 Summary:
@@ -838,11 +838,11 @@ REMEMBER THE 2ND SPRINT REVIEW ON FRIDAY!
 
 ** Subsetting code along / practice ([[https://app.datacamp.com/workspace/w/ef97b586-175f-4314-9f94-a4034e1f1be2/edit][workspace]])
 
-* 9.2 Wed, 18-Oct - subsetting =Nile=
+* DONE 9.2 Wed, 18-Oct - subsetting =Nile=
 - Subsetting code along continued
 - Subsetting practice
-* 9.3 Fri, 20-Oct - subsetting =islands= & test 6
-* 10.1 Mon, 23-Oct
+* DONE 9.3 Fri, 20-Oct - subsetting =islands= & test 6
+* DONE 10.1 Mon, 23-Oct
 ** UAMS presentation Wednesday 25-Oct
 Wed, 25-Oct meeting in Derby 209 (via Zoom)
 #+attr_latex: :width 400px
@@ -1080,10 +1080,13 @@ us in room 209 in the Derby building.
 - Nov 20: Introduction to data visualization using ggplot2
 - Nov 27: Python for R users - Basics
 
-* 10.2 Wed, 25-Oct -
-
+* DONE 10.2 Wed, 25-Oct -
 *** Review subsetting exercises for =Nile= and =islands=:
 [[https://app.datacamp.com/workspace/w/ef97b586-175f-4314-9f94-a4034e1f1be2/edit][notebook for Nile]] / [[https://app.datacamp.com/workspace/w/84f18411-f8a5-4b1d-82fd-41d9f7b08312/edit][notebook for islands]] (will post solutions)
+
+* 10.3 Fri, 27-Oct SCOTSFEST VISIT
+#+attr_html: :width 400px
+[[../img/scotsfest.png]]
 
 *** Review DataCamp lesson on =factor= data structures:
 1) What's a =factor=?
@@ -1226,7 +1229,5 @@ us in room 209 in the Derby building.
     : [1] NA
     : Warning message:
     : In Ops.factor(qux[1], qux[2]) : '>' not meaningful for factors
-
-* 10.3 Fri, 27-Oct SCOTSFEST VISIT
-#+attr_html: :width 400px
-[[../img/scotsfest.jpg]]
+11) What are =factor= values good for?
+    
