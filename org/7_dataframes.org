@@ -28,6 +28,8 @@
 
 * Example: creating data frames
 
+- Open the ~notebook.ipynb~ file in the data frame practice workspace
+
 - Create three vectors to put into the data frame
   1) the 1st uses the constant vector ~LETTERS~
   2) the 2nd uses the ~sample~ function to draw a sample from the first
@@ -56,19 +58,22 @@
     str(df_ex)  # check structure (explicitly named)
     df_ex
   #+end_src
+
 - More information: check out ~example(data.frame)~
 
 * Functions to test data structures
 
-- Check for vector, matrix, list, data frame
-- What are you expecting?
+- Check for vector, matrix, list, data frame:
   #+begin_src R :session :results output
     is.vector(df_ex)
     is.matrix(df_ex)
     is.data.frame(df_ex)
     is.list(df_ex)
   #+end_src
-- Data frames are special lists
+
+- Surprise: data frames are special [rectangular] lists
+
+- Can a data frame contain a data frame?
 
 ** Practice
 
@@ -85,37 +90,38 @@
 - You can rename columns with ~colnames()~
 - You can auto-convert ~character~ to ~factor~
 
-  #+begin_src R :session :results output
-    ## define vectors
-    ID <- c(10,20,30,40) # numeric integer vector
-    items <- c("book","pen","textbook","pencil_case") # character vector
-    store <- c(TRUE,FALSE,TRUE,FALSE) # logical vector
-    price <- c(2.5,8.0,10.0,7.0)  # numeric double vector
+#+begin_src R :session :results output
+  ## define vectors
+  ID <- c(10,20,30,40) # numeric integer vector
+  items <- c("book","pen","textbook","pencil_case") # character vector
+  store <- c(TRUE,FALSE,TRUE,FALSE) # logical vector
+  price <- c(2.5,8.0,10.0,7.0)  # numeric double vector
 
-    ## create data frame and properties
-    df <- data.frame(ID,items,store,price)
-    df
-    rownames(df)   # row names (auto-created)
-    colnames(df)   # column names
-    str(df)        # data frame structure
+  ## create data frame and properties
+  df <- data.frame(ID,items,store,price)
+  df
+  rownames(df)   # row names (auto-created)
+  colnames(df)   # column names
+  str(df)        # data frame structure
 
-    ## auto-convert characters to factors
-    df_fac <- data.frame(ID,items,store,price,
-                         stringsAsFactors = TRUE )
-    str(df_fac)
-  #+end_src
+  ## auto-convert characters to factors
+  df_fac <- data.frame(ID,items,store,price,
+                       stringsAsFactors = TRUE )
+  str(df_fac)
+#+end_src
 
 * Lab session: Creating/subsetting data frames
 #+attr_html: :width 600px
 [[../img/penguins.jpg]]
 
-1) Go go the DataCamp workspace practice template file.
+1) Go go the DataCamp workspace "[[https://app.datacamp.com/workspace/w/58e9e598-2624-44c8-aae5-fe327732eb3f][dataframe practice]]".
 2) Save it to your own workspace and complete the exercises.
 3) Finish it at home and submit it as a bonus assignment in Canvas.
 
-* Home assignment: properties of real data frames
+* Properties of real data frames
 #+attr_html: :width 600px
 [[../img/guineapigs.jpg]]
+
 * Some useful functions
 
 - ~dim~ gives you the data frame dimensions
@@ -186,6 +192,7 @@
     tg$len[small]  # tg[small] won't work here - why not?
 
   #+end_src
+
 * Factor advantage
 
 - Compare the following two plots
@@ -199,8 +206,8 @@
     qplot(data=mtcars,x=wt,y=mpg,colour=cyl)
     ggsave(file...
 
-    ## plot mpg vs wt, factor(cyl)
-    qplot(data=mtcars,x=wt,y=mpg,colour=factor(cyl))
+           ## plot mpg vs wt, factor(cyl)
+           qplot(data=mtcars,x=wt,y=mpg,colour=factor(cyl))
   #+end_src
 
   #+RESULTS:

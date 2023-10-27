@@ -1088,6 +1088,8 @@ us in room 209 in the Derby building.
 #+attr_html: :width 400px
 [[../img/scotsfest.png]]
 
+*** Introduction to data frames
+*** Data frame practice
 *** Review DataCamp lesson on =factor= data structures:
 1) What's a =factor=?
    #+begin_quote
@@ -1230,4 +1232,17 @@ us in room 209 in the Derby building.
     : Warning message:
     : In Ops.factor(qux[1], qux[2]) : '>' not meaningful for factors
 11) What are =factor= values good for?
+    #+begin_src R :results graphics file output :file ../img/tg.png
+      # plotting in 3d with factors
+      tg <- ToothGrowth
+      str(tg)
+      boxplot(tg$len ~ tg$supp,
+              xlab="",
+              ylab="Toothlength [mm]",
+              main="Toothlength of guinea pigs in ToothGrowth",
+              names=c("Vitamin C","Orange Juice"))
+    #+end_src
+
+    #+RESULTS:
+    [[file:../img/tg.png]]
     

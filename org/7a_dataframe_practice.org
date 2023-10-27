@@ -3,21 +3,12 @@
 #+SUBTITLE: Introduction to data science (DSC 105) Fall 2023
 #+STARTUP: overview hideblocks indent
 #+PROPERTY: header-args:R :session *R* :results output
-* README
-
-  - Practice file for the lecture on "Subsetting and extracting data
-    frames in R" ([[https://github.com/birkenkrahe/ds1/tree/piHome/org][lecture and review file in GitHub]])
-  - Create, execute and debug R code blocks as needed
-  - You can find the solutions in the PDF repository for the course
-
 * Create data frame
 
-  1) Create the data frame shown in the image (link below)
+  1) Create the data frame shown in the image
   2) Name the dataframe ~df~
   3) Print the dataframe
   4) Print the dataframe's structure information
-
-  [[https://tinyurl.com/2hs7dpp4][tinyurl.com/2hs7dpp4]]
 
   #+begin_src R
     ## create dataframe df
