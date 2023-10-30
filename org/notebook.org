@@ -1084,12 +1084,26 @@ us in room 209 in the Derby building.
 *** Review subsetting exercises for =Nile= and =islands=:
 [[https://app.datacamp.com/workspace/w/ef97b586-175f-4314-9f94-a4034e1f1be2/edit][notebook for Nile]] / [[https://app.datacamp.com/workspace/w/84f18411-f8a5-4b1d-82fd-41d9f7b08312/edit][notebook for islands]] (will post solutions)
 
-* 10.3 Fri, 27-Oct SCOTSFEST VISIT
+* DONE 10.3 Fri, 27-Oct SCOTSFEST VISIT
 #+attr_html: :width 400px
 [[../img/scotsfest.png]]
 
-*** Introduction to data frames
-*** Data frame practice
+*** Introduction to data frames (workspace)
+
+* 11.1 Mon, 30-Oct
+
+*** Test 6 (matrices): are you using R?
+
+- Tests are open book exams: all resources permitted
+- The point is not memorization of rules or facts
+- The point is engaging with the material and learning
+
+*** 3rd sprint review due on November 12 ([[https://lyon.instructure.com/courses/1427/assignments/20195][Canvas]])
+
+- What's an abstract?
+- How do you write an abstract?
+- What does "complete and consistent references" mean?
+
 *** Review DataCamp lesson on =factor= data structures:
 1) What's a =factor=?
    #+begin_quote
@@ -1129,9 +1143,9 @@ us in room 209 in the Derby building.
 
    Solution:
    #+begin_src R
-                                             # foo is a nominal categorical variable and a character vector
+     ## foo is a nominal categorical variable and a character vector
      factor(foo)
-                                             # bar is an ordinal categorical variable and a character vector
+     ## bar is an ordinal categorical variable and a character vector
      factor(bar)
    #+end_src
 
@@ -1175,8 +1189,8 @@ us in room 209 in the Derby building.
    : [1] 6
 8) How do =levels= of a =factor= and =names= of a =vector= differ?
    #+begin_src R
-     vec <- c(one=1,two=2,three=3)
-     factor(vec)
+     vec <- c(one=1,two=2,three=3) # element names are labels
+     factor(vec) # factor levels are the elements
    #+end_src
 
    #+RESULTS:
@@ -1205,7 +1219,7 @@ us in room 209 in the Derby building.
    Error in Summary.ordered(c(1L, 2L, 3L, 1L, 2L, 3L, 1L, 2L, 3L), na.rm = FALSE) :
      'sum' not defined for ordered factors
    #+end_example
-10) Can you compare two factors levels?
+10) Can you compare two factor levels?
     #+begin_src R
       ## you can compare factors if they are ordered
       barf  # ordered 3-level factor
@@ -1232,17 +1246,58 @@ us in room 209 in the Derby building.
     : Warning message:
     : In Ops.factor(qux[1], qux[2]) : '>' not meaningful for factors
 11) What are =factor= values good for?
-    #+begin_src R :results graphics file output :file ../img/tg.png
-      # plotting in 3d with factors
+    #+begin_src R
       tg <- ToothGrowth
       str(tg)
+    #+end_src
+
+    #+RESULTS:
+    : 'data.frame':	60 obs. of  3 variables:
+    :  $ len : num  4.2 11.5 7.3 5.8 6.4 10 11.2 11.2 5.2 7 ...
+    :  $ supp: Factor w/ 2 levels "OJ","VC": 2 2 2 2 2 2 2 2 2 2 ...
+    :  $ dose: num  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 ...
+
+    #+begin_src R :results graphics file output :file ../img/tg.png
+      # plotting in 3d with factors
       boxplot(tg$len ~ tg$supp,
               xlab="",
               ylab="Toothlength [mm]",
-              main="Toothlength of guinea pigs in ToothGrowth",
-              names=c("Vitamin C","Orange Juice"))
+              main="Toothlength of guinea pigs in Crampton (1947)",
+              names=c("Orange Juice","Vitamin C"))
     #+end_src
 
     #+RESULTS:
     [[file:../img/tg.png]]
-    
+
+    #+begin_src R
+      mt <- mtcars
+      str(mt)
+      mt$cyl <- factor(mt$cyl)
+      str(mt$cyl)  # cyl vector is now a factor
+    #+end_src
+
+    #+RESULTS:
+    #+begin_example
+    'data.frame':	32 obs. of  11 variables:
+     $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
+     $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...
+     $ disp: num  160 160 108 258 360 ...
+     $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...
+     $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...
+     $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...
+     $ qsec: num  16.5 17 18.6 19.4 17 ...
+     $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...
+     $ am  : num  1 1 1 0 0 0 0 0 0 0 ...
+     $ gear: num  4 4 4 3 3 3 3 4 4 4 ...
+     $ carb: num  4 4 1 1 2 1 4 2 2 4 ...
+     Factor w/ 3 levels "4","6","8": 2 2 1 2 3 2 3 1 1 2 ...
+    #+end_example
+
+    #+begin_src R
+      # use the factor variable as the third [color] dimension
+      plot(mt$mpg ~ mt$wt, col=mt$cyl, pch=18, cex=2)
+    #+end_src
+
+    #+RESULTS:
+*** Data frame practice (workspace) continued
+*** Data frame review questions
