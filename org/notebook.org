@@ -1090,19 +1090,13 @@ us in room 209 in the Derby building.
 
 *** Introduction to data frames (workspace)
 
-* 11.1 Mon, 30-Oct
+* DONE 11.1 Mon, 30-Oct
 
 *** Test 6 (matrices): are you using R?
 
 - Tests are open book exams: all resources permitted
 - The point is not memorization of rules or facts
 - The point is engaging with the material and learning
-
-*** 3rd sprint review due on November 12 ([[https://lyon.instructure.com/courses/1427/assignments/20195][Canvas]])
-
-- What's an abstract?
-- How do you write an abstract?
-- What does "complete and consistent references" mean?
 
 *** Review DataCamp lesson on =factor= data structures:
 1) What's a =factor=?
@@ -1135,6 +1129,20 @@ us in room 209 in the Derby building.
    #+RESULTS:
    : [1] "Jim" "Job" "Joe"
    : [1] "character"
+
+   In lieu of a proof
+   #+begin_src R
+     boo <- factor(c(1,2,3))
+     boo
+     class(boo)  # output: factor
+     class(levels(boo))   # output: character
+   #+end_src
+
+   #+RESULTS:
+   : [1] 1 2 3
+   : Levels: 1 2 3
+   : [1] "factor"
+   : [1] "character"
 4) What type of categorical variables are these vector elements?
    #+begin_src R :results silent
      foo <- c("green", "red", "blue")
@@ -1150,81 +1158,105 @@ us in room 209 in the Derby building.
    #+end_src
 
    #+RESULTS:
-   : [1] green red   blue
+   : [1] green red   blue 
    : Levels: blue green red
-   : [1] small  medium tall
+   : [1] small  medium tall  
    : Levels: medium small tall
 5) How can you turn ~bar~ into a =factor= named ~barf~ that is =ordered=?
    #+begin_src R
-     barf <- factor(bar,levels=c("small","medium","tall"),
+     barf1 <- factor(bar,
                     ordered=TRUE)
-     barf
+     barf1  # output: no levels defined, alphabetical order imposed
+     barf2 <- factor(bar, levels = c("small", "medium", "tall"),
+                    ordered=TRUE)
+     barf2  # output: levels defined, ordered factor
    #+end_src
 
    #+RESULTS:
-   : [1] small  medium tall
+   : [1] small  medium tall  
+   : Levels: medium < small < tall
+   : [1] small  medium tall  
    : Levels: small < medium < tall
 6) What happens to ~c(1,2,3)~ when I convert it to a =factor=?
    #+begin_src R
-     baz <- factor(c(1,2,3))
+     baz <- factor(c(3,2,1,1,2,2,2,1000))
      baz
      class(levels(baz)) # factor levels are stored as character
+     str(baz)
    #+end_src
 
    #+RESULTS:
-   : [1] 1 2 3
-   : Levels: 1 2 3
+   : [1] 3    2    1    1    2    2    2    1000
+   : Levels: 1 2 3 1000
    : [1] "character"
+   :  Factor w/ 4 levels "1","2","3","1000": 3 2 1 1 2 2 2 4
 7) How can I sum up elements of ~factor(c(1,2,3))~?
    #+begin_src R
      ## the elements of a factor are (character) levels
      ## sum(factor) is not meaningful
      baz
-     sum(as.numeric(baz))
+     sum(as.numeric(baz)) # this is crazy because levels are categories
    #+end_src
 
    #+RESULTS:
-   : [1] 1 2 3
-   : Levels: 1 2 3
-   : [1] 6
+   : [1] 3    2    1    1    2    2    2    1000
+   : Levels: 1 2 3 1000
+   : [1] 17
+
+   #+begin_src R
+     methods(sum)  # sum is not generic => MUST HAVE NUMBERS
+   #+end_src
+
+   #+RESULTS:
+   : no methods found
 8) How do =levels= of a =factor= and =names= of a =vector= differ?
    #+begin_src R
-     vec <- c(one=1,two=2,three=3) # element names are labels
+     vec <- c(one=100,two=200,three=300) # element names are labels
      factor(vec) # factor levels are the elements
    #+end_src
 
    #+RESULTS:
-   :   one   two three
-   :     1     2     3
+   :   one   two three 
+   :     1     2     3 
    : Levels: 1 2 3
 9) What is the (statistical) =summary= of a =factor= vector?
    #+begin_src R
-     barf  # ordered factor
-     summary(barf)
-     barf2 <- c(barf,barf,barf)  # ordered factor
-     barf2
+     barf2  # ordered factor
      summary(barf2)
+     barf3 <- c(barf2,barf2,barf2)  # ordered factor
+     barf3
+     summary(barf3)
    #+end_src
 
    #+RESULTS:
-   #+begin_example
-   [1] small  medium tall
-   Levels: small < medium < tall
-    small medium   tall
-        1      1      1
-   [1] small  medium tall   small  medium tall   small  medium tall
-   Levels: small < medium < tall
-    small medium   tall
-        3      3      3
-   Error in Summary.ordered(c(1L, 2L, 3L, 1L, 2L, 3L, 1L, 2L, 3L), na.rm = FALSE) :
-     'sum' not defined for ordered factors
-   #+end_example
+   : [1] small  medium tall  
+   : Levels: small < medium < tall
+   :  small medium   tall 
+   :      1      1      1
+   : [1] small  medium tall   small  medium tall   small  medium tall  
+   : Levels: small < medium < tall
+   :  small medium   tall 
+   :      3      3      3
+
+   #+begin_src R
+     foo
+     sum(as.numeric(foo))  # cannot coerce (NAs)
+     qux <- c("100","200")  # can coerce
+     sum(as.numeric(qux))
+   #+end_src
+
+   #+RESULTS:
+   : [1] "green" "red"   "blue"
+   : [1] NA
+   : Warning message:
+   : NAs introduced by coercion
+   : [1] 300
 10) Can you compare two factor levels?
     #+begin_src R
       ## you can compare factors if they are ordered
-      barf  # ordered 3-level factor
-      joe <- barf[2]
-      jim <- barf[3]
+      barf2  # ordered 3-level factor
+      joe <- barf2[2]
+      jim <- barf2[3]
       if (joe > jim) {
         cat("Joe's taller than Jim\n")
       }  else {
@@ -1237,10 +1269,10 @@ us in room 209 in the Derby building.
     #+end_src
 
     #+RESULTS:
-    : [1] small  medium tall
+    : [1] small  medium tall  
     : Levels: small < medium < tall
     : Jim's taller than Joe
-    : [1] small big
+    : [1] small big  
     : Levels: big small
     : [1] NA
     : Warning message:
@@ -1249,6 +1281,7 @@ us in room 209 in the Derby building.
     #+begin_src R
       tg <- ToothGrowth
       str(tg)
+      tg$supp[25:35]
     #+end_src
 
     #+RESULTS:
@@ -1256,6 +1289,8 @@ us in room 209 in the Derby building.
     :  $ len : num  4.2 11.5 7.3 5.8 6.4 10 11.2 11.2 5.2 7 ...
     :  $ supp: Factor w/ 2 levels "OJ","VC": 2 2 2 2 2 2 2 2 2 2 ...
     :  $ dose: num  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 ...
+    :  [1] VC VC VC VC VC VC OJ OJ OJ OJ OJ
+    : Levels: OJ VC
 
     #+begin_src R :results graphics file output :file ../img/tg.png
       # plotting in 3d with factors
@@ -1263,7 +1298,8 @@ us in room 209 in the Derby building.
               xlab="",
               ylab="Toothlength [mm]",
               main="Toothlength of guinea pigs in Crampton (1947)",
-              names=c("Orange Juice","Vitamin C"))
+              names=c("Orange Juice","Vitamin C"),
+              horizontal=TRUE)
     #+end_src
 
     #+RESULTS:
@@ -1273,7 +1309,7 @@ us in room 209 in the Derby building.
       mt <- mtcars
       str(mt)
       mt$cyl <- factor(mt$cyl)
-      str(mt$cyl)  # cyl vector is now a factor
+      str(mt)  # cyl vector is now a factor
     #+end_src
 
     #+RESULTS:
@@ -1290,14 +1326,45 @@ us in room 209 in the Derby building.
      $ am  : num  1 1 1 0 0 0 0 0 0 0 ...
      $ gear: num  4 4 4 3 3 3 3 4 4 4 ...
      $ carb: num  4 4 1 1 2 1 4 2 2 4 ...
-     Factor w/ 3 levels "4","6","8": 2 2 1 2 3 2 3 1 1 2 ...
+    'data.frame':	32 obs. of  11 variables:
+     $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
+     $ cyl : Factor w/ 3 levels "4","6","8": 2 2 1 2 3 2 3 1 1 2 ...
+     $ disp: num  160 160 108 258 360 ...
+     $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...
+     $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...
+     $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...
+     $ qsec: num  16.5 17 18.6 19.4 17 ...
+     $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...
+     $ am  : num  1 1 1 0 0 0 0 0 0 0 ...
+     $ gear: num  4 4 4 3 3 3 3 4 4 4 ...
+     $ carb: num  4 4 1 1 2 1 4 2 2 4 ...
     #+end_example
 
-    #+begin_src R
-      # use the factor variable as the third [color] dimension
+    #+begin_src R :results graphics file output :file mtcol.png
+      ## use the factor variable as the third [color] dimension
+      ## pch is the point character symbol (default 1)
+      ## cex is the size of the character symbol (default 1)
       plot(mt$mpg ~ mt$wt, col=mt$cyl, pch=18, cex=2)
     #+end_src
 
     #+RESULTS:
-*** Data frame practice (workspace) continued
-*** Data frame review questions
+    [[file:mtcol.png]]
+
+    #+RESULTS:[[file:mtcol.png]]
+
+
+
+
+* 11.2 Wed, 1-Nov
+
+*** 3rd sprint review due on November 12 ([[https://lyon.instructure.com/courses/1427/assignments/20195][Canvas]])
+
+- What's an abstract?
+- How do you write an abstract?
+- What does "complete and consistent references" mean?
+
+*** IN PROGRESS Data frame practice (workspace) continued
+
+* 11.3 Fri, 3-Nov
+
+*** TODO Data frame review questions
