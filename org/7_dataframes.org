@@ -110,6 +110,27 @@
   str(df_fac)
 #+end_src
 
+#+RESULTS:
+#+begin_example
+  ID       items store price
+1 10        book  TRUE   2.5
+2 20         pen FALSE   8.0
+3 30    textbook  TRUE  10.0
+4 40 pencil_case FALSE   7.0
+[1] "1" "2" "3" "4"
+[1] "ID"    "items" "store" "price"
+'data.frame':	4 obs. of  4 variables:
+ $ ID   : num  10 20 30 40
+ $ items: chr  "book" "pen" "textbook" "pencil_case"
+ $ store: logi  TRUE FALSE TRUE FALSE
+ $ price: num  2.5 8 10 7
+'data.frame':	4 obs. of  4 variables:
+ $ ID   : num  10 20 30 40
+ $ items: Factor w/ 4 levels "book","pen","pencil_case",..: 1 2 4 3
+ $ store: logi  TRUE FALSE TRUE FALSE
+ $ price: num  2.5 8 10 7
+#+end_example
+
 * Lab session: Creating/subsetting data frames
 #+attr_html: :width 600px
 [[../img/penguins.jpg]]
@@ -130,7 +151,7 @@
 - ~head(x=,N)~ gives you the first ~N~ rows
 - ~order~ gives you the indices of an ordered vector
 - ~subset~ gives you a subset of any data structure
-
+  
 #+begin_src R :session :results output
   dim(df)          # dimension of df
   nrow(df)         # no. of rows
@@ -218,7 +239,7 @@
 - What's the class of ~tg$supp~?
 - What're the levels of ~tg$supp~?
 - We want to compare ~mean~ tooth length for each ~level~
-
+    
   #+begin_src R :session :results output
 
     class(tg$supp)   # class check
@@ -233,7 +254,7 @@
     mean(tgvc$len)
 
   #+end_src
-
+  
 ** What's going on here?
 
 ~tg[tg$supp == 'OJ',]~ is loaded with meaning:
