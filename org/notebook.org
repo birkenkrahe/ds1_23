@@ -8,7 +8,7 @@
 - See also whiteboard screenshots ([[https://drive.google.com/drive/folders/16Z3Lt_RBMnRMwORqZDfGMUezy-_B9huB?usp=sharing][GDrive]]).
 - Includes further reading, watching and comments
 
-* DONE First part of term
+* DONE Part I: Basics
 ** 1.1 Wed-23-Aug
 
 Summary:
@@ -838,12 +838,13 @@ REMEMBER THE 2ND SPRINT REVIEW ON FRIDAY!
 
 ** Subsetting code along / practice ([[https://app.datacamp.com/workspace/w/ef97b586-175f-4314-9f94-a4034e1f1be2/edit][workspace]])
 
-* DONE 9.2 Wed, 18-Oct - subsetting =Nile=
+* DONE Part II: Data structures
+** DONE 9.2 Wed, 18-Oct - subsetting =Nile=
 - Subsetting code along continued
 - Subsetting practice
-* DONE 9.3 Fri, 20-Oct - subsetting =islands= & test 6
-* DONE 10.1 Mon, 23-Oct
-** UAMS presentation Wednesday 25-Oct
+** DONE 9.3 Fri, 20-Oct - subsetting =islands= & test 6
+** DONE 10.1 Mon, 23-Oct
+*** UAMS presentation Wednesday 25-Oct
 Wed, 25-Oct meeting in Derby 209 (via Zoom)
 #+attr_latex: :width 400px
 [[../img/uams.jpg]]
@@ -857,8 +858,8 @@ The meeting will take place on October 25, 9-9.50 AM via Zoom:
 https://lyon-edu.zoom.us/j/83316335723 (no passcode) - or you can join
 us in room 209 in the Derby building.
 
-** Assignment review and test preview
-*** Review DataCamp lesson on =matrix= data structures:
+*** Assignment review and test preview
+**** Review DataCamp lesson on =matrix= data structures:
 1) How can you find out if an R object is a =matrix=?
    #+begin_src R
      M <- cbind(c(1,2), c(3,4))
@@ -1072,7 +1073,7 @@ us in room 209 in the Derby building.
     : [3,]    0    0    1
     : [1] 1 1 1
 
-** DataCamp assignments published
+*** DataCamp assignments published
 
 - Oct 30: R data frames
 - Nov 6: R lists
@@ -1080,25 +1081,25 @@ us in room 209 in the Derby building.
 - Nov 20: Introduction to data visualization using ggplot2
 - Nov 27: Python for R users - Basics
 
-* DONE 10.2 Wed, 25-Oct -
-*** Review subsetting exercises for =Nile= and =islands=:
+** DONE 10.2 Wed, 25-Oct -
+**** Review subsetting exercises for =Nile= and =islands=:
 [[https://app.datacamp.com/workspace/w/ef97b586-175f-4314-9f94-a4034e1f1be2/edit][notebook for Nile]] / [[https://app.datacamp.com/workspace/w/84f18411-f8a5-4b1d-82fd-41d9f7b08312/edit][notebook for islands]] (will post solutions)
 
-* DONE 10.3 Fri, 27-Oct SCOTSFEST VISIT
+** DONE 10.3 Fri, 27-Oct SCOTSFEST VISIT
 #+attr_html: :width 400px
 [[../img/scotsfest.png]]
 
-*** Introduction to data frames (workspace)
+**** Introduction to data frames (workspace)
 
-* DONE 11.1 Mon, 30-Oct
+** DONE 11.1 Mon, 30-Oct
 
-*** Test 6 (matrices): are you using R?
+**** Test 6 (matrices): are you using R?
 
 - Tests are open book exams: all resources permitted
 - The point is not memorization of rules or facts
 - The point is engaging with the material and learning
 
-*** Review DataCamp lesson on =factor= data structures:
+**** Review DataCamp lesson on =factor= data structures:
 1) What's a =factor=?
    #+begin_quote
    A =factor= is a statistical data type used to store ordinal or
@@ -1352,18 +1353,23 @@ us in room 209 in the Derby building.
 
     #+RESULTS:[[file:mtcol.png]]
 
+** DONE 11.2 Wed, 1-Nov
 
-
-* 11.2 Wed, 1-Nov
-
-*** 3rd sprint review due on November 12 ([[https://lyon.instructure.com/courses/1427/assignments/20195][Canvas]])
+**** 3rd sprint review due on November 12 ([[https://lyon.instructure.com/courses/1427/assignments/20195][Canvas]])
 
 - What's an abstract?
 - How do you write an abstract?
 - What does "complete and consistent references" mean?
 
-*** IN PROGRESS Data frame practice (workspace) continued
+**** IN PROGRESS Data frame practice (workspace) continued
 
-* 11.3 Fri, 3-Nov
-
-*** TODO Data frame review questions
+** 11.3 Fri, 3-Nov
+**** Practice challenge: using the =subset= function
+**** Finish data frame lecture - useful functions
+**** Data frame review questions ([[https://app.datacamp.com/workspace/w/af196ae6-54cc-4d63-ae93-52eeb4be5866/edit][notebook]])
+** Week 12 - Lists
+* Part III: Visualization
+** Week 13 - Plots I
+** Week 14 - Plots II
+** Week 15 - Plots III
+* Week 16 - Project presentations
