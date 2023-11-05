@@ -1092,7 +1092,6 @@ us in room 209 in the Derby building.
 **** Introduction to data frames (workspace)
 
 ** DONE 11.1 Mon, 30-Oct
-
 **** Test 6 (matrices): are you using R?
 
 - Tests are open book exams: all resources permitted
