@@ -1362,12 +1362,17 @@ us in room 209 in the Derby building.
 
 **** IN PROGRESS Data frame practice (workspace) continued
 
-** 11.3 Fri, 3-Nov
+** DONE 11.3 Fri, 3-Nov
 **** Practice challenge: using the =subset= function
 **** Finish data frame lecture - useful functions
+** 12.1 Mon, 6-Nov [no class]
+** 12.2 Wed, 8-Nov
 **** Data frame review questions ([[https://app.datacamp.com/workspace/w/af196ae6-54cc-4d63-ae93-52eeb4be5866/edit][notebook]])
-** Week 12 - Lists
+
+** 12.3 Fri, 10-Nov
+**** Lists
 * Part III: Visualization
+3rd sprint review due Nov 12
 ** Week 13 - Plots I
 ** Week 14 - Plots II
 ** Week 15 - Plots III

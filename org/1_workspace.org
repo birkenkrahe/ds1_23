@@ -38,6 +38,17 @@ the headers as a vector, use ~colnames~ instead:
   colnames(df)
 #+end_src
 
+#+RESULTS:
+: 'data.frame':	917 obs. of  6 variables:
+:  $ Company         : chr  "Bytedance" "SpaceX" "Stripe" "Klarna" ...
+:  $ Valuation...B.  : chr  "$140.00" "$100.30" "$95.00" "$45.60" ...
+:  $ Date.Added      : chr  "4/7/17" "12/1/12" "1/23/14" "12/12/11" ...
+:  $ Country         : chr  "China" "United States" "United States" "Sweden" ...
+:  $ Category        : chr  "Artificial intelligence" "Other" "Fintech" "Fintech" ...
+:  $ Select.Investors: chr  "Sequoia Capital China, SIG Asia Investments, Sina Weibo, Softbank Group" "Founders Fund, Draper Fisher Jurvetson, Rothenberg Ventures" "Khosla Ventures, LowercaseCapital, capitalG" "Institutional Venture Partners, Sequoia Capital, General Atlantic" ...
+: [1] "Company"          "Valuation...B."   "Date.Added"      
+: [4] "Country"          "Category"         "Select.Investors"
+
 You can also print the data frame directly. When you run this cell,
 either with the mouse or by entering CTRL-ENTER, the first 10 records
 of the DataFrame ~df~ and the headline with the features are shown. At
@@ -63,6 +74,27 @@ column if we index the data frame accordingly.
 #+begin_src R
   unique(df$Category) # df['Category'] or df[,5] also work
 #+end_src
+
+#+RESULTS:
+#+begin_example
+ [1] "Artificial intelligence"            
+ [2] "Other"                              
+ [3] "Fintech"                            
+ [4] "Internet software & services"       
+ [5] "Supply chain, logistics, & delivery"
+ [6] "Data management & analytics"        
+ [7] "Edtech"                             
+ [8] "E-commerce & direct-to-consumer"    
+ [9] "Hardware"                           
+[10] "Auto & transportation"              
+[11] "Health"                             
+[12] "Consumer & retail"                  
+[13] "Finttech"                           
+[14] "Travel"                             
+[15] "Cybersecurity"                      
+[16] "Mobile & telecommunications"        
+[17] "Artificial Intelligence"
+#+end_example
 
 You can see that there are duplicates because of typos
 (~Finttech~) and capitalization (~Artificial Intelligence~). Let's
@@ -138,6 +170,25 @@ and replaces it by the second everywhere in the column:
   unique(df$Category)
 #+end_src
 
+#+RESULTS:
+#+begin_example
+ [1] "Artificial Intelligence"            
+ [2] "Other"                              
+ [3] "Fintech"                            
+ [4] "Internet software & services"       
+ [5] "Supply chain, logistics, & delivery"
+ [6] "Data management & analytics"        
+ [7] "Edtech"                             
+ [8] "E-commerce & direct-to-consumer"    
+ [9] "Hardware"                           
+[10] "Auto & transportation"              
+[11] "Health"                             
+[12] "Consumer & retail"                  
+[13] "Travel"                             
+[14] "Cybersecurity"                      
+[15] "Mobile & telecommunications"
+#+end_example
+
 ** Share editing rights
 
 One of the neater properties of DataCamp Workspace is the ability to
@@ -178,24 +229,10 @@ the data into subsets.
 #+end_src
 
 #+RESULTS:
-#+begin_example
-                              Category Count
-1              Artificial Intelligence    72
-2                Auto & transportation    30
-3                    Consumer & retail    23
-4                        Cybersecurity    38
-5          Data management & analytics    35
-6      E-commerce & direct-to-consumer    97
-7                               Edtech    27
-8                              Fintech   185
-9                             Hardware    32
-10                              Health    62
-11        Internet software & services   164
-12         Mobile & telecommunications    36
-13                               Other    51
-14 Supply chain, logistics, & delivery    51
-15                              Travel    14
-#+end_example
+: Error in eval(m$data, parent.frame()) : object 'df1' not found
+: Error in colnames(grouped_df)[2] <- "Count" : 
+:   object 'grouped_df' not found
+: Error: object 'grouped_df' not found
 
 The function ~order~ returns a permutation that rearranges
 its first argument into ascending (default) or descending order:
@@ -205,9 +242,12 @@ its first argument into ascending (default) or descending order:
   grouped_df
 #+end_src
 
+#+RESULTS:
+: Error: object 'grouped_df' not found
+: Error: object 'grouped_df' not found
+
 *** Grouping data by column with ~dplyr~
 
-With 
 
 ** Creating a barplot of category counts
 
@@ -220,7 +260,7 @@ bar plot of ~grouped_df~ right away:
           las = 2)
 #+end_src
 
-#+RESULTS:
+#+Results:
 [[file:../img/workspace_barplot.png]]
 
 Here is a more customized plot:
