@@ -17,7 +17,7 @@
 #+attr_html: :width 600px
 [[../img/practice1.jpg]]
 
-Open ~8-lists.org~ in this DataCamp workspace.
+Open ~8_lists_practice.ipynb~ in [[https://app.datacamp.com/workspace/w/206b104e-97b9-465f-9ac2-8ab8c1754e11/edit][this DataCamp workspace]].
 
 * Why are lists important?
 #+attr_html: :width 500px
@@ -44,27 +44,27 @@ Open ~8-lists.org~ in this DataCamp workspace.
   1) Operators like ~$~, ~[]~ and ~:~
   2) Functions like ~c()~, ~seq()~, ~rep()~
   3) Functions like ~hist()~, ~subset()~
-  4) Utility functions like ~options()~, ~par()~
+  4) Utility functions like ~options()~
   5) Variables like ~foo~
   6) Constants like ~LETTERS~
-  7) Environments like ~getwd()~
+  7) Environments like ~ls()~
 
 - In short:
-  1) *Everything that exists in R is an object*
-  2) *Everything that happens in R is a function call*
-  3) *Interfaces to other software are a part of R*[fn:1]
+  1) *Everything that exists in R is an object*.
+  2) *Everything that happens in R is a function call*.
+  3) *Interfaces to other software are a part of R*.
 
 - You can group any mix of R structures and objects in a ~list~
 
 - You can even have a ~list~ as a component of another ~list~ - this
   separates languages suitable for data science from others. Scratch
-  e.g. cannot do this, but Snap!, its advanced cousin, can
+  e.g. cannot do this, but Snap!, its advanced cousin, can:
   #+attr_html: :width 600px
   [[../img/snap.png]]
 
 - Equivalents of lists in other programming languages: /recursive/
-  structures, like /dictionary/ in Python, /containers/ in C++, or LIST in
-  SQL
+  structures, like =dictionary= in Python, =containers= in C++, or =LIST= in
+  SQL.
 
 * Creating (named) lists
 
@@ -125,10 +125,10 @@ Create a list that contains, in this order
   brackets
 
 - Some examples:
-  1) Retrieve the 1st list member of ~foo~ (def'd [[foo][here]])
-  2) Retrieve the 3rd element of the 1st member of ~foo~
-  3) Retrieve the 2nd through 4th element of the 2nd member
-  4) Retrieve the 3rd member
+  1) Retrieve the 1st list member of ~foo~ defined earlier.
+  2) Retrieve the 3rd element of the 1st member of ~foo~.
+  3) Retrieve the 2nd through 4th element of the 2nd member.
+  4) Retrieve the 3rd member.
   5) What is the 2nd element of the 3rd member?
   #+begin_src R :noweb yes
     foo[[1]]        #1
@@ -137,7 +137,7 @@ Create a list that contains, in this order
     foo[[3]]        #4
     foo[[3]][2]     #5
   #+end_src
-
+  
 - Same for the matrix member of the list: use double indices
   1) retrieve the 2nd column of the 1st member of ~foo~
   2) retrieve the 2nd row, 1st column of the 1st member of ~foo~
@@ -175,7 +175,7 @@ Create a list that contains, in this order
 * Practice extracting from a ~list~
 
 Solve the following extraction problems:
-1) Extract the 2nd member of ~p~ (def'd [[p][here]])
+1) Extract the 2nd member of ~p~ 
 2) Extract the 2nd column of the 2nd member of ~p~
 3) Extract the first and the last element of the 1st member of ~p~
 
@@ -247,9 +247,9 @@ Solve the following extraction problems:
   :  $ mystring  : chr "hello"
 
 - You can now use the names to subset the list as usual:
-  1) Print the ~matrix~ member of ~foo~ (def'd [[foo][here]])
-  2) Print the 2nd column of the ~matrix~ member
-  3) Print the 2nd through 4th element of the ~logical~ member
+  1) Print the ~matrix~ member of ~foo~.
+  2) Print the 2nd column of the ~matrix~ member.
+  3) Print the 2nd through 4th element of the ~logical~ member.
   #+begin_src R
     foo$mymatrix      #1
     foo$mymatrix[,2]  #2
@@ -277,7 +277,7 @@ Solve the following extraction problems:
     str(q)
   #+end_src
 
-* TODO Practice naming lists
+* Practice naming lists
 
 1) Make a safety copy ~np~ of ~p~
 2) Name the elements of ~np~ in this order: ~num~, ~logmat~, ~char~
@@ -289,22 +289,3 @@ Solve the following extraction problems:
   str(np)                               #3
   np$char[-2]
 #+end_src
-
-* TODO Nesting lists
-
-* TODO Concept summary
-
-- Lists of lists
-
-* TODO Code summary
-
-| TERM | MEANING |
-|------+---------|
-
-* Footnotes
-
-[fn:1]This last tenet is the basis of extending R beyond its own data
-structures, e.g. in the direction of C++ (Rcpp), or databases
-(RSQLite). This is subject of a planned DSC 482 special topics (fall
-'23) on software development methods, "Extending R" (title taken from
-a book by one of the creators of R, John Chambers).
