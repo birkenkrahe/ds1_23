@@ -1367,6 +1367,7 @@ us in room 209 in the Derby building.
 **** Finish data frame lecture - useful functions
 ** 12.1 Mon, 6-Nov [no class]
 ** 12.2 Wed, 8-Nov
+
 **** Data frame review questions ([[https://app.datacamp.com/workspace/w/af196ae6-54cc-4d63-ae93-52eeb4be5866/edit][notebook]])
 
 ** 12.3 Fri, 10-Nov
