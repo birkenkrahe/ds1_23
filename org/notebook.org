@@ -945,10 +945,10 @@ us in room 209 in the Derby building.
    :      [,1]  [,2]
    : [1,] "Joe" "22"
    : [2,] "Jim" "25"
-   :      name  age 
+   :      name  age
    : [1,] "Joe" "22"
    : [2,] "Jim" "25"
-   :     name  age 
+   :     name  age
    : 001 "Joe" "22"
    : 002 "Jim" "25"
 6) When you put named vectors in a =matrix=, what happens to them?
@@ -968,9 +968,9 @@ us in room 209 in the Derby building.
 
    #+RESULTS:
    #+begin_example
-   name1 name2 
+   name1 name2
    "Joe" "Jim"
-   age1 age2 
+   age1 age2
      22   25
         [,1]  [,2]
    [1,] "Joe" "22"
@@ -996,7 +996,7 @@ us in room 209 in the Derby building.
    : Error in rowSums(names_age2) : 'x' must be numeric
 
    #+begin_src R
-     
+
    #+end_src
 8) How can you compute column sums on this matrix?
    #+begin_example org
@@ -1018,14 +1018,14 @@ us in room 209 in the Derby building.
    #+end_src
 
    #+RESULTS:
-   :      [,1] [,2] 
+   :      [,1] [,2]
    : [1,] "10" "101"
    : [2,] "20" "201"
    :      [,1] [,2]
    : [1,]   10  101
    : [2,]   20  201
    : [1]  30 302
-   : Error in colSums(as.numeric(M3)) : 
+   : Error in colSums(as.numeric(M3)) :
    :   'x' must be an array of at least two dimensions
 9) How can you extract the first row and add it at the end?
    #+begin_example org
@@ -1158,24 +1158,24 @@ us in room 209 in the Derby building.
    #+end_src
 
    #+RESULTS:
-   : [1] green red   blue 
+   : [1] green red   blue
    : Levels: blue green red
-   : [1] small  medium tall  
+   : [1] small  medium tall
    : Levels: medium small tall
 5) How can you turn ~bar~ into a =factor= named ~barf~ that is =ordered=?
    #+begin_src R
      barf1 <- factor(bar,
-                    ordered=TRUE)
+                     ordered=TRUE)
      barf1  # output: no levels defined, alphabetical order imposed
      barf2 <- factor(bar, levels = c("small", "medium", "tall"),
-                    ordered=TRUE)
+                     ordered=TRUE)
      barf2  # output: levels defined, ordered factor
    #+end_src
 
    #+RESULTS:
-   : [1] small  medium tall  
+   : [1] small  medium tall
    : Levels: medium < small < tall
-   : [1] small  medium tall  
+   : [1] small  medium tall
    : Levels: small < medium < tall
 6) What happens to ~c(1,2,3)~ when I convert it to a =factor=?
    #+begin_src R
@@ -1216,8 +1216,8 @@ us in room 209 in the Derby building.
    #+end_src
 
    #+RESULTS:
-   :   one   two three 
-   :     1     2     3 
+   :   one   two three
+   :     1     2     3
    : Levels: 1 2 3
 9) What is the (statistical) =summary= of a =factor= vector?
    #+begin_src R
@@ -1229,13 +1229,13 @@ us in room 209 in the Derby building.
    #+end_src
 
    #+RESULTS:
-   : [1] small  medium tall  
+   : [1] small  medium tall
    : Levels: small < medium < tall
-   :  small medium   tall 
+   :  small medium   tall
    :      1      1      1
-   : [1] small  medium tall   small  medium tall   small  medium tall  
+   : [1] small  medium tall   small  medium tall   small  medium tall
    : Levels: small < medium < tall
-   :  small medium   tall 
+   :  small medium   tall
    :      3      3      3
 
    #+begin_src R
@@ -1269,10 +1269,10 @@ us in room 209 in the Derby building.
     #+end_src
 
     #+RESULTS:
-    : [1] small  medium tall  
+    : [1] small  medium tall
     : Levels: small < medium < tall
     : Jim's taller than Joe
-    : [1] small big  
+    : [1] small big
     : Levels: big small
     : [1] NA
     : Warning message:
@@ -1285,7 +1285,7 @@ us in room 209 in the Derby building.
     #+end_src
 
     #+RESULTS:
-    : 'data.frame':	60 obs. of  3 variables:
+    : 'data.frame':     60 obs. of  3 variables:
     :  $ len : num  4.2 11.5 7.3 5.8 6.4 10 11.2 11.2 5.2 7 ...
     :  $ supp: Factor w/ 2 levels "OJ","VC": 2 2 2 2 2 2 2 2 2 2 ...
     :  $ dose: num  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 ...
@@ -1293,7 +1293,7 @@ us in room 209 in the Derby building.
     : Levels: OJ VC
 
     #+begin_src R :results graphics file output :file ../img/tg.png
-      # plotting in 3d with factors
+                                              # plotting in 3d with factors
       boxplot(tg$len ~ tg$supp,
               xlab="",
               ylab="Toothlength [mm]",
@@ -1314,7 +1314,7 @@ us in room 209 in the Derby building.
 
     #+RESULTS:
     #+begin_example
-    'data.frame':	32 obs. of  11 variables:
+    'data.frame':       32 obs. of  11 variables:
      $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
      $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...
      $ disp: num  160 160 108 258 360 ...
@@ -1326,7 +1326,7 @@ us in room 209 in the Derby building.
      $ am  : num  1 1 1 0 0 0 0 0 0 0 ...
      $ gear: num  4 4 4 3 3 3 3 4 4 4 ...
      $ carb: num  4 4 1 1 2 1 4 2 2 4 ...
-    'data.frame':	32 obs. of  11 variables:
+    'data.frame':       32 obs. of  11 variables:
      $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
      $ cyl : Factor w/ 3 levels "4","6","8": 2 2 1 2 3 2 3 1 1 2 ...
      $ disp: num  160 160 108 258 360 ...
@@ -1368,11 +1368,139 @@ us in room 209 in the Derby building.
 ** DONE 12.1 Mon, 6-Nov [no class]
 ** DONE 12.2 Wed, 8-Nov
 
-**** Data frame review questions ([[https://app.datacamp.com/workspace/w/af196ae6-54cc-4d63-ae93-52eeb4be5866/edit][notebook]]) 
+**** Data frame review questions ([[https://app.datacamp.com/workspace/w/af196ae6-54cc-4d63-ae93-52eeb4be5866/edit][notebook]])
 
-** 12.3 Fri, 10-Nov
+- creating data frames
+- adding rows and columns to data frames
+- extracting elements from data frames
 
-**** Lists (notebook)
+** DONE 12.3 Fri, 10-Nov
+**** Data frame review questions ([[https://app.datacamp.com/workspace/w/af196ae6-54cc-4d63-ae93-52eeb4be5866/edit][notebook]])
+
+- renaming columns or rows of data frames
+- subsetting data frames
+
+**** Lists ([[https://app.datacamp.com/workspace/w/206b104e-97b9-465f-9ac2-8ab8c1754e11/edit][practice notebook]])
+- why lists
+- R as object-oriented and functional language
+
+**** Timothy's plotting question
+
+Timothy wanted to know how to plot two graphs with different y-scales
+over one another so that the y-scales are aligned.
+
+Create datasets:
+#+begin_src R :results output
+  df1 = data.frame(x=1:10,y1=seq(from=0,to=100,length.out=10))
+  df2 = data.frame(x=1:10,y2=seq(from=-10,to=200,length.out=10))
+
+  df1
+  df2
+#+end_src
+
+#+RESULTS:
+#+begin_example
+    x        y1
+1   1   0.00000
+2   2  11.11111
+3   3  22.22222
+4   4  33.33333
+5   5  44.44444
+6   6  55.55556
+7   7  66.66667
+8   8  77.77778
+9   9  88.88889
+10 10 100.00000
+    x        y2
+1   1 -10.00000
+2   2  13.33333
+3   3  36.66667
+4   4  60.00000
+5   5  83.33333
+6   6 106.66667
+7   7 130.00000
+8   8 153.33333
+9   9 176.66667
+10 10 200.00000
+#+end_example
+
+Plot the datasets next to one another
+#+begin_src R :results output graphics file :file ../img/xy1.png
+  ## 1 x 2 frame, use [s]quare plotting region
+  par(mfrow=c(1,2), pty='s') # 1 x 2 frame, use [s]quare plotting region
+
+  ## plot first dataset - separate y-axis
+  plot(df1$x, df1$y1, type = "l", col = "blue",
+       xlab = "X-axis", ylab = "Y-axis for Dataset 1",
+       main='First dataset:\nseparate y-axis')
+
+  ## plot second dataset - separate y-axis
+  plot(df2$x, df2$y2, type = "l", col = "red",
+       xlab = "X-axis", ylab = "Y-axis for Dataset 21",
+       main='Second dataset:\nseparate y-axis')
+#+end_src
+
+#+RESULTS:
+[[file:../img/xy1.png]]
+
+Let's plot them next to one another but with aligned y-scales. To do
+that, we add the parameter =ylim= and set it to the larger of the two
+intervals:
+#+begin_src R :results output graphics file :file ../img/xy2.png
+  ## 1 x 2 frame, use [s]quare plotting region
+  par(mfrow=c(1,2), pty='s') 
+
+  ## plot first dataset - aligned y-axis
+  plot(df1$x, df1$y1, type = "l", col = "blue", ylim = c(-10,200),
+       xlab = "X-axis", ylab = "Y-axis for Dataset 1 and 2",
+       main='First dataset:\naligned y-scales')
+
+  ## Plot the second dataset with its own y-axis
+  plot(df2$x, df2$y2, type = "l", col = "red", ylim = c(-10, 200),
+       xlab="",ylab="",main='Second dataset:\naligned y-scales')
+  #+end_src
+
+#+RESULTS:
+[[file:../img/xy2.png]]
+
+Now we remove all x-y-axis information from the second graph and plot
+it on top of the first - =par(new=True)= enables that:
+#+begin_src R :results output graphics file :file ../img/xy3.png
+  ## 1 x 1 frame
+  par(mfrow=c(1,1))
+
+  ## plot first dataset with y-axis and labels
+  plot(df1$x, df1$y1, type = "l", col = "blue", ylim = c(-10,200),
+       xlab = "X-axis", ylab = "Y-axis for Dataset 1 and 2",
+       main='First and second dataset')
+
+  ## allow for the next plot to be plotted on top of the first
+  par(new=TRUE)
+
+  ## Plot the second dataset without labels on top of the first
+  plot(df2$x, df2$y2, type = "l", col = "red", ylim = c(-10, 200),
+       xaxt = "n", yaxt = "n", xlab = "", ylab = "", ann = FALSE,
+       main="")
+
+#+end_src
+
+#+RESULTS:
+[[file:../img/xy3.png]]
+
+
+#+begin_src R :results output file graphics :file ../img/na.png
+  df = data.frame(1:10,c(rep(NA,4),5:10))
+  df
+  summary(df)
+  plot(df)
+#+end_src
+
+#+RESULTS:
+[[file:../img/na.png]]
+
+Other things Timothy learnt later on:
+- Difference between base R and "Tidyverse" complexity (=dplyr=)
+- How to aggregate (group) values in a new column using =aggregate=
 
 * Part III: Visualization
 3rd sprint review due Nov 12
