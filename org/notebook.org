@@ -1503,8 +1503,21 @@ Other things Timothy learnt later on:
 - How to aggregate (group) values in a new column using =aggregate=
 
 * Part III: Visualization
-3rd sprint review due Nov 12
-** Week 13 - Plots I
-** Week 14 - Plots II
-** Week 15 - Plots III
+** Week 13 - Data import and barplots
+
+- 3rd sprint review due Nov 12
+- DataCamp review: [[https://campus.datacamp.com/courses/introduction-to-importing-data-in-r/importing-data-from-flat-files-with-utils?ex=1][importing data from flat files with utils]] ([[../../admin/RoamNotes/20220601200828-datacamp.org][Org]],
+  workspace)
+- [[../9_barplots.org][Barplots]] (workspace)
+
+** Week 14 - Visualization with ggplot2
+
+- DataCamp review: visualization with ggplot2 (workspace)
+- ggplot2 lecture & practice (workspace)
+  
+** Week 15 - Python vs. R & histograms
+
+- DataCamp review: Python for R users - the basics (workspace)
+- Histogram lecture & practice (workspace)
+
 * Week 16 - Project presentations
