@@ -1506,7 +1506,7 @@ Other things Timothy learnt later on:
 ** Week 13 - Data import and barplots
 
 - 3rd sprint review due Nov 12
-- DataCamp review: [[https://campus.datacamp.com/courses/introduction-to-importing-data-in-r/importing-data-from-flat-files-with-utils?ex=1][importing data ]] ([[../../admin/RoamNotes/20220601200828-datacamp.org][Org]], workspace)
+- DataCamp review: [[https://campus.datacamp.com/courses/introduction-to-importing-data-in-r/importing-data-from-flat-files-with-utils?ex=1][importing data ]] ([[../../admin/RoamNotes/20220601200828-datacamp.org][Org]], [[https://app.datacamp.com/workspace/w/25fe01ee-f296-48ed-bf6d-f1348944970f/edit][workspace]])
 - [[../9_barplots.org][Barplots]] (workspace)
 
 ** Week 14 - Visualization with ggplot2
