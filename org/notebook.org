@@ -1503,12 +1503,16 @@ Other things Timothy learnt later on:
 - How to aggregate (group) values in a new column using =aggregate=
 
 * Part III: Visualization, import, shell, date and time
-** Week 13 - Data import and barplots
+** IN PROGRESS Week 13 - Data import and barplots
 
 - 3rd sprint review due Nov 12
 - DataCamp review: [[https://campus.datacamp.com/courses/introduction-to-importing-data-in-r/importing-data-from-flat-files-with-utils?ex=1][importing data ]] ([[../../admin/RoamNotes/20220601200828-datacamp.org][Org]], [[https://app.datacamp.com/workspace/w/25fe01ee-f296-48ed-bf6d-f1348944970f/edit][workspace]])
+  1. =lengths= vs. =length= ([[https://stat.ethz.ch/R-manual/R-devel/library/base/html/lengths.html][doc]])
+  2. ~X22~ into ~22~ in a =read.table= dataframe
 - [[../9_barplots.org][Barplots]] (workspace)
-
+- Jakobe: Track & Field project
+  [[https://tfrrs.org/results/xc/23318/USCAA_National_Championships][TFRRSXC stats]] | [[https://www.lacctic.com/][LACCTiC Simulator]]
+  
 ** Week 14 - Visualization with ggplot2
 
 - DataCamp review: visualization with ggplot2 (workspace)
