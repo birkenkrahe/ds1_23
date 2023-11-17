@@ -153,15 +153,18 @@ elements have?
   #+RESULTS: foo
   #+begin_example
   [[1]]
-       [,1] [,2]
-  [1,]    1    3
-  [2,]    2    4
+   [1] -4.0000000 -3.5789474 -3.1578947 -2.7368421 -2.3157895 -1.8947368 -1.4736842 -1.0526316
+   [9] -0.6315789 -0.2105263  0.2105263  0.6315789  1.0526316  1.4736842  1.8947368  2.3157895
+  [17]  2.7368421  3.1578947  3.5789474  4.0000000
 
   [[2]]
-  [1]  TRUE FALSE  TRUE  TRUE
+        [,1]  [,2]  [,3]
+  [1,] FALSE  TRUE  TRUE
+  [2,]  TRUE FALSE FALSE
+  [3,]  TRUE  TRUE FALSE
 
   [[3]]
-  [1] "hello"
+  [1] "don"     "quixote"
   #+end_example
 
 - List elements are indexed with the ~[[~ operator. Within each element,
@@ -188,8 +191,7 @@ Create a list that contains, in this order
    column-wise
 3) a ~character~ vector with the two strings ~"don"~ and ~"quixote"~
 
-#+name: p
-#+begin_src R
+#+begin_src R 
   seq <- seq(from=-4, to=4, length.out=20)  #1
   mat <- matrix(c(F,T,T,T,F,T,T,F,F),nrow=3,byrow=FALSE) #2
   chr <- c("don","quixote")  #3
@@ -197,22 +199,22 @@ Create a list that contains, in this order
   foo
   #+end_src
 
-#+RESULTS: p
-#+begin_example
-[[1]]
- [1] -4.0000000 -3.5789474 -3.1578947 -2.7368421 -2.3157895 -1.8947368 -1.4736842 -1.0526316
- [9] -0.6315789 -0.2105263  0.2105263  0.6315789  1.0526316  1.4736842  1.8947368  2.3157895
-[17]  2.7368421  3.1578947  3.5789474  4.0000000
+  #+RESULTS:
+  #+begin_example
+  [[1]]
+   [1] -4.0000000 -3.5789474 -3.1578947 -2.7368421 -2.3157895 -1.8947368 -1.4736842 -1.0526316
+   [9] -0.6315789 -0.2105263  0.2105263  0.6315789  1.0526316  1.4736842  1.8947368  2.3157895
+  [17]  2.7368421  3.1578947  3.5789474  4.0000000
 
-[[2]]
-      [,1]  [,2]  [,3]
-[1,] FALSE  TRUE  TRUE
-[2,]  TRUE FALSE FALSE
-[3,]  TRUE  TRUE FALSE
+  [[2]]
+        [,1]  [,2]  [,3]
+  [1,] FALSE  TRUE  TRUE
+  [2,]  TRUE FALSE FALSE
+  [3,]  TRUE  TRUE FALSE
 
-[[3]]
-[1] "don"     "quixote"
-#+end_example
+  [[3]]
+  [1] "don"     "quixote"
+  #+end_example
 
 * Subsetting lists
 
@@ -406,6 +408,9 @@ Solve the following extraction problems:
     attributes(foo)
   #+end_src
 
+  #+RESULTS:
+  : NULL
+
 - Name the members of ~foo~ using ~names~, then print ~str(foo)~:
   #+begin_src R
     names(foo) <- c(
@@ -417,9 +422,9 @@ Solve the following extraction problems:
 
   #+RESULTS:
   : List of 3
-  :  $ mymatrix  : int [1:2, 1:2] 1 2 3 4
-  :  $ mylogicals: logi [1:4] TRUE FALSE TRUE TRUE
-  :  $ mystring  : chr "hello"
+  :  $ mymatrix  : num [1:20] -4 -3.58 -3.16 -2.74 -2.32 ...
+  :  $ mylogicals: logi [1:3, 1:3] FALSE TRUE TRUE TRUE FALSE TRUE ...
+  :  $ mystring  : chr [1:2] "don" "quixote"
 
 - You can now use the names to subset the list as usual:
   1) Print the ~matrix~ member of ~foo~.
@@ -430,6 +435,13 @@ Solve the following extraction problems:
     foo$mymatrix[,2]  #2
     foo$mylogicals[2:4]
   #+end_src
+
+  #+RESULTS:
+  :  [1] -4.0000000 -3.5789474 -3.1578947 -2.7368421 -2.3157895 -1.8947368 -1.4736842 -1.0526316
+  :  [9] -0.6315789 -0.2105263  0.2105263  0.6315789  1.0526316  1.4736842  1.8947368  2.3157895
+  : [17]  2.7368421  3.1578947  3.5789474  4.0000000
+  : Error in foo$mymatrix[, 2] : incorrect number of dimensions
+  : [1] TRUE TRUE TRUE
 
 - Note that the ~names~ are stored as a ~character~ vector but not used
   with quotes. Also, you cannot use the names inside double brackets
@@ -443,6 +455,21 @@ Solve the following extraction problems:
     n <- names(vec)   # storing names vector
     vec[n]            # extracting elements with names vector
   #+end_src
+
+  #+RESULTS:
+  #+begin_example
+  [1] "a" "b"
+  a 
+  1
+  a 
+  1
+  a b 
+  1 2
+  a b 
+  1 2
+  a b 
+  1 2
+  #+end_example
 
 - You can also name the list when creating it with ~list~:
   #+begin_src R

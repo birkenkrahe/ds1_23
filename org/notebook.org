@@ -1618,10 +1618,11 @@ Other things Timothy learnt later on:
      : 1  joe  22
      : 2  jim  23
 
-
 *** IN PROGRESS Jakobe: Track & Field project
   [[https://tfrrs.org/results/xc/23318/USCAA_National_Championships][TFRRSXC stats]] | [[https://www.lacctic.com/][LACCTiC Simulator]]
 
+*** List data structures in R ([[file:8_lists.org][Org]], [[https://app.datacamp.com/workspace/w/206b104e-97b9-465f-9ac2-8ab8c1754e11/edit][workspace]])
+  
 ** Week 14 - Visualization I
 
 *** Review: lists [test]
