@@ -150,6 +150,20 @@ elements have?
     foo
   #+end_src
 
+  #+RESULTS: foo
+  #+begin_example
+  [[1]]
+       [,1] [,2]
+  [1,]    1    3
+  [2,]    2    4
+
+  [[2]]
+  [1]  TRUE FALSE  TRUE  TRUE
+
+  [[3]]
+  [1] "hello"
+  #+end_example
+
 - List elements are indexed with the ~[[~ operator. Within each element,
   the elements are indexed according to their data structure
 
@@ -179,9 +193,26 @@ Create a list that contains, in this order
   seq <- seq(from=-4, to=4, length.out=20)  #1
   mat <- matrix(c(F,T,T,T,F,T,T,F,F),nrow=3,byrow=FALSE) #2
   chr <- c("don","quixote")  #3
-  p <- list(seq, mat, chr)
-  p
-#+end_src
+  foo <- list(seq, mat, chr)
+  foo
+  #+end_src
+
+#+RESULTS: p
+#+begin_example
+[[1]]
+ [1] -4.0000000 -3.5789474 -3.1578947 -2.7368421 -2.3157895 -1.8947368 -1.4736842 -1.0526316
+ [9] -0.6315789 -0.2105263  0.2105263  0.6315789  1.0526316  1.4736842  1.8947368  2.3157895
+[17]  2.7368421  3.1578947  3.5789474  4.0000000
+
+[[2]]
+      [,1]  [,2]  [,3]
+[1,] FALSE  TRUE  TRUE
+[2,]  TRUE FALSE FALSE
+[3,]  TRUE  TRUE FALSE
+
+[[3]]
+[1] "don"     "quixote"
+#+end_example
 
 * Subsetting lists
 
@@ -203,53 +234,131 @@ Create a list that contains, in this order
     foo[[3]]        #4
     foo[[3]][2]     #5
   #+end_src
+
+  #+RESULTS:
+  :  [1] -4.0000000 -3.5789474 -3.1578947 -2.7368421 -2.3157895 -1.8947368 -1.4736842
+  :  [8] -1.0526316 -0.6315789 -0.2105263  0.2105263  0.6315789  1.0526316  1.4736842
+  : [15]  1.8947368  2.3157895  2.7368421  3.1578947  3.5789474  4.0000000
+  : [1] -3.157895
+  : [1] TRUE TRUE TRUE
+  : [1] "don"     "quixote"
+  : [1] "quixote"
   
 - Same for the matrix member of the list: use double indices
   1) retrieve the 2nd column of the 1st member of ~foo~
   2) retrieve the 2nd row, 1st column of the 1st member of ~foo~
   3) retrieve elements 1 through 4 of the 1st member of ~foo~
   #+begin_src R
-    foo[[1]]
-    foo[[1]][,2]   #1
-    foo[[1]][2,1]  #2
-    foo[[1]][1:4]  #3  this is.vector and not matrix!
-    foo[[1]][2]    # this works, too - remember byrow=FALSE
+    foo[[2]]
+    foo[[2]][,2]   #1
+    foo[[2]][2,1]  #2
+    foo[[2]][1:4]  #3  this is.vector and not matrix!
+    foo[[2]][2]    # this works, too - remember byrow=FALSE
   #+end_src
+
+  #+RESULTS:
+  :       [,1]  [,2]  [,3]
+  : [1,] FALSE  TRUE  TRUE
+  : [2,]  TRUE FALSE FALSE
+  : [3,]  TRUE  TRUE FALSE
+  : [1]  TRUE FALSE  TRUE
+  : [1] TRUE
+  : [1] FALSE  TRUE  TRUE  TRUE
+  : [1] TRUE
 
 - Using double square brackets on a list is always interpreted with
   respect to a single member, for example:
   #+begin_src R
     foo[[c(2,3)]]
     foo[[2]][3]
+    foo[[2]][3,1]
   #+end_src
+
+  #+RESULTS:
+  : [1] TRUE
+  : [1] TRUE
+  : [1] TRUE
 
 - Using the ~-~ operator inside the single index brackets to remove:
   #+begin_src R
     foo[[2]]
-    foo[[2]][-1]
+    foo[[2]][-1] # looks at the matrix as a `byrow=TRUE` vector
+    foo[[2]][-1,] # takes away the first row
+    foo[[2]][,-1] # takes away the first column
+  #+end_src
+
+  #+RESULTS:
+  #+begin_example
+        [,1]  [,2]  [,3]
+  [1,] FALSE  TRUE  TRUE
+  [2,]  TRUE FALSE FALSE
+  [3,]  TRUE  TRUE FALSE
+  [1]  TRUE  TRUE  TRUE FALSE  TRUE  TRUE FALSE FALSE
+       [,1]  [,2]  [,3]
+  [1,] TRUE FALSE FALSE
+  [2,] TRUE  TRUE FALSE
+        [,1]  [,2]
+  [1,]  TRUE  TRUE
+  [2,] FALSE FALSE
+  [3,]  TRUE FALSE
+  list()
+  #+end_example
+
+  #+begin_src R
+    char1 <- vector()
+    for (member in foo) {
+      char1 <- c(char1,is.character(member))
+    }
+    char1
   #+end_src
 
 - Preview: how would you extract the string member of ~foo~?
   #+begin_src R
-    char <- lapply(X=foo,FUN=is.character) # test each member
+    ## with a for loop
+    char <- vector()
+    for (member in foo) {
+      char <- c(char,is.character(member))
+    }
+    char
     idx <- which(char==TRUE) # get the index
     foo[[idx]]  # index list
-  #+end_src
+
+    ## with the lapply function
+    char1 <- lapply(X=foo,FUN=is.character)
+    unlist(char1)
+    idx <- which(char1==TRUE) # get the index
+    foo[[idx]]  # index list
+      #+end_src
+
+  #+RESULTS:
+  : [1] FALSE FALSE  TRUE
+  : [1] "don"     "quixote"
+  : [1] FALSE FALSE  TRUE
+  : [1] "don"     "quixote"
+
 - The ~apply~ family of functions will be taught in advanced data
   science, including ~lapply~ (apply ~FUN~-ctions across a whole ~list~)
 
 * Practice extracting from a ~list~
 
 Solve the following extraction problems:
-1) Extract the 2nd member of ~p~ 
-2) Extract the 2nd column of the 2nd member of ~p~
-3) Extract the first and the last element of the 1st member of ~p~
+1) Extract the 1st member of ~foo~.
+2) Extract the first and the last element of the 1st member of ~foo~.
+3) Extract the elements of the 1st member of ~foo~ with odd indices.
 
 #+begin_src R
-  p[[2]]      #1
-  p[[2]][,2]  #2
-  p[[1]][c(1,length(p[[1]]))] #3
+  foo[[1]]      #1
+  foo[[1]][c(1,length(foo[[1]]))] #2
+  foo[[1]][seq(1,length(foo[[1]]),by=2)] #3
 #+end_src
+
+#+RESULTS:
+:  [1] -4.0000000 -3.5789474 -3.1578947 -2.7368421 -2.3157895 -1.8947368 -1.4736842 -1.0526316
+:  [9] -0.6315789 -0.2105263  0.2105263  0.6315789  1.0526316  1.4736842  1.8947368  2.3157895
+: [17]  2.7368421  3.1578947  3.5789474  4.0000000
+: [1] -4  4
+:  [1] -4.0000000 -3.1578947 -2.3157895 -1.4736842 -0.6315789  0.2105263  1.0526316  1.8947368
+:  [9]  2.7368421  3.5789474
 
 * Removing, overwriting and slicing a ~list~
 
