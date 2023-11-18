@@ -139,7 +139,6 @@ elements have?
 - You supply the elements to the ~list~ function, separated by commata
 
 - Let's define a list ~foo~ and print it:
-  #+name: foo
   #+begin_src R
     foo <- list(
       matrix(data = 1:4,
@@ -150,7 +149,15 @@ elements have?
     foo
   #+end_src
 
-  #+RESULTS: foo
+  #+begin_src R
+    num <- seq(from=-4,to=4,length.out=20)
+    mat <- matrix(c(F,T,T,T,F,T,T,F,F),nrow=3,byrow=FALSE)
+    char <- c("don","strings")
+    foo <- list(num,mat,char)
+    foo
+  #+end_src
+
+  #+RESULTS:
   #+begin_example
   [[1]]
    [1] -4.0000000 -3.5789474 -3.1578947 -2.7368421 -2.3157895 -1.8947368 -1.4736842 -1.0526316
@@ -164,7 +171,7 @@ elements have?
   [3,]  TRUE  TRUE FALSE
 
   [[3]]
-  [1] "don"     "quixote"
+  [1] "don"     "strings"
   #+end_example
 
 - List elements are indexed with the ~[[~ operator. Within each element,
