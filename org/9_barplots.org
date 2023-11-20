@@ -42,7 +42,8 @@ the *big picture* in tables.
 * What does visualization depend on?
 #+attr_html: :width 600px
 [[../img/9_viz.png]]
-(Source: r-charts.com - base R and ggplot2 examples[fn:1])
+(Source: r-charts.com - base R and ggplot2 examples)
+
 #+begin_quote
 
 1) Raw/transformed data (observations and experiments)
@@ -124,7 +125,7 @@ the *big picture* in tables.
   :  $ supp: Factor w/ 2 levels "OJ","VC": 2 2 2 2 2 2 2 2 2 2 ...
   :  $ dose: num  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 ...
 
-- Compute the frequencies for the variables of ~ToothGrowth~
+- Compute the frequencies for the variables of ~ToothGrowth~:
   #+begin_src R
     table(tg$len)
     table(tg$supp)
@@ -159,7 +160,7 @@ the *big picture* in tables.
   structure does a table have? Is the table named or unnamed?
   #+begin_src R
     tbl <- table(ToothGrowth$supp)
-    class(tbl)
+    class(tbl) 
     str(tbl)
     names(tbl)
   #+end_src
@@ -206,6 +207,9 @@ the *big picture* in tables.
   : Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
   : Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
 
+- Fun fact: The unit of horsepower [hp] is equivalent fo a horse
+  moving 33,000 pounds of mass 1 foot in 1 minute [lbs x ft / min]
+
 - We're only interested in one variable, ~cyl~, the number of cylinders
   of the cars listed.
 
@@ -240,7 +244,7 @@ the *big picture* in tables.
 - The ~barplot~ function has a bunch of parameters, which you can view
   with ~help~ (if you run this in Org-mode, you have to quit with ~C-g~)
   #+begin_src R
-                                            #  help(barplot)
+    ##  help(barplot)
   #+end_src
 
   #+RESULTS:
@@ -404,11 +408,18 @@ the *big picture* in tables.
   #+begin_src R
     cylinders <- mtcars$cyl
     transmission <- mtcars$am
-
-    table(cylinders[transmission == 0])["4"]
+    table(cylinders)  # frequency table for all cars
+    table(cylinders[transmission == 0])  # table for automatic cars
+    table(cylinders[transmission == 0])["4"] # 4-cylinder automatic cars
   #+end_src
 
   #+RESULTS:
+  : cylinders
+  :  4  6  8 
+  : 11  7 14
+  : 
+  :  4  6  8 
+  :  3  4 12
   : 4 
   : 3
 
@@ -447,14 +458,10 @@ the *big picture* in tables.
   matrix, and it is further split by the row values.
 
 - Creating the barplot:
-  #+name: barplot
   #+begin_src R :results graphics file :file ../img/9_cyl_am.png
     barplot(cyl.freq.matrix,
-            las = 1)
+            las = 1) # label orientation
   #+end_src
-
-  #+RESULTS: barplot
-  [[file:../img/9_cyl_am.png]]
 
   #+RESULTS:
   [[file:../img/9_cyl_am.png]]
@@ -465,7 +472,7 @@ the *big picture* in tables.
 * Customizing barplots
 
 - There are a LOT of potential parameters in ~help(barplot)~ with the
-  default values.
+  default values. To find =las=, you need to check =par= (graphics).
   #+begin_example R
   barplot(height, width = 1, space = NULL,
           names.arg = NULL, legend.text = NULL, beside = FALSE,
@@ -636,8 +643,8 @@ the *big picture* in tables.
 
 - Unlike base R, ggplot2 requires ~data.frame~ format, and is more picky
 
-- The function ~ggplot2::qplot~ is a shortcut that looks like ~plot~: the
-  code below produces a basic barplot from ~mtcars$cyl~
+- The ([[https://ggplot2.tidyverse.org/reference/qplot.html][deprecated]]) function ~ggplot2::qplot~ is a shortcut that looks
+  like ~plot~: the code below produces a basic barplot from ~mtcars$cyl~
 
   #+begin_src R :results graphics file :file ../img/7_qplot.png
     library(ggplot2)
@@ -650,10 +657,10 @@ the *big picture* in tables.
 - Here, the relevant "geometry" is ~"bar"~ and the ~numeric~ variable must
   be supplied as a ~factor~ to allow treating it like a category
 
-- To get this [[barplot][plot with ~barplot~ in base R]], you need the frequency
+- To get this plot with ~barplot~ in base R, you need the frequency
   ~table~ function but you don't need to change the vector to ~factor~
 
-- To produce a ggplot2 version of the [[dodged][dodged barplot]] created earlier
+- To produce a ggplot2 version of the dodged barplot created earlier
   in base R, you can use this code:
   #+begin_src R :results graphics file :file ../img/7_ggplot.png
     qplot(
@@ -863,15 +870,4 @@ the *big picture* in tables.
 
 - [[http://www.sthda.com/english/wiki/ggplot2-barplots-quick-start-guide-r-software-and-data-visualization]["ggplot2 barplots: Quick start guide", sthda.com]]
 
-* Footnotes
 
-[fn:2]The unit of horsepower [hp] is equivalent fo a horse moving
-33,000 pounds of mass 1 foot in 1 minute [lbs x ft / min]
-
-[fn:1]What are the categories used to organize the graphs?
-Distribution, correlation and evolution (aka growth) relate to
-statistical summaries. Spatial relates to an application, and the last
-ones are qualitative characteristics related to patterns (part/whole),
-order (ranking) and time (flow), showing special types of graphs (pie
-chart, spider graph and line graph). The "Miscellaneous" category is
-filled with fun examples, too.
