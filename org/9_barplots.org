@@ -267,7 +267,7 @@ the *big picture* in tables.
   #+RESULTS:
   [[file:../img/9_cyl_ann.png]]
 
-* Practice: building a simple barplot
+* NEXT Practice: building a simple barplot
 
 1) Check the ~help~ for the ~read.csv~ function. What's the difference
    between ~read.csv~ and ~read.csv2~?
