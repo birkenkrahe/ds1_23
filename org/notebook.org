@@ -1504,7 +1504,7 @@ Other things Timothy learnt later on:
 - How to aggregate (group) values in a new column using =aggregate=
 
 * Part IV: Visualization, import and the shell
-** IN PROGRESS Week 13 - Data import and barplots
+** Week 13 - Data import and barplots
 
 - 3rd sprint review due Nov 12
 - DataCamp review: [[https://campus.datacamp.com/courses/introduction-to-importing-data-in-r/importing-data-from-flat-files-with-utils?ex=1][importing data ]] ([[../../admin/RoamNotes/20220601200828-datacamp.org][Org]], [[https://app.datacamp.com/workspace/w/25fe01ee-f296-48ed-bf6d-f1348944970f/edit][workspace]])
@@ -1625,14 +1625,22 @@ Other things Timothy learnt later on:
   
 ** Week 14 - Visualization I
 
+*** [[file:9_barplots.org][Barplots]] (workspace) [test]
+
+** Week 15 (Nov 27-Dec 1) - Visualization II / Python vs. R
+
 *** Review: lists [test]
-*** [[../9_barplots.org][Barplots]] (workspace) [test]
+*** [[../9_barplots.org][Barplots]] ([[https://app.datacamp.com/workspace/w/f2c9fd9d-23c2-4251-adf1-4e4527bd0d0f/edit][workspace]]) [test]
 *** Histograms and boxplots (workspace) [test]
 *** ggplot2 lecture and practice (workspace) 
 *** DataCamp review: visualization with ggplot2 (workspace) [test]
+*** DataCamp review: Python for R users - the basics (workspace)
 
-** Week 15 - Visualization II / Python vs. R
+** Week 16 (Dec 4-8) - Project presentations
 
-- DataCamp review: Python for R users - the basics (workspace)
+** Final exam on Wednesday, 13-Dec from 1 pm - 3 pm
 
-** Week 16 - Project presentations
+- According to the [[https://assets.speakcdn.com/assets/2433/fa23_final_exam_schedule_final.pdf][FA23 Final Exam Schedule]].
+- If this is a problem for you, talk to me.
+
+  
