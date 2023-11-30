@@ -1636,8 +1636,10 @@ Other things Timothy learnt later on:
 *** DataCamp review: Python for R users - the basics (workspace)
 
 ** Week 16 (Dec 4-8) - Project presentations
+#+attr_html: :width 600px
+[[../img/checklist.png]]
 
-
+** Friday, Dec 8: complete evaluation in class (bonus)
 
 ** Final exam on Wednesday, 13-Dec from 1 pm - 3 pm
 
