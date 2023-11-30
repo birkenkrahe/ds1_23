@@ -1628,7 +1628,6 @@ Other things Timothy learnt later on:
 *** [[file:9_barplots.org][Barplots]] (workspace) [test]
 
 ** Week 15 (Nov 27-Dec 1) - Visualization II / Python vs. R
-
 *** Review: lists [test]
 *** [[../9_barplots.org][Barplots]] ([[https://app.datacamp.com/workspace/w/f2c9fd9d-23c2-4251-adf1-4e4527bd0d0f/edit][workspace]]) [test]
 *** Histograms and boxplots (workspace) [test]
@@ -1637,6 +1636,8 @@ Other things Timothy learnt later on:
 *** DataCamp review: Python for R users - the basics (workspace)
 
 ** Week 16 (Dec 4-8) - Project presentations
+
+
 
 ** Final exam on Wednesday, 13-Dec from 1 pm - 3 pm
 
