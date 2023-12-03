@@ -1503,7 +1503,7 @@ Other things Timothy learnt later on:
 - Difference between base R and "Tidyverse" complexity (=dplyr=)
 - How to aggregate (group) values in a new column using =aggregate=
 
-* Part IV: Visualization, import and the shell
+* IN PROGRESS Part IV: Visualization, import and the shell
 ** Week 13 - Data import and barplots
 
 - 3rd sprint review due Nov 12
