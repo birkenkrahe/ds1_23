@@ -1628,13 +1628,12 @@ Other things Timothy learnt later on:
 *** [[file:9_barplots.org][Barplots]] (workspace) [test]
 
 ** Week 15 (Nov 27-Dec 1) - Visualization II / Python vs. R
-*** Review: lists [test]
-*** [[../9_barplots.org][Barplots]] ([[https://app.datacamp.com/workspace/w/f2c9fd9d-23c2-4251-adf1-4e4527bd0d0f/edit][workspace]]) [test]
-*** Histograms and boxplots (workspace) [test]
-*** ggplot2 lecture and practice (workspace) 
+*** DONE ggplot2 lecture and practice (workspace) 
+*** DONE Review: lists [[[https://lyon.instructure.com/courses/1427/assignments/20349/edit?quiz_lti][test 8]]]
+*** DONE [[../9_barplots.org][Barplots]] ([[https://app.datacamp.com/workspace/w/f2c9fd9d-23c2-4251-adf1-4e4527bd0d0f/edit][workspace]]) [[[https://lyon.instructure.com/courses/1427/assignments/20349/edit?quiz_lti][test 8]]]
+*** Histograms and boxplots ([[file:10_hist_boxplot.org][org]], [[https://app.datacamp.com/workspace/w/15166677-2d39-43c1-be26-5b99534334cc][workspace]]) [[[https://lyon.instructure.com/courses/1427/assignments/21124/edit?quiz_lti][test 9]]]
 *** DataCamp review: visualization with ggplot2 (workspace) [test]
-*** DataCamp review: Python for R users - the basics (workspace)
-
+*** DataCamp review: Python for R users - the basics [[[https://lyon.instructure.com/courses/1427/assignments/21124/edit?quiz_lti][test 9]]]
 ** Week 16 (Dec 4-8) - Project presentations
 #+attr_html: :width 600px
 [[../img/checklist.png]]
