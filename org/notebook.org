@@ -1638,8 +1638,6 @@ Other things Timothy learnt later on:
 #+attr_html: :width 600px
 [[../img/checklist.png]]
 
-** Friday, Dec 8: complete evaluation in class (bonus)
-
 ** Final exam on Wednesday, 13-Dec from 1 pm - 3 pm
 
 - According to the [[https://assets.speakcdn.com/assets/2433/fa23_final_exam_schedule_final.pdf][FA23 Final Exam Schedule]].
