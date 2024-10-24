@@ -140,7 +140,7 @@ Subsetting and extracting relates to vectorization:
       summary(foo)
     #+end_src
 
-* IN PROGRESS Logical functions in vectors: ~<~, ~>~, ~!=~, ~==~
+* Logical functions in vectors: ~<~, ~>~, ~!=~, ~==~
 
   - You can directly use logical operators to subset vectors
 
